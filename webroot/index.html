@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>PICKSC</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="favicon.ico" rel="icon">
+  <!--><link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">-->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Sailor - v4.1.0
+  * Template URL: https://bootstrapmade.com/sailor-free-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <?php include 'includes/menu.php'; ?>
+
+  
+
+  <main id="main">
+<br /><br />
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="row content">
+          
+          <div class="col-lg-6 pt-4 pt-lg-0">
+          	<!-- <h3>What we do:</h3> -->
+            <p>
+              The UCLA Particle-in-Cell (PIC) and Kinetic Simulation Software Center (PICKSC) uses and develops simulation and data science tools to make fundamental discoveries in plasma based acceleration, plasma based light sources, plasma astrophysics, intense laser and plasma interactions, the nonlinear optics of plasmas, and high fidelity simulation.  The Center is also committed to making its software available to others to accelerate the rate of scientific discovery and to provide unique educational tools. We are users and developers of OSIRIS, UPIC, QuickPIC, and QPAD and a set of Jupyter notebooks aimed at education. If you like more information on this software please look at the software page.
+            </p>
+
+              PICKSC is housed within the UCLA Departments of Physics and Astronomy and of Electrical and Computer Engineering. It is co-led by Professors W.B. Mori and E. Paulo Alves.
+            <p>
+              We are closely connected with the UCLA Laser-Plasma Group led by Professor C. Joshi.
+            </p>
+              
+          </div>
+          <div class="col-lg-6">
+          	<br />
+            <p><img src="assets/img/welcome-image.jpg" width="550px"></p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+	<hr>
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div>
+              <img src="assets/img/quasi.jpg" align="left" style="margin:0px 25px">
+              <h4><a href="#">Latest news</a></h4>
+              <p><b>KNL Timings</b>: PICKSC researchers have been updating our software to take full advantage of the many-core Intel 
+              Knight’s Landing (KNL) nodes. An OpenMP 3D electrostatic code from UPIC 2.0 has achieved a performance of 
+              850 psec/particle-step on a single Intel KNL node. On a large memory KNL such as the 96 GB node on the Cori 
+              machine at NERSC, a PIC simulation with a billion particles will run in about one second per time step. A new 
+              branch of QuickPIC has also been compiled and run on Cori at NERSC. On a single KNL node with 68 threads, the 
+              total time spent on one particle per step is 3.82 ns (including 1 iteration).</p>
+              <p><b>Fortran OpenPMD File Writers</b>: We have written an open source program that contains Fortran interfaces 
+              for parallel writing of 2D/3D mesh field data and particle data into HDF5 files using the OpenPMD standard. The 
+              software is open source and available on our GitHub repositories here.</p>
+              <p><a href="news.html">Read more news</a>.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div>
+              <img src="assets/img/intel.jpg" align="left" style="margin:0px 25px">
+              <h4><a href="#">Latest Publications</a></h4>
+              <p>T. N. Dalichaouch, X. L Xu, A. Tableman, F. Li, F. S. Tsung, and W. B. Mori, "A multisheath model for highly nonlinear 
+              plasma wakefields", PHYSICS OF PLASMAS 28, 063103 (2021). 10.1063/5.0051282</p>
+              <p>F. Li, V. K. Decyk, K. G. Miller, A. Tableman, F. S. Tsung, M. Vranic, R. A. Fonseca and W. B. Mori, "Accurately 
+              simulating nine-dimensional phase space of relativistic particles in strong fields", JOURNAL OF COMPUTATIONAL PHYSICS 438, 
+              110367 (2021). 10.1016/j.jcp.2021.110367</p>
+              <p>J. L. Shaw, M. A. Romo-Gonzalez, N. Lemos, P. M. King, G. Bruhaug, K. G. Miller, C. Dorrer, B. Kruschwitz, L. Waxer, 
+              G. J. Williams, M. Ambat, M. M. McKie, M. D. Sinclair, W. B. Mori, C. Joshi, H. Chen, J. P. Palastro, F. Albert and D. H. 
+              Froula, "Microcoulomb (0.7 +/- 0.4/0.2 mu C) laser plasma accelerator on OMEGA EP." SCIENTIFIC REPORTS 11, 7498 
+              (2021). 10.1038/s41598-021-86523-5</p>
+              <p><a href="publications.html">Read more about publications</a></p>
+            </div>
+          </div>
+          </div>
+          
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    
+
+  </main><!-- End #main -->
+
+  <?php include 'includes/footer.php'; ?>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

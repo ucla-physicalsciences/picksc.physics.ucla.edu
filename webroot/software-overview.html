@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>PICKSC</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="favicon.ico" rel="icon">
+  <!--><link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">-->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Sailor - v4.1.0
+  * Template URL: https://bootstrapmade.com/sailor-free-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <?php include 'includes/menu.php'; ?>
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Software Overview</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Software Overview</a></li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Blog Single Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+          <div class="col-lg-8 entries">
+
+            <article class="entry entry-single">
+
+              <!--<div class="entry-img">
+                <img src="assets/img/secondary-sidebar.jpg" alt="" class="img-fluid">
+              </div>-->
+
+              <!--<h2 class="entry-title">
+                <a href="blog-single.html">Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia</a>
+              </h2>-->
+
+              <div class="entry-content">
+                <h5>Methodology</h5>
+                <p>The particle-in-cell (PIC) technique has a rich history and its use in plasma physics continues to grow. 
+                Interesting perspectives on the history and philosophy behind PIC for plasma simulation can be found in [1-3].</p>
+                <p>For plasmas, charged particles interact self consistently via the electromagnetic fields they themselves produce. 
+                The PIC model works at the most fundamental, microscopic level. As a result, it is generally the most compute-intensive 
+                model in plasma physics.  PIC codes are used in almost all areas of plasma physics, including magnetic and inertial 
+                fusion energy research, plasma-based acceleration and light sources, space physics, astrophysics, ion propulsion, 
+                and plasma processing. PIC algorithms are also used in cosmology, accelerator physics, and semi classical quantum 
+                simulations.</p>
+                <p>Unlike molecular dynamics codes that are widely used in chemistry, where particles interact as binary pairs, 
+                particles in PIC codes interact via fields which are calculated on a grid from a numerical solution to a set of 
+                differential equations. This is possible whenever there is some differential equation that “describes” the 
+                fields in terms of particle sources. There are a variety of PIC codes in common use.</p>
+                <p>These codes are differentiated by the kinds of forces retained in the model. The simplest is the electrostatic 
+                force, described by a Poisson equation.  More complex are the Darwin (non-radiative electromagnetics), and fully 
+                electromagnetic and relativistic models. There are also other types of models including gyrokinetic, quasi-static,  
+                and quantum models Because PIC codes contain the richest physics, they are increasingly being used to validate 
+                reduced plasma descriptions, such as fluid models.  Due to the power of computers and the increasing sophistication 
+                of the codes, PIC are also being used to model complex phenomenon and experiments in full three dimensions. 
+                Although the standard PIC algorithm is based on normalized parameters so that one simulation represents a 
+                family of cases,  phenomenon that  depends on absolute units are increasingly being added into PIC codes, 
+                such as two body collisions, ionization, radiation reaction, and QED effects.</p>
+                <h5>PICKSC software activities</h5>
+                <p>The UCLA plasma simulation group has an extensive history in developing and using PIC software. The current 
+                activities mostly center around software for studying high frequency plasma phenomenon for which electron 
+                kinetics is important.</p>
+                <p>The group has developed and maintained both Frameworks for rapidly building parallel PIC codes as well as 
+                widely used production and educational codes. These codes use a variety of field solvers, current deposits, 
+                current smoothing, and boundary conditions, and they also include binary collisional and field ionization 
+                models. They also include data structures and algorithms useful for next generation many core platforms 
+                including GPUs and Intel Phis. Besides the parallel PIC Framework (UPIC), the  group is home to several 
+                3D production PIC codes OSIRIS, UPIC-EMMA, MAGTAIL, and QuickPIC. The group is also home to a novel 
+                multi-dimensional Vlasov Fokker Planck code called OSHUN in which the distribution function is expanded 
+                into spherical harmonics in momentum space and a linearized Landau-Boltzman collision model is employed.</p>
+                <p>Activities within PICKSC are aimed at moving the Framework and some production codes into an Open Source 
+                environmentas well as extracting some modules from the production codes into the UPIC Framework.</p>
+                <p>For example, currently UPIC only supports FFT based field solvers and in the near term we will be adding 
+                finite difference solvers as well as rigorous charge conserving current deposits.  Currently, illustrative 
+                fully self-contained codes referred to skeleton codes are freely available. We anticipate UPIC 2.0 to 
+                be available later this year. OSHUN is available through an Open Source license with a commercial exception. 
+                UPIC-EMMA will be available through an Open Source license with a commercial exception later this year.</p>
+                <h5>References</h5>
+                <p>1.  C. K. Birdsall and A. B. Langdon, “Plasma Physics via Computer Simulation,” McGraw-Hill, New York (1985).</p>
+                <p>2.  R. W. Hockney and J. W. Eastwood, “Computer Simulation using Particles,” McGraw-Hill, New York (1981).</p>
+                <p>3.  J. M. Dawson, “Particle Simulation of Plasmas,” Rev. of Modern Phys. 55, 403 
+                (1983). <a href="http://dx.doi.org/10.1103/RevModPhys.55.403">doi link</a></p>
+
+            </article><!-- End blog entry -->
+
+          </div><!-- End blog entries list -->
+
+          <div class="col-lg-4">
+
+            <div class="sidebar">
+
+              <h3 class="sidebar-title">Resources</h3>
+              <p>
+              <ul>
+              	<li><a href="production-codes.html">Production codes</a></li>
+              	<li><a href="skeleton-code.html">Skeleton PIC codes<a></li>
+              	<li><a href="upic-framework.html">UPIC Framework</a></li>
+              	<li><a href="gridless-particle-codes.html">Gridless codes</a></li>
+              	<li><a href="education-overview.html">Educational Software</a></li>
+              	<li><a href="fortran-2003-techniques.html">Fortran 2003 Technique codes</a></li>
+              </ul>
+              </p>
+              <p>For source codes visit our <a href="https://github.com/UCLA-Plasma-Simulation-Group">GitHub Repository</a>. 
+              For specific access to OSIRIS, <a href="osiris.html">see here</a>.</p>
+              <p>To register to receive software updates, <a href="picksc.org@gmail.com">click here</a>.</p>
+              <p>Our software is freely available.  Please contact us if you are interested in accessing specific codes.</p>
+              <p>Links to GitHub repositories here and on the subsequent software pages may not appear to work unless you’re 
+              logged in to your GitHub account.</p>
+              </div><!-- End sidebar recent posts-->
+
+            </div><!-- End sidebar -->
+
+          </div><!-- End blog sidebar -->
+
+        </div>
+
+      </div>
+    </section><!-- End Blog Single Section -->
+
+  </main><!-- End #main -->
+
+  <?php include 'includes/footer.php'; ?>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>PICKSC</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="favicon.ico" rel="icon">
+  <!--><link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">-->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Sailor - v4.1.0
+  * Template URL: https://bootstrapmade.com/sailor-free-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <?php include 'includes/menu.php'; ?>
+
+  <main id="main">
+
+   <!-- ======= Breadcrumbs ======= -->
+   <section id="breadcrumbs" class="breadcrumbs">
+     <div class="container">
+
+       <div class="d-flex justify-content-between align-items-center">
+         <h2>QPAD - QuickPIC with Azimuthal Decomposition</h2>
+         <ol>
+           <li><a href="index.html">Home</a></li>
+           <li><a href="production-codes.html">Production Codes</a></li><li>QPAD</li>
+         </ol>
+       </div>
+
+     </div>
+   </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Blog Single Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+          <div class="col-lg-10 entries">
+
+            <article class="entry entry-single">
+
+              <!--<div class="entry-img">
+                <img src="assets/img/secondary-sidebar.jpg" alt="" class="img-fluid">
+              </div>-->
+
+              <!--<h2 class="entry-title">
+                <a href="blog-single.html">Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia</a>
+              </h2>-->
+
+              <div class="entry-content">
+                <p>QPAD (QuickPIC with Azimuthal Decomposition) is a fully relativistic, quasi-3D parallel (MPI-based) quasi-static PIC code written in Fortran 2003. QPAD is based on the computational workflow of the full 3D PIC code QuickPIC. It is the first PIC code that combines both quasi-static approximation and azimuthal harmonic decomposition. QPAD is thus a very efficient code for modeling short-pulse laser or relativistic charged particle beam–plasma interactions; some illustrative use-cases of QPAD are presented in the figures below. QPAD can lead to several orders of magnitude computational  speed up compared with 3D quasi-static PIC codes (such as QuickPIC). QPAD utilizes synchronous parallelism in the transverse direction and asynchronous parallelism (pipeline) in the longitudinal direction, which maximizes the parallel scalability. 
+                </p>
+
+                <p>
+                Due to the advantages of high performance and small memory footprint, QPAD provides many complementary advantages for other full-3D codes and is especially suitable for the following circumstances:
+                </p>
+                <ul>
+                    <li>Physics problems relatively small amounts of azimuthal asymmetry</li>
+                    <li>No self-injected particles</li>
+                    <li>Simulations requiring ultra-high spatial resolution</li>
+                    <li>Start-to-end simulations with ultra-long distances</li>
+                    <li>Efficient parameter scanning for parameter optimization</li>
+                </ul>
+
+
+                <p>
+                The current version includes many useful features for simulations of plasma-based accelerators:
+                </p>
+                <ul>
+                    <li>Various particle pushers</li>
+                    <li>Field-induced ionization (ADK model)</li>
+                    <li>Spin dynamics for beam particles</li>
+                    <li>Various initial profiles for beams and plasma species</li>
+                    <li>Importing beam particles from output files of other codes</li>
+                    <li>Parallel cyclic reduction field solver</li>
+                </ul>
+
+                <p>
+                Plans for additional simulation features and hardware support include:
+                </p>
+                <ul>
+                    <li>GPU support</li>
+                    <li>Dynamic load balancing</li>
+                    <li>Adaptive “1D” and “2D” time steps</li>
+                    <li>Ponderomotive guiding center model for laser</li>
+                    <li>Radiation reaction</li>
+                    <li>Adaptive maximum azimuthal mode number</li>
+                </ul>
+
+                <p>
+                For more information and latest updates on QPAD, please visit <a href="https://github.com/UCLA-Plasma-Simulation-Group/QPAD">https://github.com/UCLA-Plasma-Simulation-Group/QPAD</a>
+                </p>
+
+                <!-- <p><img src="assets/img/software/qpad/qpad_fig1.png" align="center" width="800 px" style="padding-right: 10px;" alt=""></p> -->
+                <img src="assets/img/software/qpad/qpad_fig1.png" 
+                  class="rounded mx-auto d-block"
+                 style="max-width: 80%" alt="Responsive image">
+                <p><i>Figure 1: Comparable simulations for hosing instability problem in plasma acceleration using the full 3D code (QuickPIC) vs. reduced code (QPAD) for a round beam with a small offset. An ultra-long distance (2x10<sup>4</sup> characteristic plasma lengths) is simulated in 5,000 steps. There are total of four azimuthal Fourier modes (from m=0 to m=3) evolving in the QPAD simulation and the results agree well with those of the full 3D simulation, while the total computing time is reduced by ~100x.</i></p>
+
+
+                <img src="assets/img/software/qpad/qpad_fig2.png" 
+                  class="rounded mx-auto d-block"
+                 style="max-width: 80%" alt="Responsive image">
+                <p><i>Figure 2: Simulation for a PWFA driven by a proton beam with a “flying focal spot”. The simulation has a large field of view and high spatial resolution. The simulation box is 200-by-50 characteristic plasma lengths large (the figure has been cropped) containing 12,000-by-3,000 spatial grid points. This simulation was carried out on a desktop computer.</i></p>
+
+
+
+                <h5>References</h5>
+                <p> Li, F., An, W., Decyk, V. K., Xu, X., Hogan, M. J., & Mori, W. B., "A quasi-static particle-in-cell algorithm based on an azimuthal Fourier decomposition for highly efficient simulations of plasma-based acceleration: QPAD", Computer Physics Communications, 261, 107784. <a href="https://doi.org/10.1016/J.CPC.2020.107784">doi link</a></p>
+                </p>
+
+            </article><!-- End blog entry -->
+
+          </div><!-- End blog entries list -->
+<!-- 
+          <div class="col-lg-4">
+
+            <div class="sidebar">
+
+              <h3 class="sidebar-title">Production Codes</h3>
+              <p>
+              <ul>
+              	<li><a href="osiris.html">OSIRIS</a></li>
+              	<li><a href="quickpic.html">QuickPIC</a></li>
+              	<li><a href="https://github.com/UCLA-Plasma-Simulation-Group/upic-emma-2.0">UPIC EMMA</a></li>
+              	<li><a href="oshun.html">OSHUN</a></li>
+              	<li><a href="https://github.com/UCLA-Plasma-Simulation-Group/educational-codes/tree/master/upic_es_h5">UPIC-ES</a></li>
+              	<li><a href="https://github.com/UCLA-Plasma-Simulation-Group/UPIC-2.0">UPIC-DARWIN</a></li>
+              </ul>	
+              </p>
+              </div>
+
+            </div> -->
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Blog Single Section -->
+
+  </main><!-- End #main -->
+
+  <?php include 'includes/footer.php'; ?>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

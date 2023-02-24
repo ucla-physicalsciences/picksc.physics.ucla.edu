@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>PICKSC</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Sailor - v4.1.0
+  * Template URL: https://bootstrapmade.com/sailor-free-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <?php include 'includes/menu.php'; ?>
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Gridless Particle Codes</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Gridless Particle Codes</a></li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Blog Single Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+          <div class="col-lg-8 entries">
+
+            <article class="entry entry-single">
+
+              <!--<div class="entry-img">
+                <img src="assets/img/secondary-sidebar.jpg" alt="" class="img-fluid">
+              </div>-->
+
+              <!--<h2 class="entry-title">
+                <a href="blog-single.html">Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia</a>
+              </h2>-->
+
+              <div class="entry-content">
+              <p>Gridless (GL) particle codes are based on an exact solution of many interacting particles, based on a 
+              Fourier series.  GL codes run much more slowly than traditional PIC codes, on time scales of 
+              microseconds/particle/time step/core compared to nanoseconds/particle/time step/core for traditional 
+              PIC codes.  However, they are designed for high accuracy.</p>
+              <p>The first gridless code was developed by John Dawson in the 1960s for electrostatic systems [1]. The 
+              modern version of such codes are useful for very precise calculations, such as in studies of fundamental 
+              statistical physics or evaluating new algorithms. Modern implementations have also been designed, in part, 
+              to study unusual behavior in traditional PIC codes such as the effects of aliasing.</p>
+              <p>The only approximations in a GL code are a finite time step and a truncation of the Fourier series, 
+              as well as round off errors.  The major difference between a traditional spectral PIC code (such as 
+              our UPIC codes) and a GL code is that the interpolations in the charge and current deposit and particle 
+              advance are replaced by a summation over Fourier modes.  The major benefit is that interpolation errors 
+              (caused by aliasing), which result in non-physical behavior and even instabilities, are absent.  
+              All field quantities in a GL code are stored in Fourier space, and the field solvers are essentially 
+              the same as in a spectral PIC code.</p>
+              <p>We have further extended this technique to electromagnetic (EM) codes.  For the EM codes, we have 
+              also implemented analytic solutions for the evolution of Maxwell’s equation and particle advance 
+              instead of finite difference solutions.  As a result, the EM codes can take time steps larger than 
+              the traditional Courant limit.</p>
+              <p>We are making available eight GL skeleton PIC codes.</p>
+              <h5>Serial gridless codes</h5>
+              <p>The basic serial codes do not make use of any parallelism, and are the base codes for students or 
+              researchers who are unfamiliar with girdless particle codes.</p>
+              <p>Electrostatic:<br />
+              <ul>
+              	<li>1D Serial Electrostatic Spectral code: <a href="downloads/pic1gl.tar.gz">pic1gl</a></li>
+              	<li>2D Serial Electrostatic Spectral code: <a href="downloads/pic2gl.tar.gz">pic2gl</a></li>
+              </ul>
+              </p>
+              <p>Electromagnetic:<br />
+              <ul>
+              	<li>1-2/2D Serial Electromagnetic Spectral code: <a href="downloads/bpic1gl.tar.gz">bpic1gl</a></li>
+              	<li>2-1/2D Serial Electromagnetic Spectral code: <a href="downloads/bpic2gl.tar.gz">bpic2gl</a></li>
+              </ul>
+              </p>
+              <h5>Parallel gridless codes</h5>
+              <p>These codes illustrate how to use shared memory parallelism with OpenMP. The push procedures are parallelized 
+              over particles, the deposit procedures are parallelized over Fourier modes.</p>
+              <p>Electrostatic:<br />
+              <ul>
+              	<li>1D Parallel Electrostatic Spectral code: <a href="downloads/mpic1gl.tar.gz">mpic1gl</a></li>
+              	<li>2D Parallel Electrostatic Spectral code: <a href="downloads/mpic2gl.tar.gz">mpic2gl</a></li>
+              </ul>
+              </p>
+              <p>Electromagnetic:<br />
+              <ul>
+              	<li>1-2/2D Parallel Electromagnetic Spectral code: <a href="downloads/mbpic1gl.tar.gz">mbpic1gl</a></li>
+              	<li>2-1/2D Parallel Electromagnetic Spectral code: <a href="downloads/mbpic2gl.tar.gz">mbpic2gl</a></li>
+              </ul>
+              </p>
+              <p>[1]  John M. Dawson, “The Electrostatic Sheet Model for a Plasma and its Modification to Finite-Size Particles,” 
+              Methods in Computational Physics, volume 9, B. Alder, S. Fernback, and M. Rotenburg, Ed. [Academic Press, New York, 
+              1970, p. 1.]</p>
+
+            </article><!-- End blog entry -->
+
+          </div><!-- End blog entries list -->
+
+          <div class="col-lg-4">
+
+            <div class="sidebar">
+
+              <h3 class="sidebar-title">Gridless Particle Codes</h3>
+              <p>
+
+              </p>
+              <p><a href="https://github.com/UCLA-Plasma-Simulation-Group/PIC-skeleton-codes">GitHub Repository</a></p>
+    
+              </div><!-- End sidebar recent posts-->
+
+            </div><!-- End sidebar -->
+
+          </div><!-- End blog sidebar -->
+
+        </div>
+
+      </div>
+    </section><!-- End Blog Single Section -->
+
+  </main><!-- End #main -->
+
+  <?php include 'includes/footer.php'; ?>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

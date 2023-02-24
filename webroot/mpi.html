@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>PICKSC</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="favicon.ico" rel="icon">
+  <!--><link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">-->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Sailor - v4.1.0
+  * Template URL: https://bootstrapmade.com/sailor-free-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <?php include 'includes/menu.php'; ?>
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>MPI</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="skeleton-code.html">Skeleton Code</a></li>
+            <li>MPI</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Blog Single Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+          <div class="col-lg-8 entries">
+
+            <article class="entry entry-single">
+
+              <!--<div class="entry-img">
+                <img src="assets/img/secondary-sidebar.jpg" alt="" class="img-fluid">
+              </div>-->
+
+              <!--<h2 class="entry-title">
+                <a href="blog-single.html">Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia</a>
+              </h2>-->
+
+              <div class="entry-content">
+              <p>These codes illustrate how to use domain decomposition with message-passing (MPI). This is the dominant 
+              programming paradigm for PIC codes today.</p>
+              <p>The 2D codes use only a simple 1D domain decomposition. The algorithm is described in detail in Refs. 
+              [2-3]. For the 2D electrostatic code, a typical execution time for the particle part of this code is about 
+              140 ps/particle/time-step with 256 MPI nodes. For the 2-1/2D electromagnetic code, a typical execution time 
+              for the particle part of this code is about 400 ps/particle/time-step with 256 MPI nodes.  For the 2-1/2D 
+              Darwin code, a typical execution time for the particle part of this code is about 1.15 ns/particle/time-step 
+              with 256 MPI nodes.</p>
+              <p>The 3D codes use a simple 2D domain decomposition. For the 3D electrostatic code, a typical execution 
+              time for the particle part of this code is about 150 ps/particle/time-step with 512 MPI nodes. For the 3D 
+              electromagnetic code, a typical execution time for the particle part of this code is about 360 ps/particle/time-step 
+              with 512 MPI nodes.  For the 3D Darwin code, a typical execution time for the particle part of this code is 
+              about 1.0 ns/particle/time-step with 512 MPI nodes.</p>
+              <p>The CPUs (2.67GHz Intel Nehalem processors) were throttled down to 1.6 GHz for these benchmarks.</p>
+              <p>Electrostatic:<br />
+              <ul>
+              	<li>1. 2D Parallel Electrostatic Spectral code:  <a href="downloads/ppic2.tar.gz">ppic2</a></li>
+              	<li>2. 3D Parallel Electrostatic Spectral code:  <a href="downloads/ppic3.tar.gz">ppic3</a></li>
+              </ul>
+              </p>
+              <p>Electromagnetic:<br />
+              <ul>
+              	<li>3. 2-1/2D Parallel Electromagnetic Spectral code:  <a href="downloads/pbpic2.tar.gz">pbpic2</a></li>
+              	<li>4. 3D Parallel Electromagnetic Spectral code:  <a href="downloads/pbpic3.tar.gz">pbpic3</a></li>
+              </ul>
+              </p>
+              <p>Darwin:<br />
+              <ul>
+              	<li>5. 2-1/2D Parallel Darwin Spectral code:  <a href="downloads/pdpic2.tar.gz">pdpic2</a></li>
+              	<li>6. 3D Parallel Darwin Spectral code:  <a href="downloads/pdpic3.tar.gz">pdpic3</a></li>
+              </ul>
+              </p><i>Figures below: Performance of 2-1/2D electromagnetic and 3D electrostatic, electromagnetic, and darwin MPI 
+              codes as a function of the number of cores. Dashed red line is ideal scaling, blue shows particle time, black 
+              shows total time. Degradation of total time is due to the all to all transpose in the FFT, which for large number 
+              of cores is dominated by message latency. Particle time continues to scale well.</i></p>
+              <img src="assets/img/mp-fig.jpg" align="left" width="800 px"style="padding-right: 10px;" alt="">
+              <p>Figure details (click to enlarge): <a href="assets/img/2dmpitiming1.jpeg">Figure 1</a>; 
+              <a href="assets/img/fppic3.jpeg">Figure 2</a>; <a href="assets/img/fpbpic3.jpeg">Figure 3</a>; 
+              <a href="assets/img/fpdpic3.jpeg">Figure 4</a>.</p>
+              <p>Want to contact the developer? Send mail to Viktor Decyk 
+              at <a href="mailto:decyk@physics.ucla.edu">decyk@physics.ucla.edu</a>.</p>
+
+            </article><!-- End blog entry -->
+
+          </div><!-- End blog entries list -->
+
+          <div class="col-lg-4">
+
+            <div class="sidebar">
+
+              <h3 class="sidebar-title">Vectorization Codes</h3>
+              <p>
+              <ul>
+              	<li><a href="downloads/ppic2.tar.gz">ppic2</a></li>
+              	<li><a href="downloads/ppic3.tar.gz">ppic3</a></li>
+              	<li><a href="downloads/pbpic2.tar.gz">pbpic2</a></li>
+              	<li><a href="downloads/pbpic3.tar.gz">pbpic3<a></li>
+              	<li><a href="downloads/pdpic2.tar.gz">pdpic2</a></li>
+              	<li><a href="downloads/pdpic3.tar.gz">pdpic3</a></li>
+              </ul>
+              </p>
+    
+              </div><!-- End sidebar recent posts-->
+
+            </div><!-- End sidebar -->
+
+          </div><!-- End blog sidebar -->
+
+        </div>
+
+      </div>
+    </section><!-- End Blog Single Section -->
+
+  </main><!-- End #main -->
+
+  <?php include 'includes/footer.php'; ?>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

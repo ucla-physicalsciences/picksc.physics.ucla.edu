@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>PICKSC</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="favicon.ico" rel="icon">
+  <!--<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">-->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Sailor - v4.1.0
+  * Template URL: https://bootstrapmade.com/sailor-free-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <?php include 'includes/menu.php'; ?>
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>News</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>News</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="row content">
+          <!--<div class="col-lg-6">
+            <h2>Eum ipsam laborum deleniti velitena</h2>
+            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assum perenda sruen jonee trave</h3>
+          </div>-->
+          <div class="col-lg-12 pt-4 pt-lg-0">
+            <img src="assets/img/soft-release.jpeg" align="left" width="200 px"style="padding-right: 10px;" alt="">
+            <h5>New UPIC Releases</h5>
+            <p>The PICKSC group has released updated UPIC codes.</p>
+            <p>For 1D, the latest code is version UPIC 2.1.0.  It uses only OpenMP for parallelization, and it includes a 
+            python script. This is the first 1D version of the UPIC codes that has been made available.</p>
+            <p>For 2D and 3D, the latest version is UPIC 2.0.4.1. In this update, all python scripts have been updated to 
+            work with python 2 and 3, and Makefiles have been modified to make them compatible with gfortran 10 (where by 
+            default some warnings have become errors). The post-processors in the ReadFiles directories have been reorganized 
+            and simplied for the user. In addition, analytic Maxwell solvers have been added which allow the EM codes to run 
+            with time steps 2-3 larger than the courant limit. A bug in the velocity space diagnostic was also fixed.</p>
+            <p>All of these codes may be directly downloaded <a href="upic-framework.html">here</a> on the PICKSC site.  The public repository is also available 
+            on GitHub and may be found here: <a href="https://github.com/UCLA-Plasma-Simulation-Group/UPIC-2.0">UPIC-2.0</a> 
+            (you must be logged onto GitHub for this link to take you to a valid site).</p>
+            <hr><img src="assets/img/intel-knl.jpg" align="left" width="200 px"style="padding-right: 10px;" alt="">
+            <h5>KNL Timings</h5>
+            <p>PICKSC researchers have been updating our software to take full advantage of the many-core Intel Knight’s 
+            Landing (KNL) nodes.</p>
+            <p>An OpenMP 3D electrostatic code from <a href="upic-framework.html">UPIC 2.0</a> has achieved a performance of 850 psec/particle-step on a 
+            single Intel KNL node. On a large memory KNL such as the 96 GB node on the Cori machine at 
+            <a href="http://www.nersc.gov/users/computational-systems/cori/">NERSC</a>, a PIC 
+            simulation with a billion particles will run in about one second per time step.</p>
+            <p>A new branch of QuickPIC has also been compiled and run on Cori at NERSC. On a single 
+            KNL node with 68 threads, the total time spent on one particle per step is 3.82 ns (including 1 iteration).</p>
+            <hr>
+            <img src="assets/img/software-release-img.jpg" align="left" width="200 px"style="padding-right: 10px;" alt="">
+            <h5>Fortran OpenPMD File Writers</h5>
+            <p>We have written an open source program that contains Fortran interfaces for parallel writing of 2D/3D mesh 
+            field data and particle data into HDF5 files using the <a href="https://github.com/openPMD/openPMD-standard">OpenPMD 
+            standard</a>.</p>
+            <p> The software is open source and available on 
+            our <a href="https://github.com/UCLA-Plasma-Simulation-Group/Fortran-OpenPMD-File-Writers">GitHub repositories here</a>.</p>
+            <br /><br />
+            <hr>
+            <img src="assets/img/software-release-img.jpg" align="left" width="200 px"style="padding-right: 10px;" alt="">
+            <h5>New QuickPIC branch</h5>
+            <p>We have added a new branch in our QuickPIC repository (<a href="https://github.com/UCLA-Plasma-Simulation-Group/QuickPIC-OpenSource/tree/cori_vec">available here</a>).</p>
+            <p>In addition to the MPI-OpenMP hybrid algorithm, this branch contains new 2D particle subroutines (in 
+            source/part2d_lib77.f) using vectorization algorithm.</p>
+            <p> The vectorization algorithm is originally from the UPIC 
+            <a href="skeleton-code.html">Skeleton Code</a>. The algorithm in QuickPIC is transformed from the original one to one that solves the 
+            Quasi-Static-Approximation PIC model. It also has been modified to enable MPI.</p>
+            <p>A simple profiling tool is added in the code to show the computing time consumed on the interested procedures. 
+            The code can be compiled and run on Cori at NERSC. On a single KNL node with 68 threads, the total time spent on 
+            one particle per step is 3.82 ns (including 1 iteration).
+            </p>
+            <hr>
+            <img src="assets/img/osiris-logo.png" align="left" width="200 px"style="padding-right: 10px;" alt="">
+            <h5>First Annual OSIRIS Users and Developers Workshop</h5>
+            <p>On September 18-20, 2017 the first annual OSIRIS Users and Developers Workshop was held at UCLA. The aims of the 
+            workshop were to introduce users to the new features and design of our plasma simulation code OSIRIS 4.0, to 
+            allow OSIRIS users to share experiences and discuss best practices, to identify useful test and demonstration 
+            problems, to discuss how to transition from being a user to an active developer, and to identify areas for 
+            near term software improvements and a community strategy for carrying out necessary developments.</p>
+            <p>There were over 60 attendees from the U.S., Europe, and Asia, with widely ranging experiences and expertise. 
+            It was a great success, with many discussions and new collaborations and friendships.</p>
+            The agenda, as well as copies of many of the talks, can be found on our Presentations page. A summary of the 
+            workshop will be posted soon.</p>
+            <hr>
+            <img src="assets/img/software-release-img.jpg" align="left" width="200 px"style="padding-right: 10px;" alt="">
+            <h5>UPIC 2.0.2 now public</h5>
+            <p>The PICKSC group has released UPIC 2.0.2, an update to the first release of UPIC (2.0.1). The major new 
+            features here are namelist inputs, a full set of field diagnostics, and initialization with non-uniform 
+            densities. As before, codes can be compiled to run with 2 levels of parallelism (MPI/OpenMP) or OpenMP only.</p>
+            <p>The primary purpose of this framework is to provide trusted components for building and customizing 
+            parallel Particle-in-Cell codes for plasma simulation. The framework provides libraries as well as reference 
+            applications illustrating their use. The public repository is available on GitHub and may be found 
+            here: <a href="https://github.com/UCLA-Plasma-Simulation-Group/UPIC-2.0">UPIC-2.0</a> (You must be logged onto GitHub 
+            for this links to take you to a valid site).</p>
+            <p>The files for the 2D and 3D components of UPIC 2.0.2 may also be directly downloaded 
+            <a href="upic-framework.html">here</a> on the PICKSC site.</p>
+            <hr>
+            <img src="assets/img/whistler.jpg" align="left" width="200 px"style="padding-right: 10px;" alt="">
+            <h5>Whistler anisotropy instability study uses PICKSC skeleton code</h5>
+            <p>A new article in the Journal of Geophysical Space Research: Space Physics utilized simulations with the 2D 
+            darwin OpenMP skeleton code.</p>
+            <p>An, X., C. Yue, J. Bortnik, V. Decyk, W. Li, R. M. Thorne (2017), On the parameter dependence of the whistler 
+            anisotropy instability, J. Geophy. Res. Space Physics, 122, DOI:10.1002/2017JA023895</p>
+            <p>The evolution of the whistler anisotropy instability relevant to whistler-mode chorus waves in the Earth’s 
+            inner magnetosphere was studied using kinetic simulations with mdpic2 and compared with satellite observations.</p>
+            <hr>
+            <img src="assets/img/software-release-img.jpg" align="left" width="200 px"style="padding-right: 10px;" alt="">
+            <h5>UPIC 2.0.1 now public</h5>
+            <p>The PICKSC group has released UPIC 2.0.1.  The primary purpose of this framework is to provide trusted components 
+            for building and customizing parallel Particle-in-Cell codes for plasma simulation. The framework provides libraries 
+            as well as reference applications illustrating their use.</p>
+            <p>The public repository is available on GitHub and may be found here: 
+            <a href="https://github.com/UCLA-Plasma-Simulation-Group/UPIC-2.0">UPIC-2.0</a> (You must be logged onto GitHub for 
+            this links to take you to a valid site).</p>
+            <p>The files for the 2D and 3D components of UPIC 2.0.1 may also be directly downloaded 
+            <a href="upic-framework.html">here</a> on the PICKSC site.</p>
+            <hr>
+            <img src="assets/img/software-release-img.jpg" align="left" width="200 px"style="padding-right: 10px;" alt="">
+            <h5>QuickPIC and OSHUN now public</h5>
+            <p>The PICKSC group has released QuickPIC and OSHUN as open-source codes.</p>
+            <p>The public repositories are available on GitHub and may be found here: 
+            <a href="https://github.com/UCLA-Plasma-Simulation-Group/QuickPIC-OpenSource">QuickPIC</a> and 
+            <a href="https://github.com/UCLA-Plasma-Simulation-Group/OSHUN">OSHUN</a>.  (You must be
+            logged onto GitHub for these links to take you to a valid site).</p>
+            <p><a href="quickpick.html">QuickPIC</a> is a 3D parallel (MPI & OpenMP Hybrid) Quasi-Static PIC code, 
+            which is developed based on the framework UPIC.</p>
+            <p><a href="oshun.html">OSHUN</a> is a parallel Vlasov-Fokker-Planck plasma simulation code that employs an arbitrary-order spherical harmonic 
+            velocity-space decomposition.  The public repository currently houses a 1D C++ version and a 1D pure Python version 
+            (with optional C-modules for improved performance). A 2D C++ version will be added shortly.</p>
+            <p>If you have any questions, please contact <a href="mailto:anweiming@ucla.edu">Weiming An</a> for QuickPIC 
+            and <a href="mailto:bwinjum@ucla.edu">Ben Winjum</a> for OSHUN.</p>
+            <hr>
+            <img src="assets/img/aac.jpg" align="left" width="200 px"style="padding-right: 10px;" alt="">
+            <h5>PICKSC members present at AAC</h5>
+            <p>PICKSC members recently attended the 17th Advanced Accelerator Concepts (AAC) Workshop held at the 
+            National Harbor in Washington DC between July 31 and August 5. Copies of the presentations have not been 
+            posted. The PI of PICKSC received the AAC prize “for his leadership and pioneering contributions to the 
+            theory and particle-in-cell simulations of plasma based acceleration”. In addition, a PICKSC visiting 
+            student from IST in Portugal, Diana Amorim, received a best poster prize for her presentation, “Transverse 
+            evolution of positron beams accelerating in hollow plasma channel non-linear wakefields.”</p>
+            <hr>
+            <img src="assets/img/pub-picksc.png" align="left" width="200 px"style="padding-right: 10px;" alt="">
+            <h5>Publication uses PICKSC skeleton code</h5>
+            <p>The first publication based on the skeleton codes recently appeared in Physics of Plasmas.</p>
+            <p>R. Scott Hughes, Joseph Wang, Viktor K. Decyk, and S. Peter Gary, “Effects of variations in electron 
+            thermal velocity on the whistler anisotropy instability: Particle-in-cell simulations,” Physics of 
+            Plasmas 23, 042106 (2016). <a href="http://dx.doi.org/10.1063/1.4945748">DOI: 10.1063/1.4945748</a></p>
+            <p>This work made used of the 2D darwin code mdpic2 and studied whistler wave instabilities for solar wind 
+            parameters.</p><br /><br /><br />
+            <hr>
+            <img src="assets/img/software-release-img.jpg" align="left" width="200 px"style="padding-right: 10px;" alt="">
+            <h5>New Coarray Fortran Skeleton Code</h5>
+            <p>Alessandro Fanfarillo and Damian Rouson from Italy have translated the PICKSC skeleton code ppic2 to 
+            utilize Coarray Fortran.  Coarray Fortran enables a programmer to write parallel programs using a Partitioned 
+            Global Address Space (PGAS) scheme.  It is part of the Fortran2008 standard and provides an alternative to the 
+            dominant Message-Passing Interface (MPI) paradigm.</p>
+            <p>The code <a href="https://picksc.idre.ucla.edu/software/skeleton-code/coarray-fortran/">ppic2_caf</a> is 
+            available here on the PICKSC site.</p><br /><br />
+            <hr>
+            <img src="assets/img/openmpi-img.jpg" align="left" width="200 px"style="padding-right: 10px;" alt="">
+            <h5>3D OpenMP/MPI code benchmarks</h5>
+            <p>Viktor Decyk has developed fully 3D versions of skeleton PIC codes illustrating the hybrid parallel 
+            algorithmic techniques for utilizing both OpenMP and MPI.  These skeleton codes have recently been 
+            benchmarked on the Edison machine at NERSC.</p>
+            <p>For the electromagnetic code on a problem size of 1024^3 grids with 27 particles/cell, one can see good 
+            scaling up to nearly 100,000 cores, nearly the entire Edison machine. There are 10 FFTs per time step, and 
+            the particle time gives about 2 psec/particle/time step at 98,304 cores.</p>
+            <p>Electrostatic, electromagnetic, and Darwin versions are available.  These codes may be accessed here on 
+            the <a href="openmp-mpi.html">OpenMP/MPI skeleton code subpage</a> or at our 
+            <a href="https://github.com/UCLA-Plasma-Simulation-Group/PIC-skeleton-codes">GitHub repository for skeleton codes</a>.</p>
+            <hr>
+            <img src="assets/img/sc15-logo.png" align="left" width="200 px"style="padding-right: 10px;" alt="">
+            <h5>PICKSC codes at SC15</h5>
+            <p>PICKSC’s PIC skeleton codes will be used as a case study for a tutorial on “live programming” at SC15 in 
+            Austin, Texas on Nov 15.</p>
+            <p>For more details see: 
+            <a href="http://sc15.supercomputing.org/schedule/event_detail?evid=tut145">http://sc15.supercomputing.org/schedule/event_detail?evid=tut145</a>.</p>
+            <hr>
+            <img src="assets/img/henrygardner.jpg" align="left" width="200 px"style="padding-right: 10px;" alt="">
+            <h5>Henry Gardner visits PICKSC</h5>
+            <p><a href="http://cs.anu.edu.au/~Henry.Gardner/">Professor Henry Gardner</a>, from the Research School of Computer Science at the Australian National University, 
+            visited with Viktor Decyk from May 18-22. They continued their long-standing collaboration on design patterns 
+            for scientific programming using the new object-oriented features of Fortran2003. They hope to incorporate these 
+            patterns in future versions of the PICKSC production codes.</p>
+            <p>Henry Gardner is co-author of an advanced textbook on design patterns in scientific programming
+            (<a href="http://users.cecs.anu.edu.au/~Henry.Gardner/cdindex.htm">book home 
+            page</a> and 
+            <a href="https://www.amazon.com/Patterns-e-Science-Computational-Science-Engineering/dp/3540680888/ref=sr_1_1?ie=UTF8&qid=1432702630&sr=8-1&keywords=gardner+design+patterns">Amazon link</a>).</p><br /><br />
+            <hr>
+            <img src="assets/img/psti-logo.jpg" align="left" width="200 px"style="padding-right: 10px;" alt="">
+            <h5>New video describes activities at UCLA’s Plasma Science and Technology Institute</h5>
+            <p>A new video has been produced that highlights activities at The Plasma Science and Technology Institute at UCLA.  
+            This Institute consists of affiliated laboratories and research groups that investigate fundamental questions 
+            related plasmas, and it includes the research activities performed by PICKSC scientists.</p>
+            <p>The areas of study include basic plasma physics, fusion research, space plasmas, laser-plasma interactions, 
+            advanced accelerators, novel radiation sources, and plasma-materials processing. Diverse programs encompass 
+            experimentation, theory, and computer simulation.</p>
+            <hr>
+            <img src="assets/img/benswift.jpg" align="left" width="200 px"style="padding-right: 10px;" alt="">
+            <h5>Ben Swift: Live Steering of Parallel PIC Codes</h5>
+            <p>Ben Swift, a Research Fellow in the School of Computer Science at the Australian National University, has been 
+            working on a project looking at run-time load balancing and optimisation of scientific simulations running on 
+            parallel computing architectures.  He chose PICKSC’s Skeleton Codes as a basis for studying live programming workflow.</p>
+            <p>You can watch a video here:  
+            <a href="https://vimeo.com/126577281">Live programming: bringing the HPC development workflow to life</a></p>
+            <p>More about Ben Swift may be found on his <a href="https://benswift.me/blog/index.html">webpage</a>.</p>
+            <hr>
+            <img src="assets/img/software-release-img.jpg" align="left" width="200 px"style="padding-right: 10px;" alt="">
+            <h5>Skeleton codes are available</h5>
+            <p>We are pleased to announce the availability and full release of a hierarchy of skeleton codes.</p>
+            <p>Skeleton codes are bare-bones but fully functional PIC codes containing all the crucial elements but not the 
+            diagnostics and initial conditions typical of production codes. These are sometimes also called mini-apps. We are 
+            providing a hierarchy of skeleton PIC codes, from very basic serial codes for beginning students to very 
+            sophisticated codes with 3 levels of parallelism for HPC experts. The codes are designed for high performance, 
+            but not at the expense of code obscurity.  They illustrate the use of a variety of parallel programming 
+            techniques, such as MPI, OpenMP, and CUDA, in both Fortran and C.  For students new to parallel processing, 
+            we also provide some Tutorial and Quickstart codes.</p>
+            <p>If you like to register to receive regular software updates, please contact us.</p>
+            <hr>
+            <img src="assets/img/cerenkov-peicheng.png" align="left" width="200 px"style="padding-right: 10px;" alt="">
+            <h5>Mitigation of numerical Cerenkov radiation in PIC</h5>
+            <p>UCLA graduate student Peicheng Yu, current PICKSC post-doc Xinlu Xu, and collaborators have been investigating 
+            the mitigation of the numerical Cerenkov instability (NCI) which occurs when a plasma drifts near the speed of 
+            light in a PIC code.  In a series of papers (references below) they have developed a general theory as well as 
+            mitigation strategies for fully spectral (FFT based) and hybrid (FFT and finite difference) solvers. Recently 
+            they published an article in Communications in Computer Physics [1] and posted a new article on the arxiv: 
+            arXiv:1502.01376 [physics.comp-ph]. If you would like more information, please contact Mr. Peicheng Yu at 
+            <a href="mailto:tpc02@ucla.edu">tpc02@ucla.edu</a>.</p>
+            <p><b>References</b></p>
+            <p>1.  P. Yu, X. Xu, V. K. Decyk, F. Fiuza, J. Vieira, F. S. Tsung, R. A. Fonseca, W. Lu, L. O. Silva, W. B. Mori, 
+            “Elimination of the numerical Cerenkov instability for spectral EM-PIC codes.” COMPUTER PHYSICS COMMUNICATIONS 192, 
+            32 (2015). doi link</p>
+            <p>2.  P. Yu, X. Xu, V. K. Decyk, W. An, J. Vieira, F. S. Tsung, R. A. Fonseca, W. Lu, L. O. Silva, W. B. Mori, 
+            “Modeling of laser wakefield acceleration in Lorentz boosted frame using EM-PIC code with spectral solver.” 
+            JOURNAL OF COMPUTATIONAL PHYSICS 266, 124 (2014). doi link</p>
+            <p>3.  X. Xu, P. Yu, S. F. Martins, F. S. Tsung, V. K. Decyk, J. Vieira, R. A. Fonseca, W. Lu, L. O. Silva, 
+            W. B. Mori, “Numerical instability due to relativistic plasma drift in EM-PIC simulations.” COMPUTER PHYSICS 
+            COMMUNICATIONS 184, 2503 (2013). doi link</p>
+            <p>4.  P. Yu, et al., in Proc. 16th Advanced Accelerator Concepts Workshop, San Jose, California, 2014.</p>
+            <p>5.  P. Yu, X. Xu, V. K. Decyk, S. F. Martins, F. S. Tsung, J. Vieira, R. A. Fonseca, W. Lu, L. O. Silva, and 
+            W. B. Mori, “Modeling of laser wakefield acceleration in the Lorentz boosted frame using OSIRIS and UPIC framework,” A
+            IP Conf. Proc. 1507, 416 (2012). doi link</p>
+            <hr>
+            <img src="assets/img/quasi-3d.jpeg" align="left" width="200 px"style="padding-right: 10px;" alt="">
+            <h5>Implementation of a Quasi-3D algorithm into OSIRIS</h5>
+            <p>PICKSC member Asher Davidson has recently published an article in the Journal of Computational Physics detailing 
+            the implementation of a quasi-3D algorithm into OSIRIS.</p>
+            <p>For many plasma physics problems, three-dimensional and kinetic effects are very important. However, such simulations 
+            are very computationally intensive. Fortunately, there is a class of problems for which there is nearly azimuthal symmetry 
+            and the dominant three-dimensional physics is captured by the inclusion of only a few azimuthal harmonics. Recently, it 
+            was proposed [1] to model one such problem, laser wakefield acceleration, by expanding the fields and currents in azimuthal 
+            harmonics and truncating the expansion. The complex amplitudes of the fundamental and first harmonic for the fields were 
+            solved on an r–z grid and a procedure for calculating the complex current amplitudes for each particle based on its motion 
+            in Cartesian geometry was presented using a Marder’s correction to maintain the validity of Gauss’s law. In this paper, 
+            we describe an implementation of this algorithm into OSIRIS using a rigorous charge conserving current deposition method 
+            to maintain the validity of Gauss’s law. We show that this algorithm is a hybrid method which uses a particles-in-cell 
+            description in r–z and a gridless description in ϕ. We include the ability to keep an arbitrary number of harmonics and 
+            higher order particle shapes. Examples for laser wakefield acceleration, plasma wakefield acceleration, and beam loading 
+            are also presented and directions for future work are discussed.</p>
+            <p><b>References</b></p>
+            <p><a href="http://dx.doi.org/10.1016/j.jcp.2014.10.064">A. Davidson, et. al., J. Comp. Phys. 281,1063 (2015)</a>.</p>
+            <hr>
+            <img src="assets/img/nsf-highlights.png" align="left" width="200 px"style="padding-right: 10px;" alt="">
+            <h5>NSF highlights plasma-accelerator PIC simulations</h5>
+            <p>NSF has highlighted research done by QuickPIC for the FACET simulations. 
+            <a href="https://nsf.gov/discoveries/disc_summ.jsp?cntn_id=134878&org=NSF">See link here</a>.</p>
+            <p>Article excerpt: 'In recent years, however, scientists experimenting with so-called "plasma wakefields" have found 
+            that accelerating electrons on waves of plasma, or ionized gas, is not only more efficient, but also allows for the use 
+            of an electric field a thousand or more times higher than those of a conventional accelerator.</p>
+            <p>'And most importantly, the technique, where electrons gain energy by "surfing" on a wave of electrons within the 
+            ionized gas, raises the potential for a new generation of smaller and less-expensive particle accelerators.</p>
+            <p>' "The big picture application is a future high energy physics collider," says Warren Mori, a professor of physics, 
+            astronomy and electrical engineering at the University of California, Los Angeles (UCLA), who has been working on this 
+            project. "Typically, these cost tens of billions of dollars to build. The motivation is to try to develop a technology 
+            that would reduce the size and the cost of the next collider." '</p>
+            <hr>
+            <img src="assets/img/cover-nature1.jpeg" align="left" width="200 px"style="padding-right: 10px;" alt="">
+            <h5>QuickPIC makes the Nature cover</h5>
+            <p>Breakthrough in plasma-based accelerator research is facilitated using QuickPIC, a code based on the UPIC Framework.</p>
+            <p>Recently, a team of researchers from SLAC and UCLA demonstrated a milestone in plasma based accelerator research. 
+            Using two properly space electron bunches, they were able to demonstrate efficient transfer of energy from a drive 
+            electron beam to a second trailing electron beam.</p>
+            <p>The planning and interpretation of the experiment relied on QuickPIC as well as OSIRIS.</p>
+            <p>Nature article: M. Litos et al., Nature 515, 92 (2014).</p>
+            <p>General science write-up in Nature News and Views:  Accelerator physics: Surf’s up at SLAC.</p>
+            <br />
+            <p>More links: Nature</p>
+            <p>
+            <ul>
+            	<li><a href="https://www.nature.com/nature/volumes/515/issues/7525">Nature (Vol. 515, Num. 7525)</a></li>
+            	<li><a href="https://www.nature.com/articles/nature13882">Nature (direct link to paper)</li>
+            	<li><a href="http://www.nature.com/nature/journal/v515/n7525/full/515040a.html">Nature New & Views (Mike Downer)</a></li>
+            	<li><a href="http://www.nature.com/nature/journal/v515/n7525/full/515040a.html">http://www.nature.com/nature/journal/v515/n7525/full/515040a.html</a></li>
+            	<li><a href="https://www.nature.com/articles/nature.2014.16289">Nature Podcast (includes actual audio interview)</a></li>
+            </ul>
+            </p>
+            <p>SLAC</p>
+            <ul>
+            	<li><a href="https://www6.slac.stanford.edu/news/2014-11-05-researchers-hit-milestone-accelerating-particles-plasma.aspx">SLAC News Center</a></li>
+            </ul>
+            </p>
+            <p>"Hard" Science Media</p>
+            <ul>
+            	<li><a href="http://news.sciencemag.org/physics/2014/11/physicists-crank-current-new-type-accelerator">Science<a></li>
+            	<li><a href="http://scitation.aip.org/content/aip/magazine/physicstoday/news/10.1063/PT.5.7125?utm_medium=email&utm_source=Physics+Today&utm_campaign=5018485_Physics+Today:+The+week+in+Physics+17-21+November&dm_i=1Y69,2ZKAD,I6CMLV,AR9ZT,1">Physics Today (physics update)</a></li>
+            	<li><a href="http://www.scientificamerican.com/article/plasma-surfing-machine-brings-mini-accelerators-closer-video/">Scientific American</a></li>
+            	<li><a href="http://www.symmetrymagazine.org/article/november-2014/scientists-progress-toward-plasma-acceleration">Symmetry</a></li>
+            	<li><a href="http://phys.org/news/2014-11-physicists-milestone-particles-plasma.html">Phys.org</a></li>
+            	<li><a href="http://esciencenews.com/articles/2014/11/06/researchers.hit.milestone.accelerating.particles.with.plasma">esciencenews</a></li>
+            </ul>
+            </p>
+            <p>Mainstream Media, Science and Tech Blogs, etc.</p>
+            <ul>
+            	<li><a href="http://www.latimes.com/science/sciencenow/la-sci-sn-plasma-wakefield-accelerator-particles-higgs-surfing-electrons-20141111-story.html">LA Times</a></li>
+            	<li><a href="http://www.nbcnews.com/science/science-news/not-so-large-colliders-could-revolutionize-physics-n242446">NBC News</a></li>
+            	<li><a href="http://io9.com/freakishly-compact-particle-accelerators-could-revoluti-1655447390">io9</a></li>
+            	<li><a href="http://news.yahoo.com/super-smasher-particle-colliders-may-smaller-more-powerful-192944135.html">Yahoo News</a></li>
+            	<li><a href="http://www.huffingtonpost.com/world-science-festival/this-week-in-science-buil_b_6117542.html">Huffington Post</a></li>
+            	<li><a href="http://arstechnica.com/science/2014/11/new-particle-accelerator-technology-gets-high-speeds-in-short-distances/">Ars Technica</a></li>
+            	<li><a href="http://motherboard.vice.com/read/americas-new-particle-collider-is-one-foot-long">Vice – Motherboard</a></li>
+            	<li><a href="http://gizmodo.com/a-radically-new-particle-accelerator-could-have-500-tim-1655498217">Gizmodo</a></li>
+            	<li><a href="http://www.iflscience.com/physics/tabletop-particle-accelerator-may-revolutionize-research">IFLscience</a></li>
+            	<li><a href="http://www.livescience.com/48621-wakefield-plasma-particle-accelerator.html">LiveScience (article)</a></li>
+            	<li><a href="http://www.livescience.com/48618-shrinking-particle-colliders-may-expand-physics-discoveries-video.html">LiveScience (video)</a></li>
+            	<li><a href="https://theconversation.com/cheaper-more-compact-particle-accelerators-are-a-step-closer-33876">The Conversation</a></li>
+            	<li><a href="http://www.wallstreetotc.com/revolutionary-particle-accelerator-using-waves-plasma-unveiled/211957/">Wallstreet OTC</a></li>
+            	<li><a href="http://www.voanews.com/content/us-scientists-build-the-smallest-particle-accelerator/2511071.html">Voice of America</a></li>
+            	<li><a href="http://mainenewsonline.com/content/14111528-scientists-unveil-revolutionary-particle-accelerator-using">Maine News Online</a></li>
+            	<li><a href="http://www.hngn.com/articles/48505/20141106/particle-accelerator-breakthrough-plasma-waves-boost-electrons-to-record-energies.htm">HNGN</a></li>
+            	<li><a href="http://www.redorbit.com/news/technology/1113276204/milestone-in-accelerating-particles-with-plasma-111014/">Red Orbit</a></li>
+            	<li><a href="http://www.sci-tech-today.com/story.xhtml?story_id=1110069YX343">Sci-Tech Today</a></li>
+            	<li><a href="http://www.science20.com/the_conversation/cheap_compact_particle_accelerators_may_be_our_physics_future-148767">Science 2.0</a></li>
+            	<li><a href="http://www.extremetech.com/extreme/193725-the-worlds-most-advanced-particle-accelerator-is-just-12-inches-long-and-sits-on-a-lab-bench-in-the-us">Extreme Tech</a></li>
+            	<li><a href="http://www.techtimes.com/articles/19673/20141106/scientists-collaborate-to-build-smallest-particle-accelerator.htm">Tech Times</a></li>
+            	<li><a href="http://www.techfragments.com/2777/plasma-wave-particle-accelerator-reaches-blowout-regime/">Tech Fragments</a></li>
+            	<li><a href="http://www.rdmag.com/news/2014/11/researchers-hit-milestone-accelerating-plasma-particles">R&D Magazine</a></li>
+            	<li><a href="http://www.overclockersclub.com/news/37567/">Overclockers Club</a></li>
+            	<li><a href="http://www.sciencecodex.com/researchers_hit_milestone_in_accelerating_particles_with_plasma-144958">Science Codex</a></li>
+            	<li><a href="http://www.ecnmag.com/news/2014/11/researchers-hit-milestone-accelerating-particles-plasma">ECN</a></li>
+            	<li><a href="http://www.engineering.com/DesignerEdge/DesignerEdgeArticles/ArticleID/8884/Plasma-Could-Fuel-More-Economical-Next-Gen-Accellerators.aspx">Engineering.com</a></li>
+            	<li><a href="http://www.laboratoryequipment.com/videos/2014/11/researchers-drive-particles-plasma">Laboratory Equipment</a></li>
+            	<li><a href="http://semiengineering.com/system-bits-nov-11-2/">Semiconductor Engineering</a></li>
+            	<li><a href="http://www.scientificcomputing.com/news/2014/11/milestone-accelerating-particles-plasma-powerful-enough-drive-future-accelerators">Scientific Computing</a></li>
+            </ul>
+            </p>
+            <p>International Media</p>
+            <ul>
+            	<li><a href="http://www.europapress.es/ciencia/laboratorio/noticia-proyectan-aceleradores-particulas-plasma-coste-20141105185741.html">Ciencia Plus (Spain)</a></li>
+            	<li><a href="http://www.media.inaf.it/2014/11/05/slac-wakefield/">Media INAF (Italy)</a></li>
+            	<li><a href="http://www.repubblica.it/scienze/2014/11/05/news/acceleratori_low_cost-99843553/">Repubblica (Italy)</a></li>
+            	<li><a href="http://www.weltderphysik.de/gebiet/atome/news/2014/kielfeld-beschleunigung/">Welt der Physik (Germany)</a></li>
+            	<li><a href="http://www.ansa.it/scienza/notizie/rubriche/fisica/2014/11/05/gli-acceleratori-particelle-saranno-piu-piccoli-e-low-cost_62053cf8-2a62-490a-a4b9-4b17cbe126e4.html">ANSA (Italy)</a></li>
+            	<li><a href="http://notizie.tiscali.it/articoli/scienza/14/11/acceleratori-particelle-piccoli-123.html?ultimora">Tiscali (Italy)</a></li>
+            	<li><a href="http://www.spektrum.de/news/wellenreiten-im-teilchenbeschleuniger/1319056">Spektrum (Germany)</a></li>
+            	<li><a href="http://www.pro-physik.de/details/vipnews/6937161/Mitreissende_Plasmawellen.html">Pro-Physik (Germany)</a></li>
+            	<li><a href="http://www.wired.it/scienza/lab/2014/11/06/futuro-acceleratori-particelle/">Wired (Italian version)</a></li>
+            	<li><a href="http://www.golem.de/news/kielfeld-beschleuniger-teilchenbeschleuniger-fuer-jedermann-1411-110428.html">Golem (Germany)</a></li>
+            	<li><a href="http://www.vesti.ru/doc.html?id=2115253">VESTI (Russia)</a></li>
+            </ul>
+            </p>
+            <hr>
+            <img src="assets/img/cuda.png" align="left" width="200 px"style="padding-right: 10px;" alt="">
+            <h5>OSIRIS is now GPU and Intel Phi enabled</h5>
+            <p>PICKSC members, notably Adam Tableman, Viktor Decyk, and Ricardo Fonseca, have developed strategies for porting 
+            PIC codes to many-core architectures including GPUs and Intel Phi processors.  Some of these ideas have been 
+            implemented into OSIRIS so that it is GPU and Intel Phi enabled.</p>
+            <p>The GPU version of OSIRIS is fully operational in one, two and three dimensions, with support for most of the 
+            features of OSIRIS.  Dynamic GPU load balancing/tuning is included and the code is fully MPI ready and capable of 
+            running on thousands of GPU nodes, with tailored support for Fermi and Kepler generations.</p>
+            <hr>
+            <img src="assets/img/incite.png" align="left" width="200 px"style="padding-right: 10px;" alt="">
+            <h5>PICKSC members get INCITE award</h5>
+            <p>90 million processor hours on the IBM Blue Gene/Q Machine at Argonne National Laboratory have been awarded to Frank 
+            Tsung (PI), Warren Mori (Co-PI), Ben Winjum, and Viktor Decyk as a 2015 Incite Award for "Petascale Simulations of 
+            Laser Plasma Interactions Relevant to IFE".</p>
+            <p>The Research Summary for the Award: Inertial (laser-initiated) fusion energy (IFE) holds incredible promise as a 
+            source of clean and sustainable energy for powering devices. However, significant obstacles to obtaining and 
+            harnessing IFE in a controllable manner remain, including the fact that self-sustained ignition has not yet 
+            been achieved in IFE experiments. This inability is attributed in large part to excessive laser-plasma 
+            instabilities (LPIs) encountered by the laser beams.</p>
+            <p>LPIs such as two-plasmon decay and stimulated Raman scattering can absorb, deflect, or reflect laser light, 
+            disrupting the fusion drive, and can also generate energetic electrons that threaten to preheat the target. 
+            Nevertheless, IFE schemes like shock ignition (where a high-intensity laser is introduced toward the end of 
+            the compression pulse) could potentially take advantage of LPIs to generate energetic particles to create a 
+            useful shock that drives fusion. Therefore, developing an understanding of LPIs will be crucial to the success 
+            of any IFE scheme.</p>
+            <p>The physics involved in LPI processes is complex and highly nonlinear, involving both wave- wave and 
+            wave-particle interactions and necessitating the use of fully nonlinear kinetic computer models, such as 
+            fully explicit particle-in-cell (PIC) simulations that are computationally intensive and thus limit how 
+            many spatial and temporal scales can be modeled.</p>
+            <p>By using highly optimized PIC codes, however, researchers will focus on using fully kinetic simulations 
+            to study the key basic high energy density science directly relevant to IFE. The ultimate goal is to develop 
+            a hierarchy of kinetic, fluid, and other reduced-description approaches that can model the full space and 
+            time scales, and close the gap between particle- based simulations and current experiments.</p>
+            <hr>
+            <img src="assets/img/pic-conv.jpeg" align="left" width="200 px"style="padding-right: 10px;" alt="">
+            <h5>Verification and Convergence Properties of Particle-in-Cell Codes</h5>
+            <p>Despite the wide use of PIC codes throughout plasma physics for over 50 years, there still does not appear to 
+            be a consensus on the mathematical model that PIC codes represent.  PICKSC researchers have recently found that 
+            a conventional spectral PIC code can be shown to converge to a spectral gridless code with finite-size particles, 
+            indicating that the appropriate underlying model of PIC codes is the Klimontovich equation with finite-size 
+            particles as opposed to the Vlasov equation or a statistical model such as the Vlasov-Boltzmann equation.</p>
+            <p>Using gridless codes developed by Viktor Decyk for both electrostatic and electromagnetic cases, the energy 
+            evolution of a 1D, periodic, thermal plasma was shown to converge exactly (within machine precision) as the 
+            number of Fourier modes, the particle size, and the time step were varied.  Following this, the researchers 
+            compared a conventional spectral PIC code to the gridless code, showing the convergence of electrostatic 
+            and electromagnetic PIC codes to the gridless code as the cell size was varied and the particle size was 
+            kept constant.  They further verified conditions for which electron plasma waves had the proper dispersion 
+            relation.  Interestingly, these convergence tests suggested that when using PIC codes with Gaussian-shaped 
+            particles, convergence occurred when using grid sizes less than half the electron Debye length and a particle 
+            size of approximately one Debye length, contrasting slightly with conventional PIC usage of equal grid sizes 
+            and particles sizes.</p>
+            <p><b>References</b></p>
+            <p>[B. J. Winjum, J. J. Tu, S. S. Su, V. K. Decyk, and W. B. Mori, “Verification and Convergence Properties 
+            of a Particle-In-Cell Code”, to be published.]</p>
+            <hr>
+            <img src="assets/img/blue-waters.png" align="left" width="200 px"style="padding-right: 10px;" alt="">
+            <h5>PICKSC members get BlueWaters access</h5>
+            <p>The UCLA Simulation of Plasmas Group and the OSIRIS Consortium have been given access to 
+            <a href="https://bluewaters.ncsa.illinois.edu/">Blue Waters</a>, one of 
+            the most powerful supercomputing machines in the world.  Blue Waters is supported by the National Science Foundation 
+            and the University of Illinois at Urbana-Champaign, and it is managed by the National Center for Supercomputing 
+            Applications.  The UCLA group hopes to use their access to investigate scientific questions about inertial fusion 
+            energy, plasma-based acceleration, energetic particle generation in the cosmos, and magnetotail substorms.</p>
+            <p>Dr. Tsung’s presentation for the group at the 2014 Blue Waters Symposium 
+            <a href="https://bluewaters.ncsa.illinois.edu/science-teams?p_p_id=projectdetailpageportlet_WAR_bwupdatatoolsportlet&_projectdetailpageportlet_WAR_bwupdatatoolsportlet_jspPage=%2Fhtml%2Fprojectdetailpageportlet%2Fdetail.jsp&_projectdetailpageportlet_WAR_bwupdatatoolsportlet_project=jn7">may be viewed here</a>.</p>
+            <hr>
+            <img src="assets/img/picksc-workshop.jpeg" align="left" width="200 px"style="padding-right: 10px;" alt="">
+            <h5>PICKSC hosts first annual workshop</h5>
+            <p>The UCLA Particle-in-Cell (PIC) and Kinetic Simulation Software Center (PICKSC) hosted a workshop on enabling software 
+            interoperability within the PIC community. We invited the primary developers of about a dozen major PIC codes used in 
+            the study of Laser Plasma Interactions (LPI), as well as a few developers from other areas. The LPI community shares 
+            intellectual ideas about simulations effectively, but has rarely shared the software itself. There is no large community 
+            code. Almost all the developers we invited accepted, indicating a strong interest in this topic.</p>
+            <p>The workshop was held at UCLA from Sept 22-24, 2014. The four sessions were primarily organized as discussions, with 
+            short presentations to add additional material. The first major topic was whether interoperability was desired and what 
+            it actually means. There was agreement on a wide number of issues:<br />
+            <ul>
+            	<li>1. The desire for a code of ethics, acknowledgment when code is reused. This could be an acknowledgement in a 
+            	publication, references to papers, or authorship in a publication. The latter might be appropriate if a shared 
+            	code enabled new research capability.</li>
+            	<li>2. Desire for standard problems to verify or validate new codes or modified codes, including a database of 
+            	physics benchmarks with standard inputs. One would like to easily reproduce the results of a paper, in hours, 
+            	not months, with an independently developed code.</li>
+            	<li>3. Desire for common display formats.</li>
+            	<li>4. Interoperability of software may be enabled via middleware, with simple interfaces.</li>
+            	<li> 5. Desire for workflow interoperability between different codes, using output of one code as input to another.</li>
+            </ul>
+            </p>
+            <p>The second major topic was how to enable software interoperability. The attendees discussed and compared units, data 
+            structures and objects used in the various codes. Two languages were in common use in the community, Fortran and C/C++.   
+            Scripting languages (often Python) was sometimes used to glue components together. Fortran2003 has standard interoperability 
+            with C which simplifies language interoperability. There were two common types of units in use, dimensionless units and SI. 
+            Dimensionless units are used by those who adhere to the philosophy that a simulation represents many actual physical systems. 
+            Translating units is generally straightforward, but can be tricky since not everything is well documented. Some codes had 
+            public units for input/output but different units internally. Among object-oriented codes, there was a wide variety of 
+            classes with different dependences. It was felt that only simple objects could actually interoperate at this time. Different 
+            parallel domain decompositions used in the code could also pose a problem, but this was not extensively discussed.</p>
+            <p>The third major topic was how to enable interoperability of algorithms. There was a consensus that providing a simple 
+            unit test for each new algorithm, which compares the algorithm with some analytic solution and could be run and executed 
+            independently of the actual PIC code. The use of skeleton codes (or mini-apps) to illustrate how a collection of algorithms 
+            interoperate was also discussed. There was a consensus that PICKSC can serve as a focal point of PIC codes containing 
+            pointers between various codes in the community.</p>
+            <hr>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    
+
+    
+
+  </main><!-- End #main -->
+
+  <?php include 'includes/footer.php'; ?>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

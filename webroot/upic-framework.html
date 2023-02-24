@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>PICKSC</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="favicon.ico" rel="icon">
+  <!--><link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">-->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Sailor - v4.1.0
+  * Template URL: https://bootstrapmade.com/sailor-free-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <?php include 'includes/menu.php'; ?>
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>UPIC Framework</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">UPIC Framework</a></li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Blog Single Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+          <div class="col-lg-8 entries">
+
+            <article class="entry entry-single">
+
+              <!--<div class="entry-img">
+                <img src="assets/img/secondary-sidebar.jpg" alt="" class="img-fluid">
+              </div>-->
+
+              <!--<h2 class="entry-title">
+                <a href="blog-single.html">Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia</a>
+              </h2>-->
+
+              <div class="entry-content">
+              <h5>UPIC 1.0</h5>
+              <p>The UPIC (UCLA Parallel PIC) Framework was developed about 15 years ago to provide trusted components for 
+              the rapid construction of new parallel PIC codes. The Idea was to provide libraries as well as reference PIC 
+              applications which illustrate their use and users would then enhance and customize these components (You-Pick) 
+              to build new codes. The focus was on high accuracy spectral methods. Message-passing was the primary 
+              parallelization method, but multi-tasking with pthreads was also supported.</p>
+              <p>Both electrostatic and electromagnetic codes were supported in 1d, 2d, and 3d, as well as some Darwin codes, 
+              with a variety of numerical methods and boundary conditions. The codes QuickPIC, QPIC, UPIC-Emma and others were 
+              built from these components. The software design was layered with the lowest layer in Fortran77. Higher layers 
+              in Fortran95 could either be procedural, using using wrappers, or object-based for more complex projects.</p>
+              <h5>UPIC 2.0</h5>
+              <p>Since then, parallel programming has become increasingly complex, with 3 levels of parallelism required to 
+              obtain optimal performance on advanced architectures. Since most of the time is spent processing particles, it 
+              was important to solidify the data structures and algorithms needed for optimal particle processing before 
+              implementing a new framework. A variety of small skeleton PIC applications were developed to experiment with 
+              different levels of parallelism and programming models while maintaining portability as much as possible. In 
+              addition, Fortran2003 has many useful features for high performance scientific computing, including complete 
+              support for object-oriented programming and interoperability with C. We plan to expand beyond spectral methods 
+              and increasingly support mixed language programming.  As the new data structures and algorithms converge, a 
+              new UPIC Framework is evolving for the 21st century.</p>
+              <p>The 1D, 2D, and 3D components of the UPIC 2.0 framework are open source.  They may be accessed on the 
+              <a href="https://github.com/UCLA-Plasma-Simulation-Group/UPIC-2.0">public GitHub repository</a>.</p>
+              <p>For 1D, the latest code is version UPIC 2.1.0.  It uses only OpenMP for parallelization, and it includes 
+              a python script. This is the first 1D version of the UPIC codes that has been made available, and it may be 
+              directly downloaded here: <a href="downloads/mbeps1-21.tar.gz">mbeps1_21.tar.gz</a>.</p>
+              <p>For 2D and 3D, the latest version is UPIC 2.0.4.1. In this update, all python scripts have been updated 
+              to work with python 2 and 3, and Makefiles have been modified to make them compatible with gfortran 10 (where 
+              by default some warnings have become errors). The post-processors in the ReadFiles directories have been 
+              reorganized and simplied for the user. In addition, analytic Maxwell solvers have been added which allow 
+              the EM codes to run with time steps 2-3 larger than the courant limit. A bug in the velocity space 
+              diagnostic was also fixed.  UPIC 2.0.4.1 may be directly downloaded 
+              here:  <a href="downloads/mpbeps2_2041.tar.gz">mpbeps2_2041.tar.gz</a> (2D) 
+              and <a href="downloads/mpbeps3_2042.tar.gz">mpbeps3_2042.tar.gz</a> (3D).</p>
+              <p>The 4th version (UPIC 2.0.4) included the major new features of support for vectorization and Python.  
+              These codes can now be run with 3 levels of parallelism (Vector/MPI/OpenMP) or some subset.  Python only 
+              supports Vector/OpenMP.  UPIC 2.0.4 may be directly downloaded 
+              here:  <a href="downloads/mpbeps2_204.tar.gz">mpbeps2_204.tar.gz</a> (2D) and 
+              <a href="downloads/mpbeps3_204.tar.gz">mpbeps3_204.tar.gz</a> (3D).</p>
+              <p>The 3rd version (UPIC 2.0.3) included the major new features of restart capabilities and particle 
+              diagnostics. Codes in this version and earlier can be compiled to run with 2 levels of parallelism 
+              (MPI/OpenMP) or OpenMP only. UPIC 2.0.3 may be directly downloaded 
+              here:  <a href="downloads/mpbeps2_203.tar.gz">mpbeps2_203.tar.gz</a> (2D) and 
+              <a href="downloads/mpbeps3_203.tar.gz">mpbeps3_203.tar.gz</a> (3D).</p>
+              <p>The 2nd version (UPIC 2.0.2) included the major new features of namelist inputs, a full set of 
+              field diagnostics, and initialization with non-uniform densities. UPIC 2.0.2 may be directly downloaded 
+              here:  <a href="downloads/mpbeps2_202.tar.gz">mpbeps2_202.tar.gz</a> (2D) and 
+              <a href="downloads/mpbeps3_202.tar.gz">mpbeps3_202.tar.gz</a> (3D).</p>
+              <p>The first version (UPIC 2.0.1) contained only the basic particle loop and field solvers, with a 
+              uniform plasma and no diagnostics except energy.  UPIC 2.0.1 may be directly downloaded 
+              here:  <a href="downloads/mpbeps2_201.tar.gz">mpbeps2_201.tar.gz</a> (2D) and 
+              <a href="downloads/mpbeps3_201.tar.gz">mpbeps3_201.tar.gz</a> (3D).</p>
+
+            </article><!-- End blog entry -->
+
+          </div><!-- End blog entries list -->
+
+          <div class="col-lg-4">
+
+            <div class="sidebar">
+
+              <h3 class="sidebar-title">UPIC Framework</h3>
+              <p>
+
+              </p>
+              <p><a href="https://github.com/UCLA-Plasma-Simulation-Group/PIC-skeleton-codes">GitHub Repository</a></p>
+    
+              </div><!-- End sidebar recent posts-->
+
+            </div><!-- End sidebar -->
+
+          </div><!-- End blog sidebar -->
+
+        </div>
+
+      </div>
+    </section><!-- End Blog Single Section -->
+
+  </main><!-- End #main -->
+
+  <?php include 'includes/footer.php'; ?>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

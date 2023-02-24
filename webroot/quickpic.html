@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>PICKSC</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="favicon.ico" rel="icon">
+  <!--><link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">-->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Sailor - v4.1.0
+  * Template URL: https://bootstrapmade.com/sailor-free-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <?php include 'includes/menu.php'; ?>
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Quickpic</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="production-codes.html">Production Codes</a></li>
+            <li><a href="quickpic.html">Quickpic</a></li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Blog Single Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+          <div class="col-lg-8 entries">
+
+            <article class="entry entry-single">
+
+              <!--<div class="entry-img">
+                <img src="assets/img/secondary-sidebar.jpg" alt="" class="img-fluid">
+              </div>-->
+
+              <!--<h2 class="entry-title">
+                <a href="blog-single.html">Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia</a>
+              </h2>-->
+
+              <div class="entry-content">
+                <p><b>Access</b>: You can obtain QuickPIC from Github <a href="https://github.com/UCLA-Plasma-Simulation-Group/QuickPIC-OpenSource.git">here</a>.</p>
+                <p>Description:  QuickPIC [1, 2] is a 3D fully parallelized, fully relativistic, three-dimensional quasi-static 
+                PIC code. It was the first 3D quasi-static code and remains the only fully 3D quasi-static PIC code.  
+                It was built from components from the UPIC Framework. The algorithm is based on the quasi-static 
+                approximation, which separates out the time scale of the evolution of the driver from the plasma 
+                evolution and reduces a fully 3D EM field solve and particle push into a sequence of 2D solves and 
+                particle pushes. A predictor-corrector loop is required and only one iteration is often needed even 
+                for nonlinear problems. For the laser driver, the ponderomotive guiding center approximation is used. 
+                QuickPIC results agree with full PIC codes such as OSIRIS results for problems of interest. A field 
+                ionization module based on the ADK model is implemented. With a pipelining algorithm and improvements 
+                to the iteration loop, QuickPIC achieves good strong scaling to more than 100,000 cores on Titan and 
+                Blue Waters.</p>
+                <p><img src="assets/img/quickpic-img.jpg" align="left" width="800 px"style="padding-right: 10px;" alt=""></p>
+                <p><i>Figure 1: Strong Scaling for QuickPIC; Figure 2: QuickPIC simulation of Laser Wake Field Accelerator 
+                (LWFA) with an electron beam load (Image made by Weiming An); Figure 3:  QuickPIC simulation of two-bunch 
+                electron beam driven Plasma Wake Field Accelerator (PWFA) at FACET (Image made by Weiming An). It was chosen 
+                as the cover of Nature on Nov 6th 2014.</i></p>
+                <h5>References</h5>
+                <p>[1] C. Huang, V. K. Decyk, C. Ren, M. Zhou, W. Lu, W. B. Mori, J. H. Cooley, T. M. Antonsen, Jr., and
+                 T. Katsouleas, “Quickpic: A highly efficient particle-in-cell code for modeling wakefield acceleration 
+                 in plasmas,” J. Comput. Phys. 217, 658 (2006).  <a href="http://dx.doi.org/10.1016/j.jcp.2006.01.039">doi link</a></p>
+                 <p>[2] W. An, V. K. Decyk, W. B. Mori, and T. M. Antonsen, Jr., “An improved iteration loop for the 
+                 three dimensional quasi-static particle-in-cell algorithm: Quickpic,” J. of Comp. Phys. 250, 165 
+                 (2013).  <a href="http://dx.doi.org/10.1016/j.jcp.2013.05.020">doi link</a></p>
+                 
+                
+
+            </article><!-- End blog entry -->
+
+          </div><!-- End blog entries list -->
+
+          <div class="col-lg-4">
+
+            <div class="sidebar">
+
+              <h3 class="sidebar-title">Production Codes</h3>
+              <p>
+              <ul>
+              	<li><a href="osiris.html">OSIRIS</a></li>
+              	<li><a href="quickpic.html">QuickPIC</a></li>
+              	<li><a href="https://github.com/UCLA-Plasma-Simulation-Group/upic-emma-2.0">UPIC EMMA</a></li>
+              	<li><a href="oshun.html">OSHUN</a></li>
+              	<li><a href="https://github.com/UCLA-Plasma-Simulation-Group/educational-codes/tree/master/upic_es_h5">UPIC-ES</a></li>
+              	<li><a href="https://github.com/UCLA-Plasma-Simulation-Group/UPIC-2.0">UPIC-DARWIN</a></li>
+              </ul>	
+              </p>
+              </div><!-- End sidebar recent posts-->
+
+            </div><!-- End sidebar -->
+
+          </div><!-- End blog sidebar -->
+
+        </div>
+
+      </div>
+    </section><!-- End Blog Single Section -->
+
+  </main><!-- End #main -->
+
+  <?php include 'includes/footer.php'; ?>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

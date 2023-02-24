@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>PICKSC</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="favicon.ico" rel="icon">
+  <!--><link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">-->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Sailor - v4.1.0
+  * Template URL: https://bootstrapmade.com/sailor-free-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <?php include 'includes/menu.php'; ?>
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>GPU</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="skeleton-code.html">Skeleton Code</a></li>
+            <li>GPU</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Blog Single Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+          <div class="col-lg-8 entries">
+
+            <article class="entry entry-single">
+
+              <!--<div class="entry-img">
+                <img src="assets/img/secondary-sidebar.jpg" alt="" class="img-fluid">
+              </div>-->
+
+              <!--<h2 class="entry-title">
+                <a href="blog-single.html">Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia</a>
+              </h2>-->
+
+              <div class="entry-content">
+              <h5>GPU Tutorial</h5>
+              <p>Tutorial for Computing on GPUs: <a href="downloads/gpu-tutorial.tar.gz">gpututorial</a>.</p>
+              <h5>GPU Codes with two levels of parallelism</h5>
+              <p>These codes illustrate how to implement an optimal PIC algorithm on a GPU. It uses a hybrid tiling scheme 
+              with SIMD vectorization, both written with NVIDIA’s CUDA programming environment. The tiling algorithm used within 
+              a thread block on the GPU is the same as that used with OpenMP (Ref. [4]). Unlike the OpenMP implementation, however, 
+              each tile is controlled by a block of threads rather than a single thread, which requires a vectorized or data 
+              parallel implementation. Both CUDA C and CUDA Fortran interoperable versions are available, where a Fortran code 
+              can call the CUDA C libraries and a C code can call the CUDA Fortran libraries. For the 2D electrostatic code, a 
+              typical execution time for the particle part of this code on the M2090 GPU is about 0.9 ns/particle/time-step. 
+              For the 2-1/2D electromagnetic code, a typical execution time for the particle part of this code is about 
+              2.0 ns/particle/time-step.</p>
+              <p>The first family uses CUDA C on the NVIDIA GPU, with a tiling technique for each thread block, and with 
+              SIMD vectorization within a block.</p>
+              <p>1. 2D Parallel Electrostatic Spectral code:  <a href="downloads/gpupic2.tar.gz">gpupic2</a></p>
+              <p>2. 2-1/2D Parallel Electromagnetic Spectral code:  <a href="downloads/gpubpic2.tar.gz">gpubpic2</a></p>
+              <p>The second family uses CUDA Fortran on the NVIDIA GPU, with a tiling technique for each thread block, and 
+              with SIMD vectorization within a block.</p>
+              <p>1. 2D Parallel Electrostatic Spectral code:  <a href="downloads/gpufpic2.tar.gz">gpufpic2</a></p>
+              <p>2. 2-1/2D Parallel Electromagnetic Spectral code:  <a href="downloads/gpufbpic2.tar.gz">gpufbpic2</a></p>
+              <h5>GPU-MPI Codes with three levels of parallelism</h5>
+              <p>These codes illustrate how to implement an optimal PIC algorithm on multiple GPUs. It uses a hybrid tiling 
+              scheme with SIMD vectorization on each GPU, and domain decomposition connecting such GPUs implemented with MPI. 
+              The algorithms used are described in Refs. [2-4]. Both CUDA C and CUDA Fortran interoperable versions are available, 
+              where a Fortran code can call the CUDA C libraries and a C code can call the CUDA Fortran libraries. For the 2D 
+              electrostatic code, a typical execution time for the particle part of this code on 108 M2090 GPUs is about 13 
+              ps/particle/time-step. For the 2-1/2D electromagnetic code, a typical execution time for the particle part of 
+              this code is about 30 ps/particle/time-step. To put this into perspective, on 96 GPUs, a 2-1/2d electromagnetic 
+              simulation with 10 billion particles and a 16384×16384 grid takes about 0.5 sec/time step, including the field 
+              solver. The particle calculation is 3600 times faster than in the original serial code.</p>
+              <p>The first family uses CUDA C on the NVIDIA GPU, with a tiling technique for each thread block, SIMD 
+              vectorization within a block, and domain decomposition with MPI between GPUs.</p>
+              <p>1. 2D Parallel Electrostatic Spectral code:  <a href="downloads/gpuppic2.tar.gz">gpuppic2</a></p>
+              <p>2. 2-1/2D Parallel Electromagnetic Spectral code:  <a href="downloads/gpupbpic2.tar.gz">gpupbpic2</a></p>
+              <p>The second family uses CUDA Fortran on the NVIDIA GPU, with a tiling technique for each thread block, SIMD 
+              vectorization within a block, and domain decomposition with MPI between GPUs.</p>
+              <p>1. 2D Parallel Electrostatic Spectral code:  <a href="downloads/gpufppic2.tar.gz">gpufppic2</a></p>
+              <p>2. 2-1/2D Parallel Electromagnetic Spectral code:  <a href="downloads/gpufpbpic2.tar.gz">gpufpbpic2</a></p>
+              <p><i>Figure below: Strong scaling performance as a function of the number of M2090 GPUs. The dashed red line is 
+              the ideal scaling, blue shows the particle time, and black shows the total time. Degradation of the total time is 
+              due to the all-to-all transpose in the fast Fourier transform. The degradation is particularly severe here because 
+              3 GPUs are competing for a single network adaptor.</i></p>
+              <img src="assets/img/gpu-fig.jpg" align="left" width="800 px"style="padding-right: 10px;" alt="">
+              <p>Figure details (click to enlarge): <a href="assets/img/timing.jpg">Figure 1</a>.</p> 
+              <p>Want to contact the developer? Send mail to Viktor Decyk 
+              at <a href="mailto:decyk@physics.ucla.edu">decyk@physics.ucla.edu</a>.</p>
+
+            </article><!-- End blog entry -->
+
+          </div><!-- End blog entries list -->
+
+          <div class="col-lg-4">
+
+            <div class="sidebar">
+
+              <h3 class="sidebar-title">Vectorization Codes</h3>
+              <p>
+              <ul>
+              	<li><a href="downloads/gpupic2.tar.gz">gpupic2</a></li>
+              	<li><a href="downloads/gpubpic2.tar.gz">gpubpic2</a></li>
+              	<li><a href="downloads/gpufpic2.tar.gz">gpufpic2</a></li>
+              	<li><a href="downloads/gpufbpic2.tar.gz">gpufbpic2</li>
+              	<li><a href="downloads/gpuppic2.tar.gz">gpuppic2</a></li>
+              	<li><a href="downloads/gpupbpic2.tar.gz">gpupbpic2</a></li>
+              	<li><a href="downloads/gpufppic2.tar.gz">gpufppic2</a></li>
+              	<li><a href="downloads/gpufpbpic2.tar.gz">gpufpbpic2</a></li>
+              </ul>
+              </p>
+    
+              </div><!-- End sidebar recent posts-->
+
+            </div><!-- End sidebar -->
+
+          </div><!-- End blog sidebar -->
+
+        </div>
+
+      </div>
+    </section><!-- End Blog Single Section -->
+
+  </main><!-- End #main -->
+
+  <?php include 'includes/footer.php'; ?>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

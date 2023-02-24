@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>PICKSC</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="favicon.ico" rel="icon">
+  <!--><link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">-->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Sailor - v4.1.0
+  * Template URL: https://bootstrapmade.com/sailor-free-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <?php include 'includes/menu.php'; ?>
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>OSIRIS</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="production-codes.html">Production Codes</a></li><li>OSIRIS</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Blog Single Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+          <div class="col-lg-8 entries">
+
+            <article class="entry entry-single">
+
+              <!--<div class="entry-img">
+                <img src="assets/img/secondary-sidebar.jpg" alt="" class="img-fluid">
+              </div>-->
+
+              <!--<h2 class="entry-title">
+                <a href="blog-single.html">Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia</a>
+              </h2>-->
+
+              <div class="entry-content">
+                <p>Access: To obtain access to OSIRIS, we simply ask that you fill out an MOU (download OSIRIS_MOU) and return 
+                it to us (picksc.org@gmail.com) along with your GitHub username. We will then be happy to add you to the 
+                appropriate GitHub team for OSIRIS.</p>
+                <p>Description: Over the past 15 years, we and our collaborators in the OSIRIS consortium have developed and 
+                continue to upgrade a state-of-the-art, fully explicit, multi-dimensional, fully parallelized, fully 
+                relativistic PIC code called OSIRIS and a set of sophisticated diagnostic and visualization packages [1-2]. 
+                OSIRIS is now an extremely mature code that has been run well over several hundred million core hours. Its 
+                impact is very large, as it is used not just by our group but by many groups throughout the US and the world 
+                on a variety of physics problems. OSIRIS is highly optimized on a single core (for linear as well as for higher 
+                order particle shapes) and it scales extremely well to over 1.5 million cores (on the Sequoia supercomputer @ 
+                LLNL). On modern parallel machines, OSIRIS has shown good scalability over a large variety of platforms. In 
+                2011 OSIRIS was chosen by the DOE Office of Advanced Scientific Computing Research to be featured in their 
+                software effectiveness program. As part of this program, OSIRIS was shown to scale to the full Jaguar machine 
+                (220,000 cores) on both test and physics problems. It demonstrated high parallel scalability as well as single 
+                core efficiency (through the use of the SSE vector units). Recently, in addition to scaling to 1,600,000 cores 
+                on Sequoia, OSIRIS achieved a speed of > 2.2 PFlops on the Blue Waters supercomputer. There are also CUDA and 
+                Intel-Phi enabled versions of OSIRIS under continual development.</p>
+                <p><img src="assets/img/osiris.jpg" align="left" width="800 px"style="padding-right: 10px;" alt=""></p>
+                <p><i>Figures: Figure 1 (left): Figure 1:  Weak and strong scaling results on the Sequoia supercomputer at 
+                LLNL.  For weak scaling, OSIRIS is shown to be > 97% efficient on > 1.5 million cores.  For strong scaling, 
+                the code is 79% efficient on the full Sequoia machine; Figure 2 (right): OSIRIS simulation from the discovery of 
+                a laser-plasma acceleration mechanism that generates 20 MeV proton beams with a 1% spread, shown on the 
+                Nature cover.</i></p>
+                <p>OSIRIS is written in the object-oriented style using Fortran 90, which allows for the re-use of highly 
+                reliable legacy fortran codes while allowing for the rapid development of new modules.  Over these 15 years, 
+                many new features have been added to it which improves both the speed and functionality of OSIRIS.  The use of 
+                higher order particle shapes permits the use of large cells (compared to the Debye length) without numerical 
+                heating. It can use either momentum (uniform) or energy conserving (non-uniform) field interpolation. It can 
+                run using a moving window to efficiently model short pulses and it has Perfecly Matched Layers for absorbing 
+                electromagnetic waves at the boundaries. The parallelization is done either using domain decomposition with 
+                MPI across all cores or by using a hybrid approach where MPI is used across nodes and OpenMP is used to launch 
+                threads on the cores on a node. It also has dynamic load balancing routines for the MPI piece. There is a 
+                relativistic two body Coulomb collision model as well as a beta version of a hybrid algorithm (OSIRIS-H, [3]) 
+                which pushes particles throughout all regions including collisions, but in a high density region (collisional) 
+                MHD field equations are used to solve for the fields. The MHD field equations do not support high frequency 
+                waves so larger time steps can be used. This could be of use when modeling ion acceleration from laser-solid 
+                interactions. OSIRIS can model laser wakefield acceleration in a Lorentz boosted frame and solve for the laser 
+                fields using an envelope equation and a ponderomotive guiding center pusher for the particles.</p>
+                <p>New features continue to be developed. For example, OSIRIS now has the option of being run in quasi-3D 
+                using hybrid r-z PIC with a gridless phi. The fields (including currents) are expanded into an arbitrary 
+                number of azimuthal harmonics. This allows modeling lasers and plasma waves with the correct self-focusing 
+                geometry in which the spots sizes have nearly azimuthal symmetry. Another recent addition is a hybrid FFT/Finite 
+                difference field solver that can eliminate the Numerical Cerenkov Instability.</p>
+                <p>In the near term, key features from OSIRIS will be extracted and put into the UPIC Framework and versions 
+                of OSIRIS will be used for educational software.</p> 
+                <h5>Visualization and data analysis</h5>
+                <p>Visualization and data analysis are an essential and nontrivial part of any parallel numerical infrastructure. 
+                Over the past decade, members of the OSIRIS Consortium at UCLA and IST led by PICKSC member R.A. Fonseca have 
+                developed a very sophisticated set of data analysis and visualization routines based on IDL, called VisXD. We 
+                also have a smaller set of Python routines that emulate some of the analysis routines. The data in our production 
+                codes is written in HDF5 so that output can be easily viewed from other public or private analysis and visualization 
+                routines. Other analysis routines commonly used are Matlab and Visit. Examples from VisXD and Visit are shown below. 
+                We have also developed diagnostics and analysis tools specific to the study of the nonlinear optics of plasmas. 
+                These include diagnosing the relection and absorption of laser light and the energy flux of electrons crossing 
+                virtual or real boundaries in the plasma.</p>
+                <p><img src="assets/img/osiris-456.jpg" align="left" width="800 px"style="padding-right: 10px;" alt=""></p>
+                <p><i>Figures: Figure 3 (left): Figure 3: Images of laser and density in a fast ignition relevant simulation; 
+               Figure 4 (middle): Laser and plasma density from a laser wakefield simulation. We can tag particles of interest 
+               and plot their trajectories; Figure 5 (right): Plasma waves and electrons in a High-Frequency-Hybrid-Instability 
+               simulation showing how the hot electrons are effected by a spectrum of plasma waves.</i></p>
+                <h5>References</h5>
+                <p>[1]  R. G. Hemker, “Particle-In-Cell Modeling of Plasma-Based Accelerators in Two and Three Dimensions,” 
+                Ph.D. dissertation, University of California, Los Angeles (2000).  <a href="http://arxiv.org/abs/1503.00276">Arxiv link</a></p>
+                <p>[2]  R. A. Fonseca, L. O. Silva, F. S. Tsung, V. K. Decyk, W. Lu, C. Ren, W. B. Mori, S. Deng, S. Lee, 
+                T. Katsouleas, and J. C. Adam, Lecture Notes in Computer Science (Springer, Heidelberg, 2002), Vol. 2331, 
+                pp. 342–351; R. A. Fonseca et al, “One-to-one direct modeling of experiments and astrophysical scenarios: 
+                pushing the envelope on kinetic plasma simulations,” Plasma Phys. Control. Fusion 50, 124034 (2008).  
+                <a href="http://dx.doi.org/10.1088/0741-3335/50/12/124034">doi link</a></p>
+                <p>[3]  F Fiuza, M Marti, R A Fonseca, L O Silva, J Tonge, J May, and W B Mori, “Efficient modeling of 
+                laser–plasma interactions in high energy density scenarios,” Plasma Phys. Control. Fusion 53, 074004 
+                (2011).  <a href="http://dx.doi.org/10.1088/0741-3335/53/7/074004">doi link</a></p>
+
+            </article><!-- End blog entry -->
+
+          </div><!-- End blog entries list -->
+
+          <div class="col-lg-4">
+
+            <div class="sidebar">
+
+              <h3 class="sidebar-title">Production Codes</h3>
+              <p>
+              <ul>
+              	<li><a href="osiris.html">OSIRIS</a></li>
+              	<li><a href="quickpic.html">QuickPIC</a></li>
+              	<li><a href="https://github.com/UCLA-Plasma-Simulation-Group/upic-emma-2.0">UPIC EMMA</a></li>
+              	<li><a href="oshun.html">OSHUN</a></li>
+              	<li><a href="https://github.com/UCLA-Plasma-Simulation-Group/educational-codes/tree/master/upic_es_h5">UPIC-ES</a></li>
+              	<li><a href="https://github.com/UCLA-Plasma-Simulation-Group/UPIC-2.0">UPIC-DARWIN</a></li>
+              </ul>	
+              </p>
+              </div><!-- End sidebar recent posts-->
+
+            </div><!-- End sidebar -->
+
+          </div><!-- End blog sidebar -->
+
+        </div>
+
+      </div>
+    </section><!-- End Blog Single Section -->
+
+  </main><!-- End #main -->
+
+  <?php include 'includes/footer.php'; ?>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
