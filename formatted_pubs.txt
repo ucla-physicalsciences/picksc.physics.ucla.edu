@@ -7,6 +7,9 @@
                 <span class="" style3=""="">
                   <a href="https://doi.org/10.1103/PhysRevResearch.5.013085">[online]</a>
                 </span>
+                <span class="" style3=""="">
+                  <a href="https://doi.org/10.48550/arXiv.2207.13849">[arXiv]</a>
+                </span>
                 <br>
                 Jacob R. Pierce, John P. Palastro, Fei Li, Bernardo Malaca, Dillon Ramsey, Jorge Vieira, Kathleen Weichman, Warren B. Mori
                 </br>
@@ -19,6 +22,9 @@
                 </b>
                 <span class="" style3=""="">
                   <a href="https://doi.org/10.1103/PhysRevResearch.5.L012011">[online]</a>
+                </span>
+                <span class="" style3=""="">
+                  <a href="https://doi.org/10.48550/arXiv.2204.08698">[arXiv]</a>
                 </span>
                 <br>
                 Yipeng Wu, Xinlu Xu, Chaojie Zhang, Zan Nie, Mitchell Sinclair, Audrey Farrell, Kenneth A. Marsh, Jianfei Hua, Wei Lu, Warren B. Mori, Chan Joshi
@@ -33,6 +39,9 @@
                 <span class="" style3=""="">
                   <a href="https://doi.org/10.1103/PhysRevA.107.013513">[online]</a>
                 </span>
+                <span class="" style3=""="">
+                  <a href="https://doi.org/10.48550/arXiv.2210.07947">[arXiv]</a>
+                </span>
                 <br>
                 D. Ramsey, A. Di Piazza, M. Formanek, P. Franke, D. H. Froula, B. Malaca, W. B. Mori, J. R. Pierce, T. T. Simpson, J. Vieira, M. Vranic, K. Weichman, J. P. Palastro
                 </br>
@@ -45,6 +54,9 @@
                 </b>
                 <span class="" style3=""="">
                   <a href="https://doi.org/10.1016/j.cpc.2022.108559">[online]</a>
+                </span>
+                <span class="" style3=""="">
+                  <a href="https://doi.org/10.48550/arXiv.2204.13563">[arXiv]</a>
                 </span>
                 <br>
                 Viktor K. Decyk, Warren B. Mori, Fei Li
@@ -59,6 +71,9 @@
                 </b>
                 <span class="" style3=""="">
                   <a href="https://doi.org/10.1073/pnas.2211713119">[online]</a>
+                </span>
+                <span class="" style3=""="">
+                  <a href="https://doi.org/10.48550/arXiv.2204.04267">[arXiv]</a>
                 </span>
                 <br>
                 Chaojie Zhang, Yipeng Wu, Mitchell Sinclair, Audrey Farrell, Kenneth A. Marsh, Irina Petrushina, Navid Vafaei-Najafabadi, Apurva Gaikwad, Rotem Kupfer, Karl Kusche, Mikhail Fedurin, Igor Pogorelsky, Mikhail Polyanskiy, Chen-Kang Huang, Jianfei Hua, Wei Lu, Warren B. Mori, Chan Joshi
@@ -86,6 +101,9 @@
                 <span class="" style3=""="">
                   <a href="https://doi.org/10.1016/j.jcp.2022.111599">[online]</a>
                 </span>
+                <span class="" style3=""="">
+                  <a href="https://doi.org/10.48550/arXiv.2203.12148">[arXiv]</a>
+                </span>
                 <br>
                 Fei Li, Weiming An, Frank S. Tsung, Viktor K. Decyk, Warren B. Mori
                 </br>
@@ -98,6 +116,9 @@
                 </b>
                 <span class="" style3=""="">
                   <a href="https://doi.org/10.1088/1361-6587/ac9016">[online]</a>
+                </span>
+                <span class="" style3=""="">
+                  <a href="https://doi.org/10.48550/arXiv.2208.06375">[arXiv]</a>
                 </span>
                 <br>
                 Michaël Touati, Romain Codur, Frank Tsung, Viktor K. Decyk, Warren B. Mori, Luis O. Silva
@@ -112,6 +133,9 @@
                 <span class="" style3=""="">
                   <a href="https://doi.org/10.1103/PhysRevAccelBeams.25.091303">[online]</a>
                 </span>
+                <span class="" style3=""="">
+                  <a href="https://doi.org/10.48550/arXiv.2111.04319">[arXiv]</a>
+                </span>
                 <br>
                 Shiyu Zhou, Jianfei Hua, Wei Lu, Weiming An, Qianqian Su, Warren B. Mori, Chan Joshi
                 </br>
@@ -125,6 +149,9 @@
                 <span class="" style3=""="">
                   <a href="https://doi.org/10.1103/PhysRevResearch.4.033192">[online]</a>
                 </span>
+                <span class="" style3=""="">
+                  <a href="https://doi.org/10.48550/arXiv.2011.01927">[arXiv]</a>
+                </span>
                 <br>
                 E. P. Alves, F. Fiuza
                 </br>
@@ -137,6 +164,9 @@
                 </b>
                 <span class="" style3=""="">
                   <a href="https://doi.org/10.1103/PhysRevResearch.4.033015">[online]</a>
+                </span>
+                <span class="" style3=""="">
+                  <a href="https://doi.org/10.48550/arXiv.2206.09017">[arXiv]</a>
                 </span>
                 <br>
                 Zan Nie, Fei Li, Felipe Morales, Serguei Patchkovskii, Olga Smirnova, Weiming An, Chaojie Zhang, Yipeng Wu, Noa Nambu, Daniel Matteo, Kenneth A. Marsh, Frank Tsung, Warren B. Mori, Chan Joshi
@@ -164,6 +194,9 @@
                 <span class="" style3=""="">
                   <a href="https://doi.org/10.1063/5.0089814">[online]</a>
                 </span>
+                <span class="" style3=""="">
+                  <a href="https://doi.org/10.48550/arXiv.2204.04262">[arXiv]</a>
+                </span>
                 <br>
                 Chaojie Zhang, Yipeng Wu, Mitchell Sinclair, Audrey Farrell, Kenneth A. Marsh, Jianfei Hua, Irina Petrushina, Navid Vafaei-Najafabadi, Rotem Kupfer, Karl Kusche, Mikhail Fedurin, Igor Pogorelsky, Mikhail Polyanskiy, Chen-Kang Huang, Wei Lu, Warren B. Mori, Chan Joshi
                 </br>
@@ -176,6 +209,9 @@
                 </b>
                 <span class="" style3=""="">
                   <a href="https://doi.org/10.1088/1361-6587/ac6a10">[online]</a>
+                </span>
+                <span class="" style3=""="">
+                  <a href="https://doi.org/10.48550/arXiv.2202.07401">[arXiv]</a>
                 </span>
                 <br>
                 Xiaoning Wang, Jie Gao, Qianqian Su, Jia Wang, Dazhang Li, Ming Zeng, Wei Lu, Warren B. Mori, Chan Joshi, Weiming An
@@ -203,6 +239,9 @@
                 <span class="" style3=""="">
                   <a href="https://doi.org/10.1103/PhysRevAccelBeams.25.011302">[online]</a>
                 </span>
+                <span class="" style3=""="">
+                  <a href="https://doi.org/10.48550/arXiv.2109.14566">[arXiv]</a>
+                </span>
                 <br>
                 Xinlu Xu, Jorge Vieira, Mark J. Hogan, Chan Joshi, Warren B. Mori
                 </br>
@@ -217,6 +256,9 @@
                 <span class="" style3=""="">
                   <a href="https://doi.org/10.1063/5.0065232">[online]</a>
                 </span>
+                <span class="" style3=""="">
+                  <a href="https://doi.org/10.48550/arXiv.2108.00028">[arXiv]</a>
+                </span>
                 <br>
                 Kyle G. Miller, Joshua May, Frederico Fiuza, Warren B. Mori
                 </br>
@@ -229,6 +271,9 @@
                 </b>
                 <span class="" style3=""="">
                   <a href="https://doi.org/10.1103/PhysRevLett.127.174801">[online]</a>
+                </span>
+                <span class="" style3=""="">
+                  <a href="https://doi.org/10.48550/arXiv.2012.06095">[arXiv]</a>
                 </span>
                 <br>
                 Shiyu Zhou, Jianfei Hua, Weiming An, Warren B. Mori, Chan Joshi, Jie Gao, Wei Lu
@@ -243,6 +288,9 @@
                 <span class="" style3=""="">
                   <a href="https://doi.org/10.1088/1361-6587/ac2cd9">[online]</a>
                 </span>
+                <span class="" style3=""="">
+                  <a href="https://doi.org/10.48550/arXiv.1406.5424">[arXiv]</a>
+                </span>
                 <br>
                 R. M. G. M. Trines, E. P. Alves, K. A. Humphrey, R. Bingham, R. A. Cairns, F. Fiúza, R. A. Fonseca, L. O. Silva
                 </br>
@@ -256,6 +304,9 @@
                 <span class="" style3=""="">
                   <a href="https://doi.org/10.1088/1361-6587/ac2613">[online]</a>
                 </span>
+                <span class="" style3=""="">
+                  <a href="https://doi.org/10.48550/arXiv.1311.2034">[arXiv]</a>
+                </span>
                 <br>
                 E. P. Alves, R. M. G. M. Trines, K. A. Humphrey, R. Bingham, R. A. Cairns, F. Fiúza, R. A. Fonseca, L. O. Silva
                 </br>
@@ -268,6 +319,9 @@
                 </b>
                 <span class="" style3=""="">
                   <a href="https://doi.org/10.1103/PhysRevE.104.035203">[online]</a>
+                </span>
+                <span class="" style3=""="">
+                  <a href="https://doi.org/10.48550/arXiv.1910.07670">[arXiv]</a>
                 </span>
                 <br>
                 I. N. Ellis, D. J. Strozzi, W. B. Mori, F. Li, F. R. Graziani
@@ -295,6 +349,9 @@
                 <span class="" style3=""="">
                   <a href="https://doi.org/10.1016/j.jcp.2021.110367">[online]</a>
                 </span>
+                <span class="" style3=""="">
+                  <a href="https://doi.org/10.48550/arXiv.2007.07556">[arXiv]</a>
+                </span>
                 <br>
                 Fei Li, Viktor K. Decyk, Kyle G. Miller, Adam Tableman, Frank S. Tsung, Marija Vranic, Ricardo A. Fonseca, Warren B. Mori
                 </br>
@@ -308,6 +365,9 @@
                 <span class="" style3=""="">
                   <a href="https://doi.org/10.1038/s41567-021-01202-6">[online]</a>
                 </span>
+                <span class="" style3=""="">
+                  <a href="https://doi.org/10.48550/arXiv.2005.00183">[arXiv]</a>
+                </span>
                 <br>
                 Yipeng Wu, Jianfei Hua, Zheng Zhou, Jie Zhang, Shuang Liu, Bo Peng, Yu Fang, Xiaonan Ning, Zan Nie, Fei Li, Chaojie Zhang, Chih-Hao Pai, Yingchao Du, Wei Lu, Warren B. Mori, Chan Joshi
                 </br>
@@ -320,6 +380,9 @@
                 </b>
                 <span class="" style3=""="">
                   <a href="https://doi.org/10.1063/5.0051282">[online]</a>
+                </span>
+                <span class="" style3=""="">
+                  <a href="https://doi.org/10.48550/arXiv.2103.12986">[arXiv]</a>
                 </span>
                 <br>
                 T. N. Dalichaouch, X. L. Xu, A. Tableman, F. Li, F. S. Tsung, W. B. Mori
@@ -347,6 +410,9 @@
                 <span class="" style3=""="">
                   <a href="https://doi.org/10.1016/j.cpc.2020.107784">[online]</a>
                 </span>
+                <span class="" style3=""="">
+                  <a href="https://doi.org/10.48550/arXiv.2002.08494">[arXiv]</a>
+                </span>
                 <br>
                 Fei Li, Weiming An, Viktor K. Decyk, Xinlu Xu, Mark J. Hogan, Warren B. Mori
                 </br>
@@ -373,6 +439,9 @@
                 <span class="" style3=""="">
                   <a href="https://doi.org/10.1103/PhysRevLett.126.094801">[online]</a>
                 </span>
+                <span class="" style3=""="">
+                  <a href="https://doi.org/10.48550/arXiv.2007.12736">[arXiv]</a>
+                </span>
                 <br>
                 Xinlu Xu, David B. Cesar, Sébastien Corde, Vitaly Yakimenko, Mark J. Hogan, Chan Joshi, Agostino Marinelli, Warren B. Mori
                 </br>
@@ -385,6 +454,9 @@
                 </b>
                 <span class="" style3=""="">
                   <a href="https://doi.org/10.1103/PhysRevLett.126.054801">[online]</a>
+                </span>
+                <span class="" style3=""="">
+                  <a href="https://doi.org/10.48550/arXiv.2101.10378">[arXiv]</a>
                 </span>
                 <br>
                 Zan Nie, Fei Li, Felipe Morales, Serguei Patchkovskii, Olga Smirnova, Weiming An, Noa Nambu, Daniel Matteo, Kenneth A. Marsh, Frank Tsung, Warren B. Mori, Chan Joshi
@@ -412,6 +484,9 @@
                 <span class="" style3=""="">
                   <a href="https://doi.org/10.1063/5.0039301">[online]</a>
                 </span>
+                <span class="" style3=""="">
+                  <a href="https://doi.org/10.48550/arXiv.2012.00984">[arXiv]</a>
+                </span>
                 <br>
                 Zan Nie, Yipeng Wu, Chaojie Zhang, Warren B. Mori, Chan Joshi, Wei Lu, Chih-Hao Pai, Jianfei Hua, Jyhpyng Wang
                 </br>
@@ -424,6 +499,9 @@
                 </b>
                 <span class="" style3=""="">
                   <a href="https://doi.org/10.1016/j.cpc.2020.107633">[online]</a>
+                </span>
+                <span class="" style3=""="">
+                  <a href="https://doi.org/10.48550/arXiv.2003.10406">[arXiv]</a>
                 </span>
                 <br>
                 Kyle G. Miller, Roman P. Lee, Adam Tableman, Anton Helm, Ricardo A. Fonseca, Viktor K. Decyk, Warren B. Mori
@@ -451,6 +529,9 @@
                 <span class="" style3=""="">
                   <a href="https://doi.org/10.1103/PhysRevAccelBeams.24.011302">[online]</a>
                 </span>
+                <span class="" style3=""="">
+                  <a href="https://doi.org/10.48550/arXiv.2012.01404">[arXiv]</a>
+                </span>
                 <br>
                 P. M. King, K. Miller, N. Lemos, J. L. Shaw, B. F. Kraus, M. Thibodeau, B. M. Hegelich, J. Hinojosa, P. Michel, C. Joshi, K. A. Marsh, W. Mori, A. Pak, A. G. R. Thomas, F. Albert
                 </br>
@@ -463,6 +544,9 @@
                 </b>
                 <span class="" style3=""="">
                   <a href="https://doi.org/10.1103/PhysRevE.103.013306">[online]</a>
+                </span>
+                <span class="" style3=""="">
+                  <a href="https://doi.org/10.48550/arXiv.2101.05798">[arXiv]</a>
                 </span>
                 <br>
                 E. P. Alves, W. B. Mori, F. Fiuza
@@ -477,6 +561,9 @@
                 <span class="" style3=""="">
                   <a href="https://doi.org/10.1016/j.cpc.2020.107580">[online]</a>
                 </span>
+                <span class="" style3=""="">
+                  <a href="https://doi.org/10.48550/arXiv.2004.03754">[arXiv]</a>
+                </span>
                 <br>
                 Fei Li, Kyle G. Miller, Xinlu Xu, Frank S. Tsung, Viktor K. Decyk, Weiming An, Ricardo A. Fonseca, Warren B. Mori
                 </br>
@@ -490,6 +577,9 @@
                 </b>
                 <span class="" style3=""="">
                   <a href="https://doi.org/10.1103/PhysRevLett.125.255001">[online]</a>
+                </span>
+                <span class="" style3=""="">
+                  <a href="https://doi.org/10.48550/arXiv.2011.09979">[arXiv]</a>
                 </span>
                 <br>
                 Chaojie Zhang, Jianfei Hua, Yipeng Wu, Yu Fang, Yue Ma, Tianliang Zhang, Shuang Liu, Bo Peng, Yunxiao He, Chen-Kang Huang, Ken A. Marsh, Warren B. Mori, Wei Lu, Chan Joshi
@@ -530,6 +620,9 @@
                 <span class="" style3=""="">
                   <a href="https://doi.org/10.1016/j.jcp.2020.109451">[online]</a>
                 </span>
+                <span class="" style3=""="">
+                  <a href="https://doi.org/10.48550/arXiv.1910.13529">[arXiv]</a>
+                </span>
                 <br>
                 Xinlu Xu, Fei Li, Frank S. Tsung, Thamine N. Dalichaouch, Weiming An, Han Wen, Viktor K. Decyk, Ricardo A. Fonseca, Mark J. Hogan, Warren B. Mori
                 </br>
@@ -564,19 +657,6 @@
 
               <h6>
                 <b>
-                  Photon deceleration in plasma wakes generates single-cycle relativistic tunable infrared pulses
-                </b>
-                <span class="" style3=""="">
-                  <a href="https://doi.org/10.1038/s41467-020-16541-w">[online]</a>
-                </span>
-                <br>
-                Zan Nie, Chih-Hao Pai, Jie Zhang, Xiaonan Ning, Jianfei Hua, Yunxiao He, Yipeng Wu, Qianqian Su, Shuang Liu, Yue Ma, Zhi Cheng, Wei Lu, Hsu-Hsin Chu, Jyhpyng Wang, Chaojie Zhang, Warren B. Mori, Chan Joshi
-                </br>
-                Nature Communications 11, 2787 (2020)
-              </h6>
-
-              <h6>
-                <b>
                   Sub-Joule Single-Cycle Terahertz Pulse by Frequency Downshifting of a Picosecond 10 gm CO2 Laser Pulse in a Tailored Plasma Structure
                 </b>
                 <span class="" style3=""="">
@@ -594,6 +674,9 @@
                 </b>
                 <span class="" style3=""="">
                   <a href="https://doi.org/10.1088/1367-2630/ab8678">[online]</a>
+                </span>
+                <span class="" style3=""="">
+                  <a href="https://doi.org/10.48550/arXiv.1707.07290">[arXiv]</a>
                 </span>
                 <br>
                 Y. Wan, I. A. Andriyash, C. H. Pai, J. F. Hua, C. J. Zhang, F. Li, Y. P. Wu, Z. Nie, W. B. Mori, W. Lu, V. Malka, C. Joshi
@@ -634,6 +717,9 @@
                 </b>
                 <span class="" style3=""="">
                   <a href="https://doi.org/10.1103/PhysRevApplied.12.064011">[online]</a>
+                </span>
+                <span class="" style3=""="">
+                  <a href="https://doi.org/10.48550/arXiv.1805.07031">[arXiv]</a>
                 </span>
                 <br>
                 Y.P. Wu, J.F. Hua, C.-H. Pai, W. An, Z. Zhou, J. Zhang, S. Liu, B. Peng, Y. Fang, S.Y. Zhou, X.L. Xu, C.J. Zhang, F. Li, Z. Nie, W. Lu, W.B. Mori, C. Joshi
@@ -726,6 +812,9 @@
                 <span class="" style3=""="">
                   <a href="https://doi.org/10.1103/PhysRevLett.122.204804">[online]</a>
                 </span>
+                <span class="" style3=""="">
+                  <a href="https://doi.org/10.48550/arXiv.1904.11192">[arXiv]</a>
+                </span>
                 <br>
                 Y. P. Wu, J. F. Hua, Z. Zhou, J. Zhang, S. Liu, B. Peng, Y. Fang, Z. Nie, X. N. Ning, C.-H. Pai, Y. C. Du, W. Lu, C. J. Zhang, W. B. Mori, C. Joshi
                 </br>
@@ -751,6 +840,9 @@
                 </b>
                 <span class="" style3=""="">
                   <a href="https://doi.org/10.1103/PhysRevAccelBeams.22.023402">[online]</a>
+                </span>
+                <span class="" style3=""="">
+                  <a href="https://doi.org/10.48550/arXiv.1807.06968">[arXiv]</a>
                 </span>
                 <br>
                 F. Del Gaudio, T. Grismayer, R. A. Fonseca, W. B. Mori, L. O. Silva
@@ -800,19 +892,6 @@
 
               <h6>
                 <b>
-                  Relativistic single-cycle tunable infrared pulses generated from a tailored plasma density structure
-                </b>
-                <span class="" style3=""="">
-                  <a href="https://doi.org/10.1038/s41566-018-0190-8">[online]</a>
-                </span>
-                <br>
-                Zan Nie, Chih-Hao Pai, Jianfei Hua, Chaojie Zhang, Yipeng Wu, Yang Wan, Fei Li, Jie Zhang, Zhi Cheng, Qianqian Su, Shuang Liu, Yue Ma, Xiaonan Ning, Yunxiao He, Wei Lu, Hsu-Hsin Chu, Jyhpyng Wang, Warren B. Mori, Chan Joshi
-                </br>
-                Nature Photonics 12, 489-494 (2018)
-              </h6>
-
-              <h6>
-                <b>
                   Generation and Acceleration of the Trailing Positron Bunch Using a Drive- Trailing Electron Bunch Configuration
                 </b>
                 <span class="" style3=""="">
@@ -830,6 +909,9 @@
                 </b>
                 <span class="" style3=""="">
                   <a href="https://doi.org/10.1038/s41566-018-0190-8">[online]</a>
+                </span>
+                <span class="" style3=""="">
+                  <a href="https://doi.org/10.48550/arXiv.1712.09182">[arXiv]</a>
                 </span>
                 <br>
                 Zan Nie, Chih-Hao Pai, Jianfei Hua, Chaojie Zhang, Yipeng Wu, Yang Wan, Fei Li, Jie Zhang, Zhi Cheng, Qianqian Su, Shuang Liu, Yue Ma, Xiaonan Ning, Yunxiao He, Wei Lu, Hsu-Hsin Chu, Jyhpyng Wang, Warren B. Mori, Chan Joshi
@@ -870,6 +952,9 @@
                 <span class="" style3=""="">
                   <a href="https://doi.org/10.1088/1367-2630/aac926">[online]</a>
                 </span>
+                <span class="" style3=""="">
+                  <a href="https://doi.org/10.48550/arXiv.1802.01926">[arXiv]</a>
+                </span>
                 <br>
                 Q. Zhao, S. M. Weng, Z. M. Sheng, M. Chen, G. B. Zhang, W. B. Mori, B. Hidding, D. A. Jaroszynski, J. Zhang
                 </br>
@@ -895,6 +980,9 @@
                 </b>
                 <span class="" style3=""="">
                   <a href="https://doi.org/10.1088/1361-6587/aaca0b">[online]</a>
+                </span>
+                <span class="" style3=""="">
+                  <a href="https://doi.org/10.48550/arXiv.1803.05801">[arXiv]</a>
                 </span>
                 <br>
                 J. P. Brodrick, M. Sherlock, W. A. Farmer, A. S. Joglekar, R. Barrois, J. Wengraf, J. J. Bissell, R. J. Kingham, D. Del Sorbo, M. P. Read, C. P. Ridgers
@@ -922,6 +1010,9 @@
                 <span class="" style3=""="">
                   <a href="https://doi.org/10.1103/PhysRevLett.120.154801">[online]</a>
                 </span>
+                <span class="" style3=""="">
+                  <a href="https://doi.org/10.48550/arXiv.1712.09032">[arXiv]</a>
+                </span>
                 <br>
                 J. Luo, M. Chen, W. Y. Wu, S. M. Weng, Z. M. Sheng, C. B. Schroeder, D. A. Jaroszynski, E. Esarey, W. P. Leemans, W. B. Mori, J. Zhang
                 </br>
@@ -934,6 +1025,9 @@
                 </b>
                 <span class="" style3=""="">
                   <a href="https://doi.org/10.1103/PhysRevLett.120.124802">[online]</a>
+                </span>
+                <span class="" style3=""="">
+                  <a href="https://doi.org/10.48550/arXiv.1802.09000">[arXiv]</a>
                 </span>
                 <br>
                 C. A. Lindstrøm, E. Adli, J. M. Allen, W. An, C. Beekman, C. I. Clarke, C. E. Clayton, S. Corde, A. Doche, J. Frederico, S. J. Gessner, S. Z. Green, M. J. Hogan, C. Joshi, M. Litos, W. Lu, K. A. Marsh, W. B. Mori, B. D. O’Shea, N. Vafaei-Najafabadi, V. Yakimenko
@@ -973,6 +1067,9 @@
                 </b>
                 <span class="" style3=""="">
                   <a href="https://doi.org/10.1103/PhysRevX.8.011020">[online]</a>
+                </span>
+                <span class="" style3=""="">
+                  <a href="https://doi.org/10.48550/arXiv.1707.06821">[arXiv]</a>
                 </span>
                 <br>
                 J. M. Cole, K. T. Behm, E. Gerstmayr, T. G. Blackburn, J. C. Wood, C. D. Baird, M. J. Duff, C. Harvey, A. Ilderton, A. S. Joglekar, K. Krushelnick, S. Kuschel, M. Marklund, P. McKenna, C. D. Murphy, K. Poder, C. P. Ridgers, G. M. Samarin, G. Sarri, D. R. Symes, A. G. R. Thomas, J. Warwick, M. Zepf, Z. Najmudin, S. P. D. Mangles

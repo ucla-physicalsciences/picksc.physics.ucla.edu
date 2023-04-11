@@ -35,10 +35,39 @@ base_str = """
                 </br>
                 {} {}, {} ({})
               </h6>\n"""
+arXiv_str = """
+              <h6>
+                <b>
+                  {}
+                </b>
+                <span class="" style3=""="">
+                  <a href="https://doi.org/{}">[online]</a>
+                </span>
+                <span class="" style3=""="">
+                  <a href="https://doi.org/10.48550/{}">[arXiv]</a>
+                </span>
+                <br>
+                {}
+                </br>
+                {} {}, {} ({})
+              </h6>\n"""
 
-with open('formatted_pubs.txt', mode='w', encoding='utf-8') as f:
-    year_header = 2024
-    for bibentry in bib:
+def formatter(bibentry):
+    if 'archive' in bibentry.keys():
+        title = bibentry['title']
+        doi = bibentry['DOI']
+        arXiv = bibentry['archive'].replace(':','.')
+        authorlist = bibentry['authorlist']
+        journal = bibentry['container-title']
+        if 'volume' in bibentry.keys():
+            volume = bibentry['volume']
+        else:
+            volume=''
+        page = bibentry['page']
+        year = bibentry['issued']['date'].year
+
+        return arXiv_str.format(title, doi, arXiv, authorlist, journal, volume, page, year)
+    else:
         title = bibentry['title']
         doi = bibentry['DOI']
         authorlist = bibentry['authorlist']
@@ -49,8 +78,15 @@ with open('formatted_pubs.txt', mode='w', encoding='utf-8') as f:
             volume=''
         page = bibentry['page']
         year = bibentry['issued']['date'].year
+
+        return base_str.format(title, doi, authorlist, journal, volume, page, year)
+
+with open('formatted_pubs.txt', mode='w', encoding='utf-8') as f:
+    year_header = 2024
+    for bibentry in bib:
+        year = bibentry['issued']['date'].year
         if year < year_header:
             year_header = year
             f.write(f'<h5>{year}</h5>\n')
-        f.write(base_str.format(title, doi, authorlist, journal, volume, page, year))
+        f.write(formatter(bibentry))
 
