@@ -2,6 +2,22 @@
 
               <h6>
                 <b>
+                  Optimization of transformer ratio and beam loading in a plasma wakefield accelerator with a structure-exploiting algorithm
+                </b>
+                <span class="" style3=""="">
+                  <a href="https://doi.org/10.1063/5.0142940">[online]</a>
+                </span>
+                <span class="" style3=""="">
+                  <a href="https://doi.org/10.48550/arXiv.2301.09697">[arXiv]</a>
+                </span>
+                <br>
+                Q. Su, J. Larson, T. N. Dalichaouch, F. Li, W. An, L. Hildebrand, Y. Zhao, V. Decyk, P. Alves, S. M. Wild, W. B. Mori
+                </br>
+                Physics of Plasmas 30, 053108 (2023)
+              </h6>
+
+              <h6>
+                <b>
                   Arbitrarily structured laser pulses
                 </b>
                 <span class="" style3=""="">
