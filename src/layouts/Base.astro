@@ -10,9 +10,9 @@ interface Props {
 
 const {
   title,
-  description = 'PICKSC, the UCLA Particle-in-Cell and Kinetic Simulation Software Center, develops simulation and data-science tools for plasma physics.',
+  description = 'The UCLA Plasma Simulation Group develops and uses particle-in-cell and data-science tools to make discoveries in plasma physics.',
 } = Astro.props;
-const fullTitle = title ? `${title} · PICKSC` : 'PICKSC · UCLA Particle-in-Cell and Kinetic Simulation Software Center';
+const fullTitle = title ? `${title} · UCLA Plasma Simulation Group` : 'UCLA Plasma Simulation Group';
 ---
 
 <!doctype html>
@@ -22,7 +22,8 @@ const fullTitle = title ? `${title} · PICKSC` : 'PICKSC · UCLA Particle-in-Cel
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
-    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link

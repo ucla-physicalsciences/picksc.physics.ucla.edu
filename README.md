@@ -1,6 +1,6 @@
-# PICKSC website (Astro)
+# UCLA Plasma Simulation Group website (Astro)
 
-Source for the redesigned [picksc.physics.ucla.edu](https://picksc.physics.ucla.edu), built with
+Source for the redesigned UCLA Plasma Simulation Group website (currently [picksc.physics.ucla.edu](https://picksc.physics.ucla.edu)), built with
 [Astro](https://astro.build) and Tailwind CSS. Work in progress on the `astro-revamp` branch; the live
 site is still served from the `gh-pages` branch (Jekyll).
 
