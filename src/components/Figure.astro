@@ -1,0 +1,22 @@
+---
+// A highlight's figure, or a neutral placeholder while the figure is pending.
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+interface Props {
+  image?: ImageMetadata;
+  alt: string;
+  class?: string;
+  widths?: number[];
+  sizes?: string;
+}
+const { image, alt, class: className = '', widths = [480, 800, 1200], sizes = '(min-width: 768px) 50vw, 100vw' } = Astro.props;
+---
+
+{image ? (
+  <Image src={image} alt={alt} widths={widths} sizes={sizes} class:list={['h-full w-full object-contain', className]} />
+) : (
+  <div class:list={['flex h-full w-full items-center justify-center bg-slate-100 text-sm text-slate-400', className]}>
+    Figure coming soon
+  </div>
+)}

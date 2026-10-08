@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-serif: "Source Serif 4", ui-serif, Georgia, serif;
+
+  /* UCLA blues, used sparingly as the accent */
+  --color-brand-50: #eef5fb;
+  --color-brand-100: #d6e7f5;
+  --color-brand-600: #2774ae;
+  --color-brand-700: #1d5c8c;
+  --color-brand-900: #003b5c;
+  --color-gold: #ffd100;
+}
+
+@layer base {
+  html {
+    @apply bg-white text-slate-800 antialiased;
+  }
+  body {
+    @apply font-sans;
+  }
+  h1, h2, h3 {
+    @apply font-serif text-slate-900;
+  }
+  a {
+    @apply text-brand-700;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-brand-600;
+  }
+}

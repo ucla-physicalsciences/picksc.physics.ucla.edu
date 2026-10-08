@@ -1,0 +1,25 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Figure from './Figure.astro';
+import { themes } from '../data/site';
+
+interface Props {
+  entry: CollectionEntry<'highlights'>;
+}
+const { data } = Astro.props.entry;
+---
+
+<article class="group flex flex-col overflow-hidden rounded-xl border border-slate-200 bg-white transition hover:border-slate-300 hover:shadow-md">
+  <div class="aspect-[16/10] border-b border-slate-100 bg-white p-4">
+    <Figure image={data.image} alt={data.imageAlt} sizes="(min-width: 1024px) 360px, (min-width: 640px) 50vw, 100vw" />
+  </div>
+  <div class="flex flex-1 flex-col p-5">
+    <p class="text-xs font-medium uppercase tracking-wide text-brand-600">{themes[data.theme].title}</p>
+    <h3 class="mt-2 text-lg leading-snug font-semibold">
+      <a href={`https://doi.org/${data.paper.doi}`} class="text-slate-900 no-underline group-hover:text-brand-700">
+        {data.title}
+      </a>
+    </h3>
+    <p class="mt-auto pt-4 text-sm text-slate-500">{data.paper.citation}</p>
+  </div>
+</article>

@@ -1,0 +1,112 @@
+---
+import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import HighlightCard from '../components/HighlightCard.astro';
+import hero from '../assets/hero-weibel.png';
+import publications from '../data/publications.json';
+import { software, LEGACY } from '../data/site';
+
+const highlights = (await getCollection('highlights', ({ data }) => data.featured))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 3);
+
+const recent = publications.slice(0, 5);
+const cite = (p: (typeof publications)[number]) =>
+  p.status === 'accepted'
+    ? `Accepted in ${p.journal} (${p.year})`
+    : [p.journal, p.volume && `${p.volume}, ${p.page}`].filter(Boolean).join(' ') + ` (${p.year})`;
+const shortAuthors = (a: string[]) => (a.length > 4 ? `${a.slice(0, 3).join(', ')}, et al.` : a.join(', '));
+---
+
+<Base>
+  <!-- Hero -->
+  <section class="border-b border-slate-200 bg-gradient-to-b from-brand-50/60 to-white">
+    <div class="mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 sm:px-6 md:grid-cols-2 md:py-24">
+      <div>
+        <h1 class="text-4xl leading-tight font-semibold sm:text-5xl">
+          Simulating plasmas, from first principles to discovery
+        </h1>
+        <p class="mt-6 text-lg leading-relaxed text-slate-600">
+          PICKSC uses and develops particle-in-cell and data-science tools to make fundamental discoveries in
+          plasma-based acceleration, light sources, plasma astrophysics and intense laser–plasma interactions, and
+          shares its codes to accelerate discovery and teaching.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="/research" class="rounded-lg bg-brand-700 px-5 py-2.5 text-sm font-medium text-white no-underline hover:bg-brand-900">
+            Explore our research
+          </a>
+          <a href="#software" class="rounded-lg border border-slate-300 bg-white px-5 py-2.5 text-sm font-medium text-slate-700 no-underline hover:border-slate-400">
+            Our software
+          </a>
+        </div>
+      </div>
+      <figure>
+        <Image src={hero} alt="OSIRIS simulation of the Weibel instability showing tangled magnetic filaments in a three-dimensional plasma" widths={[600, 960]} sizes="(min-width: 768px) 50vw, 100vw" class="w-full" loading="eager" />
+        <figcaption class="mt-2 text-xs text-slate-500">
+          Weibel filamentation in a 4096-GPU OSIRIS simulation. Lee et al., J. Plasma Phys. (2025)
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Highlights -->
+  <section class="mx-auto max-w-6xl px-4 pt-20 sm:px-6">
+    <div class="flex items-end justify-between gap-4">
+      <h2 class="text-3xl font-semibold">Recent highlights</h2>
+      <a href="/research" class="text-sm font-medium no-underline hover:underline">All research →</a>
+    </div>
+    <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {highlights.map((entry) => <HighlightCard entry={entry} />)}
+    </div>
+  </section>
+
+  <!-- Software -->
+  <section id="software" class="mx-auto max-w-6xl scroll-mt-20 px-4 pt-20 sm:px-6">
+    <h2 class="text-3xl font-semibold">Software</h2>
+    <p class="mt-3 max-w-2xl text-slate-600">
+      We develop and share production and educational codes used by plasma physicists around the world.
+    </p>
+    <ul class="mt-8 grid gap-px overflow-hidden rounded-xl border border-slate-200 bg-slate-200 sm:grid-cols-2 lg:grid-cols-3">
+      {software.map((s) => (
+        <li class="bg-white">
+          <a href={s.href} class="block h-full p-5 no-underline hover:bg-slate-50">
+            <p class="font-semibold text-slate-900">{s.name}</p>
+            <p class="mt-1 text-sm text-slate-600">{s.desc}</p>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <!-- Publications + about -->
+  <section class="mx-auto grid max-w-6xl gap-12 px-4 pt-20 sm:px-6 lg:grid-cols-3">
+    <div class="lg:col-span-2">
+      <div class="flex items-end justify-between gap-4">
+        <h2 class="text-3xl font-semibold">Latest publications</h2>
+        <a href={`${LEGACY}/publications.html`} class="text-sm font-medium no-underline hover:underline">All publications →</a>
+      </div>
+      <ol class="mt-6 divide-y divide-slate-200 border-y border-slate-200">
+        {recent.map((p) => (
+          <li class="py-4">
+            <a href={`https://doi.org/${p.doi}`} class="font-medium text-slate-900 no-underline hover:text-brand-700">{p.title}</a>
+            <p class="mt-1 text-sm text-slate-500">{shortAuthors(p.authors)} · <span class="italic">{cite(p)}</span></p>
+          </li>
+        ))}
+      </ol>
+    </div>
+    <aside class="rounded-xl bg-slate-50 p-6 text-sm leading-relaxed text-slate-600">
+      <h2 class="text-xl font-semibold">About PICKSC</h2>
+      <p class="mt-3">
+        The UCLA Simulation of Plasmas Group was founded in 1973 by the late John M. Dawson, whose group invented the
+        laser wakefield and plasma wakefield accelerator concepts and pioneered parallel PIC computing.
+      </p>
+      <p class="mt-3">
+        Today PICKSC is housed in the UCLA Departments of Physics &amp; Astronomy and of Electrical &amp; Computer
+        Engineering, co-led by Professors Warren B. Mori and E. Paulo Alves, and works closely with the UCLA Laser–Plasma
+        Group led by Professor Chan Joshi.
+      </p>
+      <a href={`${LEGACY}/about-us.html`} class="mt-4 inline-block font-medium no-underline hover:underline">Our history →</a>
+    </aside>
+  </section>
+</Base>
