@@ -9,4 +9,5 @@ To use one on the homepage, change the `hero` import at the top of
 
 | File | What it shows | Source |
 |---|---|---|
-| `weibel-osiris-gpu.png` | 3D Weibel filamentation, 4096-GPU OSIRIS run | Lee et al., J. Plasma Phys. 91, E8 (2025), Fig. 3a |
+| `welcome-image.jpg` (500 × 577) | QuickPIC simulation of a beam-driven plasma wakefield accelerator: the drive electron bunch excites a plasma wake that accelerates a trailing bunch. Featured on the cover of *Nature* (vol. 515, no. 7525, 6 November 2014, "Full speed ahead"). | M. Litos et al., "High-efficiency acceleration of an electron beam in a plasma wakefield accelerator", Nature 515, 92–95 (2014), [doi:10.1038/nature13882](https://doi.org/10.1038/nature13882) |
+| `7525.png` (440 × 578) | The full *Nature* cover with the image above. | [Nature issue 7525](https://www.nature.com/nature/volumes/515/issues/7525) |
