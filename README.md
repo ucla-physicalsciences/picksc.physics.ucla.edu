@@ -18,6 +18,7 @@ npm run build    # static site in dist/
 |---|---|
 | Research highlights (one per featured paper) | `src/content/highlights/*.md` |
 | Highlight figures | `src/assets/research/` |
+| Candidate simulation figures (homepage hero) | `src/assets/simulations/` |
 | Publications | `src/data/publications.json` |
 | Menu, research themes, software list | `src/data/site.ts` |
 | Group logo files (SVG, PNG, PDF; not served by the site) | `brand/` |

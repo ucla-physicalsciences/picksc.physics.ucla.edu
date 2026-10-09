@@ -3,7 +3,8 @@ import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import HighlightCard from '../components/HighlightCard.astro';
-import hero from '../assets/hero-weibel.png';
+// Placeholder hero: the stacked group logo. Candidate simulation figures live in src/assets/simulations/.
+import hero from '../../brand/SVG/PSG_lockup-stacked_color.svg';
 import publications from '../data/publications.json';
 import { software, LEGACY } from '../data/site';
 
@@ -48,12 +49,9 @@ const shortAuthors = (a: string[]) => (a.length > 4 ? `${a.slice(0, 3).join(', '
           </a>
         </div>
       </div>
-      <figure>
-        <Image src={hero} alt="OSIRIS simulation of the Weibel instability showing tangled magnetic filaments in a three-dimensional plasma" widths={[600, 960]} sizes="(min-width: 768px) 50vw, 100vw" class="w-full" loading="eager" />
-        <figcaption class="mt-2 text-xs text-slate-500">
-          Weibel filamentation in a 4096-GPU OSIRIS simulation. Lee et al., J. Plasma Phys. (2025)
-        </figcaption>
-      </figure>
+      <div class="hidden justify-center md:flex">
+        <img src={hero.src} width={hero.width} height={hero.height} alt="UCLA Plasma Simulation Group logo" class="h-auto w-full max-w-sm" />
+      </div>
     </div>
   </section>
 
