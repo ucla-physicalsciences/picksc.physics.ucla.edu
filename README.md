@@ -20,6 +20,8 @@ npm run build    # static site in dist/
 | Highlight figures | `src/assets/research/` |
 | Publications | `src/data/publications.json` |
 | Menu, research themes, software list | `src/data/site.ts` |
+| Group logo files (SVG, PNG, PDF; not served by the site) | `brand/` |
+| Logo used in the header | `src/assets/group-logo.svg` (copy of `brand/SVG/PSG_lockup-horizontal_color.svg`, outer margin trimmed) |
 
 To add a research highlight, copy an existing file in `src/content/highlights/`, put its figure in
 `src/assets/research/`, and edit the front matter. The build checks every field, so a missing or
