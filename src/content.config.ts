@@ -37,6 +37,8 @@ const areas = defineCollection({
       image: image().optional(),
       imageAlt: z.string().default(''),
       figureCredit: z.string().default(''),
+      // Wide figures (e.g. multi-step diagrams) span the full width below the text.
+      wideFigure: z.boolean().default(false),
       publications: z.array(z.string()).default([]),
     }),
 });

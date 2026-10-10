@@ -2,9 +2,10 @@
 title: AI/ML for plasma physics
 subtitle: Coupling machine learning with kinetic simulations to accelerate discovery
 order: 2
-image: ../../assets/areas/ai-ml.png
-imageAlt: "Snapshots of electron phase-space density over time with sampled measurement volumes, and the partial differential equation inferred from them."
-figureCredit: "Inferring the governing equation from particle-in-cell phase-space data. Adapted from Alves & Fiuza, Phys. Rev. Research (2022)."
+image: ../../assets/areas/ai-ml-sparse-regression.png
+imageAlt: "Workflow for discovering the governing equation from simulation data: measurement volumes are sampled from electron phase-space snapshots, a library of candidate terms is built and integrated over them, and sparse regression yields the inferred Vlasov equation."
+figureCredit: "Discovering the Vlasov equation from particle-in-cell data with sparse regression. Adapted from Fig. 1(b) of Alves & Fiuza, Phys. Rev. Research (2022), CC BY 4.0."
+wideFigure: true
 publications:
   - 10.1103/PhysRevResearch.4.033192
   - 10.1103/9fq1-vpqz
