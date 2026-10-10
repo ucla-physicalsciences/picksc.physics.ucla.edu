@@ -2,9 +2,9 @@
 title: AI/ML for plasma physics
 subtitle: Coupling machine learning with kinetic simulations to accelerate discovery
 order: 2
-# image: ../../assets/areas/ai-ml.png
-imageAlt: ""
-figureCredit: ""
+image: ../../assets/areas/ai-ml.png
+imageAlt: "Snapshots of electron phase-space density over time with sampled measurement volumes, and the partial differential equation inferred from them."
+figureCredit: "Inferring the governing equation from particle-in-cell phase-space data. Adapted from Alves & Fiuza, Phys. Rev. Research (2022)."
 publications:
   - 10.1103/PhysRevResearch.4.033192
   - 10.1103/9fq1-vpqz

@@ -2,9 +2,9 @@
 title: Plasma-based acceleration
 subtitle: Laser- and beam-driven wakefield accelerators and intense laser– and beam–plasma interactions
 order: 3
-# image: ../../assets/areas/plasma-acceleration.png
-imageAlt: ""
-figureCredit: ""
+image: ../../assets/areas/pba.jpg
+imageAlt: "Colorful 3D rendering of a QuickPIC simulation: a drive electron bunch excites a plasma wake that accelerates a trailing bunch."
+figureCredit: "QuickPIC simulation of a plasma wakefield accelerator, featured on the cover of Nature 515 (2014)."
 publications:
   - 10.1103/cy5x-b81v
   - 10.1103/qts4-8kgf

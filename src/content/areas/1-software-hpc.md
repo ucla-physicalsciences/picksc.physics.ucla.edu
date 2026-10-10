@@ -2,9 +2,9 @@
 title: Simulation software & high-performance computing
 subtitle: Sustainable, reusable kinetic plasma codes for the world's largest supercomputers
 order: 1
-# image: ../../assets/areas/software-hpc.png
-imageAlt: ""
-figureCredit: ""
+image: ../../assets/areas/software-hpc.png
+imageAlt: "Log-log plot of OSIRIS throughput versus number of GPUs, from 64 to 4096, for four test problems, all close to ideal scaling, with a photo of the Perlmutter supercomputer."
+figureCredit: "Weak scaling of OSIRIS up to 4096 GPUs on NERSC's Perlmutter. Data from Lee et al., J. Plasma Phys. (2025); photo: NERSC."
 # Three recent papers, by DOI (must exist in src/data/publications.json)
 publications:
   - 10.1088/1361-6587/aeaab0
