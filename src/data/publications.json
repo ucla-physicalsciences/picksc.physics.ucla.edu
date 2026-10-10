@@ -934,5 +934,20 @@
     "doi": "10.1103/physrevapplied.19.064013",
     "arxiv": null,
     "status": null
+  },
+  {
+    "title": "Data-driven discovery of reduced plasma physics models from fully kinetic simulations",
+    "authors": [
+      "E. Paulo Alves",
+      "Frederico Fiuza"
+    ],
+    "journal": "Physical Review Research",
+    "volume": "4",
+    "page": "033192",
+    "year": 2022,
+    "date": "2022-09-09",
+    "doi": "10.1103/PhysRevResearch.4.033192",
+    "arxiv": "2011.01927",
+    "status": null
   }
 ]

@@ -25,4 +25,20 @@ const highlights = defineCollection({
     }),
 });
 
-export const collections = { highlights };
+// Research areas: one Markdown file per area, shown in `order` on the Research page.
+// The body is the area's description; `publications` lists DOIs from src/data/publications.json.
+const areas = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/areas' }),
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
+      subtitle: z.string(),
+      order: z.number(),
+      image: image().optional(),
+      imageAlt: z.string().default(''),
+      figureCredit: z.string().default(''),
+      publications: z.array(z.string()).default([]),
+    }),
+});
+
+export const collections = { highlights, areas };

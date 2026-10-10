@@ -16,7 +16,9 @@ npm run build    # static site in dist/
 
 | What | Where |
 |---|---|
-| Research highlights (one per featured paper) | `src/content/highlights/*.md` |
+| Research areas (Research page: text, figure, 3 papers each) | `src/content/areas/*.md` |
+| Research area figures | `src/assets/areas/` |
+| Homepage highlight cards (one per featured paper) | `src/content/highlights/*.md` |
 | Highlight figures | `src/assets/research/` |
 | Candidate simulation figures (homepage hero) | `src/assets/simulations/` |
 | Publications | `src/data/publications.json` |

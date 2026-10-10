@@ -30,3 +30,23 @@
     @apply outline-2 outline-offset-2 outline-brand-600;
   }
 }
+
+/* Markdown body text of research areas (no typography plugin, so style lists here) */
+.area-text > * + * {
+  margin-top: 1rem;
+}
+.area-text ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+}
+.area-text ul ul {
+  list-style: circle;
+  margin-top: 0.5rem;
+}
+.area-text li + li {
+  margin-top: 0.5rem;
+}
+.area-text strong {
+  font-weight: 600;
+  color: var(--color-slate-900);
+}

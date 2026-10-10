@@ -1,16 +1,14 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import Figure from '../components/Figure.astro';
-import { themes } from '../data/site';
+import { byDoi, cite, shortAuthors } from '../data/publications';
 
-const all = (await getCollection('highlights')).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
-const groups = (Object.keys(themes) as (keyof typeof themes)[])
-  .map((key) => ({ key, ...themes[key], entries: all.filter((e) => e.data.theme === key) }))
-  .filter((g) => g.entries.length > 0);
+const areas = (await getCollection('areas')).sort((a, b) => a.data.order - b.data.order);
+const slug = (id: string) => id.replace(/^\d+-/, '');
 ---
 
-<Base title="Research" description="Research highlights from the UCLA Plasma Simulation Group: plasma-based acceleration, high-performance simulation and data-driven plasma physics.">
+<Base title="Research" description="Research areas of the UCLA Plasma Simulation Group: simulation software and high-performance computing, AI/ML for plasma physics, plasma-based acceleration, nonlinear optics of plasmas and plasma astrophysics.">
   <section class="border-b border-slate-200 bg-gradient-to-b from-brand-50/60 to-white">
     <div class="mx-auto max-w-6xl px-4 py-14 sm:px-6">
       <h1 class="text-4xl font-semibold">Research</h1>
@@ -18,56 +16,57 @@ const groups = (Object.keys(themes) as (keyof typeof themes)[])
         We combine first-principles kinetic simulation, high-performance computing and data-driven methods to
         understand and design plasma systems.
       </p>
-      <nav aria-label="Research themes" class="mt-6 flex flex-wrap gap-2">
-        {groups.map((g) => (
-          <a href={`#${g.key}`} class="rounded-full border border-slate-300 bg-white px-4 py-1.5 text-sm text-slate-700 no-underline hover:border-brand-600 hover:text-brand-700">
-            {g.title}
+      <nav aria-label="Research areas" class="mt-6 flex flex-wrap gap-2">
+        {areas.map((a) => (
+          <a href={`#${slug(a.id)}`} class="rounded-full border border-slate-300 bg-white px-4 py-1.5 text-sm text-slate-700 no-underline hover:border-brand-600 hover:text-brand-700">
+            {a.data.title}
           </a>
         ))}
       </nav>
     </div>
   </section>
 
-  {groups.map((g) => (
-    <section id={g.key} class="mx-auto max-w-6xl scroll-mt-20 px-4 pt-16 sm:px-6">
-      <h2 class="text-3xl font-semibold">{g.title}</h2>
-      <p class="mt-3 max-w-3xl text-slate-600">{g.blurb}</p>
+  {areas.map(async (area) => {
+    const { data } = area;
+    const { Content } = await render(area);
+    const papers = data.publications.map(byDoi);
+    const hasText = Boolean(area.body?.trim());
+    return (
+      <section id={slug(area.id)} class="scroll-mt-20 border-b border-slate-100 py-16 last:border-b-0">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6">
+          <h2 class="text-3xl font-semibold">{data.title}</h2>
+          <p class="mt-2 max-w-3xl text-lg text-slate-500">{data.subtitle}</p>
 
-      <div class="mt-10 space-y-14">
-        {g.entries.map(async (entry, i) => {
-          const { data } = entry;
-          const { Content } = await import('astro:content').then((m) => m.render(entry));
-          // Very wide figures (e.g. a single row of panels) get the full width, text below.
-          const wide = data.image ? data.image.width / data.image.height > 2.2 : false;
-          return (
-            <article class:list={['grid items-center gap-8', !wide && 'md:grid-cols-2']}>
-              <figure class:list={['rounded-xl border border-slate-200 bg-white p-4', !wide && i % 2 === 1 && 'md:order-2']}>
-                <Figure
-                  image={data.image}
-                  alt={data.imageAlt}
-                  class={data.image ? 'max-h-[440px]' : 'min-h-56'}
-                  sizes={wide ? '(min-width: 1152px) 1100px, 100vw' : undefined}
-                  widths={wide ? [800, 1400, 2000] : undefined}
-                />
-                <figcaption class="mt-3 text-xs text-slate-500">{data.figureCredit}</figcaption>
-              </figure>
-              <div class:list={[wide && 'max-w-3xl']}>
-                <h3 class="text-2xl leading-snug font-semibold">{data.title}</h3>
-                <div class="mt-4 leading-relaxed text-slate-700">
-                  <Content />
-                </div>
-                <div class="mt-5 border-l-2 border-brand-600 pl-4 text-sm">
-                  <a href={`https://doi.org/${data.paper.doi}`} class="font-medium text-slate-900 no-underline hover:text-brand-700">
-                    {data.paper.title}
-                  </a>
-                  <p class="mt-1 text-slate-500">{data.paper.authors}</p>
-                  <p class="text-slate-500 italic">{data.paper.citation}</p>
-                </div>
-              </div>
-            </article>
-          );
-        })}
-      </div>
-    </section>
-  ))}
+          <div class="mt-8 grid items-start gap-10 lg:grid-cols-5">
+            <div class="area-text leading-relaxed text-slate-700 lg:col-span-3">
+              {hasText ? <Content /> : <p class="text-slate-400 italic">Description coming soon.</p>}
+            </div>
+            <figure class="rounded-xl border border-slate-200 bg-white p-4 lg:col-span-2">
+              <Figure
+                image={data.image}
+                alt={data.imageAlt}
+                class={data.image ? 'max-h-[420px]' : 'aspect-[4/3]'}
+                sizes="(min-width: 1024px) 440px, 100vw"
+              />
+              {data.figureCredit && <figcaption class="mt-3 text-xs text-slate-500">{data.figureCredit}</figcaption>}
+            </figure>
+          </div>
+
+          {papers.length > 0 && (
+            <div class="mt-10">
+              <h3 class="font-sans text-sm font-semibold tracking-wide text-slate-500 uppercase">Recent publications</h3>
+              <ol class="mt-3 divide-y divide-slate-200 border-y border-slate-200">
+                {papers.map((p) => (
+                  <li class="py-3">
+                    <a href={`https://doi.org/${p.doi}`} class="font-medium text-slate-900 no-underline hover:text-brand-700">{p.title}</a>
+                    <p class="mt-1 text-sm text-slate-500">{shortAuthors(p.authors)} · <span class="italic">{cite(p)}</span></p>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          )}
+        </div>
+      </section>
+    );
+  })}
 </Base>

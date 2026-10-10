@@ -5,7 +5,7 @@ import Base from '../layouts/Base.astro';
 import HighlightCard from '../components/HighlightCard.astro';
 // Placeholder hero: the stacked group logo. Candidate simulation figures live in src/assets/simulations/.
 import hero from '../../brand/SVG/PSG_lockup-stacked_color.svg';
-import publications from '../data/publications.json';
+import { publications, cite, shortAuthors } from '../data/publications';
 import { software, LEGACY } from '../data/site';
 
 const highlights = (await getCollection('highlights', ({ data }) => data.featured))
@@ -13,11 +13,6 @@ const highlights = (await getCollection('highlights', ({ data }) => data.feature
   .slice(0, 3);
 
 const recent = publications.slice(0, 5);
-const cite = (p: (typeof publications)[number]) =>
-  p.status === 'accepted'
-    ? `Accepted in ${p.journal} (${p.year})`
-    : [p.journal, p.volume && `${p.volume}, ${p.page}`].filter(Boolean).join(' ') + ` (${p.year})`;
-const shortAuthors = (a: string[]) => (a.length > 4 ? `${a.slice(0, 3).join(', ')}, et al.` : a.join(', '));
 ---
 
 <Base>

@@ -10,22 +10,11 @@ export const nav = [
   { label: 'Join us', href: `${LEGACY}/opportunities.html` },
 ];
 
+// Labels for the research-area tag on homepage highlight cards (keys match the highlights' `theme`).
 export const themes = {
-  acceleration: {
-    title: 'Plasma-based acceleration',
-    blurb:
-      'Laser- and beam-driven plasma wakefield accelerators, from injectors and single-stage concepts to the beam quality a future linear collider or XFEL will demand.',
-  },
-  computing: {
-    title: 'High-performance simulation',
-    blurb:
-      'Developing particle-in-cell codes such as OSIRIS, QuickPIC and QPAD, and the algorithms that let them run efficiently on the largest GPU and CPU supercomputers.',
-  },
-  'data-driven': {
-    title: 'Data-driven plasma physics',
-    blurb:
-      'Using kinetic simulation data, differentiable simulators and machine learning to discover reduced models, closures and operators that respect the underlying physics.',
-  },
+  acceleration: { title: 'Plasma-based acceleration' },
+  computing: { title: 'Simulation software & HPC' },
+  'data-driven': { title: 'AI/ML for plasma physics' },
 } as const;
 
 export const software = [
