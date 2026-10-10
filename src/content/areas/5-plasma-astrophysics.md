@@ -2,8 +2,8 @@
 title: Plasma astrophysics
 subtitle: Magnetic field generation and particle acceleration in astrophysical plasmas
 order: 5
-image: ../../assets/areas/plasma-astro.png
-imageAlt: "Artist's view of an active galaxy launching a relativistic jet, with an inset of 3D simulation results showing the electric field, current density and magnetic field of a kink-unstable jet."
+image: ../../assets/areas/plasma-astro-kink.png
+imageAlt: "3D rendering of twisted magnetic field lines in a kink-unstable plasma jet from a particle-in-cell simulation."
 figureCredit: "Kink instability in a relativistic jet, from 3D particle-in-cell simulations. Alves, Zrake & Fiuza, Phys. Rev. Lett. (2018)."
 publications:
   - 10.1103/physrevlett.121.245101

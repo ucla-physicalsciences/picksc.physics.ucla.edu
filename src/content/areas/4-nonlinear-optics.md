@@ -2,9 +2,9 @@
 title: Nonlinear optics of plasmas
 subtitle: Controlling laser–plasma instabilities in inertial confinement fusion, and using plasmas to amplify high-power, high-intensity light
 order: 4
-# image: ../../assets/areas/nonlinear-optics.png
-imageAlt: ""
-figureCredit: ""
+image: ../../assets/areas/brillouin-amplification.png
+imageAlt: "3D surface plot of a laser seed pulse growing into a sharp, intense peak as it is amplified by stimulated Brillouin scattering in a plasma."
+figureCredit: "Laser amplification via stimulated Brillouin scattering in plasma. Adapted from Alves et al., Plasma Phys. Control. Fusion (2021)."
 publications:
   - 10.1038/s41566-026-01977-1
   - 10.1103/hdkp-2mpm
