@@ -5,10 +5,11 @@ order: 2
 legacy: "quickpic.html"
 ---
 
-**Access**: You can obtain QuickPIC from Github [here](https://github.com/UCLA-Plasma-Simulation-Group/QuickPIC-OpenSource.git).
+**Access:** QuickPIC is open source and available on [GitHub](https://github.com/UCLA-Plasma-Simulation-Group/QuickPIC-OpenSource), with
+installation and input-file documentation in its wiki.
 
-Description: QuickPIC [1, 2] is a 3D fully parallelized, fully relativistic, three-dimensional quasi-static
-PIC code. It was the first 3D quasi-static code and remains the only fully 3D quasi-static PIC code.
+QuickPIC [1, 2] is a fully parallelized (MPI and OpenMP), fully relativistic, three-dimensional quasi-static
+PIC code. It was the first fully 3D quasi-static PIC code.
 It was built from components from the UPIC Framework. The algorithm is based on the quasi-static
 approximation, which separates out the time scale of the evolution of the driver from the plasma
 evolution and reduces a fully 3D EM field solve and particle push into a sequence of 2D solves and
@@ -16,8 +17,9 @@ particle pushes. A predictor-corrector loop is required and only one iteration i
 for nonlinear problems. For the laser driver, the ponderomotive guiding center approximation is used.
 QuickPIC results agree with full PIC codes such as OSIRIS results for problems of interest. A field
 ionization module based on the ADK model is implemented. With a pipelining algorithm and improvements
-to the iteration loop, QuickPIC achieves good strong scaling to more than 100,000 cores on Titan and
-Blue Waters.
+to the iteration loop, QuickPIC has shown good strong scaling to more than 100,000 cores (on Titan and
+Blue Waters). For problems that are close to azimuthally symmetric, its quasi-3D counterpart
+[QPAD](/software/qpad) is orders of magnitude faster.
 
 ![](./images/quickpic-img.jpg)
 

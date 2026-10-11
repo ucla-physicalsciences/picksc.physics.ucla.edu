@@ -9,7 +9,7 @@ QPAD (QuickPIC with Azimuthal Decomposition) is a fully relativistic, quasi-3D p
 
 Due to the advantages of high performance and small memory footprint, QPAD provides many complementary advantages for other full-3D codes and is especially suitable for the following circumstances:
 
-- Physics problems relatively small amounts of azimuthal asymmetry
+- Physics problems with relatively small amounts of azimuthal asymmetry
 - No self-injected particles
 - Simulations requiring ultra-high spatial resolution
 - Start-to-end simulations with ultra-long distances
@@ -19,6 +19,7 @@ The current version includes many useful features for simulations of plasma-base
 
 - Various particle pushers
 - Field-induced ionization (ADK model)
+- Ponderomotive guiding center model for lasers
 - Spin dynamics for beam particles
 - Various initial profiles for beams and plasma species
 - Importing beam particles from output files of other codes
@@ -29,15 +30,14 @@ Plans for additional simulation features and hardware support include:
 - GPU support
 - Dynamic load balancing
 - Adaptive “1D” and “2D” time steps
-- Ponderomotive guiding center model for laser
 - Radiation reaction
 - Adaptive maximum azimuthal mode number
 
-For more information and latest updates on QPAD, please visit <https://github.com/UCLA-Plasma-Simulation-Group/QPAD>
+**Access:** QPAD is open source; the code, documentation and latest updates are on [GitHub](https://github.com/UCLA-Plasma-Simulation-Group/QPAD).
 
 ![](./images/qpad_fig1.png)
 
-*Figure 1: Comparable simulations for hosing instability problem in plasma acceleration using the full 3D code (QuickPIC) vs. reduced code (QPAD) for a round beam with a small offset. An ultra-long distance (2x104 characteristic plasma lengths) is simulated in 5,000 steps. There are total of four azimuthal Fourier modes (from m=0 to m=3) evolving in the QPAD simulation and the results agree well with those of the full 3D simulation, while the total computing time is reduced by ~100x.*
+*Figure 1: Comparable simulations for hosing instability problem in plasma acceleration using the full 3D code (QuickPIC) vs. reduced code (QPAD) for a round beam with a small offset. An ultra-long distance (2×10<sup>4</sup> characteristic plasma lengths) is simulated in 5,000 steps. There are total of four azimuthal Fourier modes (from m=0 to m=3) evolving in the QPAD simulation and the results agree well with those of the full 3D simulation, while the total computing time is reduced by ~100x.*
 
 ![](./images/qpad_fig2.png)
 

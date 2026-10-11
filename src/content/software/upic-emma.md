@@ -5,13 +5,16 @@ order: 5
 legacy: "upic-emma.html"
 ---
 
-UPIC-Emma [1] is a new fully relativistic, fully parallelized, multidimensional electromagnetic spectral PIC code
+UPIC-EMMA [1] is a fully relativistic, fully parallelized, multidimensional electromagnetic spectral PIC code
 built from components from the UPIC Framework. It uses a fully spectral (FFT) based field solver as described in [2].
 It includes the ability to launch laser pulses in both the lab and Lorentz boosted frame. It includes options for
 eliminating the robust numerical instability (Numerical Cherenkov Instability-NCI) that arises when the plasma drifts
 across the grid relativistically. This is accomplished by modifying the field solver near NCI unstable modes in k-space
-which can be pinpointed based on recent theoretical work in [3-4]. It is currently being developed to study laser wakefield
+which can be pinpointed based on theoretical work in [3-4]. It has been used to study laser wakefield
 acceleration and relativistic shocks.
+
+UPIC-EMMA 2.0, built on UPIC 2.0 with MPI/OpenMP parallelization, is developed in a public
+[GitHub repository](https://github.com/UCLA-Plasma-Simulation-Group/upic-emma-2.0).
 
 ## References
 

@@ -107,9 +107,9 @@ programming paradigms, such as OpenCL, OpenACC, or co-array Fortran, perhaps wit
 
 ## Support
 
-This work is also supported in part by the National Science Foundation, Department of Energy
-SciDAC program and the UCLA Institute for Digital Research and Innovation (IDRE). It is also closely
-co-ordinated with the activities of the NSF funded Particle-in-Cell and Kinetic Simulation Center
+This work was supported in part by the National Science Foundation, the Department of Energy
+SciDAC program and the UCLA Institute for Digital Research and Innovation (IDRE), and was closely
+co-ordinated with the activities of the NSF-funded Particle-in-Cell and Kinetic Simulation Software Center
 (PICKSC) at UCLA.
 
 ## References

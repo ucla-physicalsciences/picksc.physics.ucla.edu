@@ -29,6 +29,5 @@ used for example to study:
 - Aliasing effects
 - Grid instability
 
-The code repository will soon be moved to the UCLA-Plasma-Simulation-Group repository on GitHub, and
-the code will additionally be available on the PICKSC web site. Please send us an email if you are interested
-in this code.
+The 1D electrostatic code with its Python GUI is available on
+[GitHub](https://github.com/UCLA-Plasma-Simulation-Group/BasicPIC1).
