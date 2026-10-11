@@ -8,6 +8,7 @@ export interface Person {
   role?: string;
   title?: string;
   focus?: string;
+  bio?: string;
   photo?: string;
   email?: string;
   website?: string;

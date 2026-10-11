@@ -4,6 +4,7 @@
 #         Without a photo, the card shows the person's initials.
 # Links (all optional): email, website, scholar, github, linkedin, researchgate, dblp
 # focus: optional one-line research focus shown under the role.
+# bio:   optional short paragraph (used on the PI cards).
 #
 # When someone leaves, move their entry to `alumni` (src/pages/alumni.astro) and add
 # `years` (e.g. "2019–2025"), `after` (where they went next) and, optionally, `quote`
@@ -13,12 +14,22 @@ pis:
   - name: E. Paulo Alves
     role: Co-director
     title: Associate Professor, Physics & Astronomy
+    bio: >-
+      E. Paulo Alves is an Associate Professor of Physics & Astronomy at UCLA. His research combines large-scale
+      kinetic simulations and AI/ML to study plasma astrophysics and intense laser–plasma interactions. He received
+      his PhD from Instituto Superior Técnico, Lisbon, and was a researcher at SLAC National Accelerator Laboratory
+      before joining UCLA.
     photo: paulo-alves.jpg
     email: epalves@physics.ucla.edu
     scholar: https://scholar.google.com/citations?user=dpMiNBUAAAAJ
   - name: Warren B. Mori
     role: Co-director
-    title: Distinguished Professor, Physics & Astronomy and Electrical & Computer Engineering  # CHECK
+    title: Distinguished Professor, Physics & Astronomy and Electrical & Computer Engineering
+    bio: >-
+      Warren B. Mori is a Distinguished Professor of Physics & Astronomy and of Electrical & Computer Engineering at
+      UCLA. He is a leader in the theory and simulation of plasma-based acceleration and nonlinear laser–plasma
+      interactions, and his work has been recognized by numerous awards, including the APS James Clerk Maxwell
+      Prize for Plasma Physics.
     photo: warren-mori.jpg
     email: mori@physics.ucla.edu
     scholar: https://scholar.google.com/citations?user=_OsGhQ4AAAAJ
@@ -51,26 +62,34 @@ groups:
     members:
       - name: Benjamin Agnew
         role: Graduate student
+        focus: Nonlinear optics of asymmetric beams in plasma
       - name: Maria Almanza
         role: Graduate student
+        focus: Laser amplification in plasmas and GPU-accelerated particle-in-cell simulation
         photo: maria-almanza.jpg
         linkedin: https://www.linkedin.com/in/maria-almanza-b97082314/
       - name: Albert Countryman
         role: Graduate student
+        focus: Nonlinear optics of plasma metamaterials
       - name: Gabrielle Guttormsen
         role: Graduate student
+        focus: Particle acceleration in relativistic astrophysical jets
         photo: gabrielle-guttormsen.jpg
         linkedin: https://www.linkedin.com/in/gabrielle-guttormsen-94104b115/
       - name: Elias Hansen
         role: Graduate student
+        focus: Reduced theoretical and computational models of plasma-based accelerators
       - name: Madox C. McGrae-Menge
         role: Graduate student
+        focus: Data-driven reduced models and closures for kinetic plasmas
         photo: madox-mcgrae-menge.jpg
         linkedin: https://www.linkedin.com/in/madox-mcgrae-menge-9b0a91146/
       - name: Vijay Patel
         role: Graduate student
+        focus: Stimulated Raman and Brillouin scattering in inhomogeneous plasmas
       - name: Zack Pine
         role: Graduate student
+        focus: Physics-informed machine learning to reconstruct plasma dynamics from experimental data
         photo: zack-pine.jpg
         scholar: https://scholar.google.com/citations?user=EyxPHfoAAAAJ
 
