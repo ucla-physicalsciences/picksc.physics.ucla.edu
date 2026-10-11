@@ -6,7 +6,7 @@ export const nav = [
   { label: 'Software', href: '/software' },
   { label: 'Publications', href: '/publications' },
   { label: 'Team', href: '/team' },
-  { label: 'News', href: `${LEGACY}/news.html` },
+  { label: 'News', href: '/news' },
   { label: 'Join us', href: `${LEGACY}/opportunities.html` },
 ];
 

@@ -1,0 +1,125 @@
+---
+import { Image } from 'astro:assets';
+import { getCollection, render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import { themes } from '../data/site';
+
+// Dates are stored as UTC midnight; format in UTC so they don't shift a day.
+const fmt = (d: Date, precision: 'day' | 'month' | 'year') =>
+  precision === 'year'
+    ? String(d.getUTCFullYear())
+    : d.toLocaleDateString('en-US', { timeZone: 'UTC', year: 'numeric', month: 'long', ...(precision === 'day' && { day: 'numeric' }) });
+
+const byDate = <T extends { data: { date: Date } }>(a: T, b: T) => b.data.date.valueOf() - a.data.date.valueOf();
+const news = (await getCollection('news')).sort(byDate);
+
+// Latest: current news items interleaved with the research highlights.
+const latest = await Promise.all(
+  [
+    ...news.filter((n) => !n.data.archive).map((n) => ({ kind: 'news' as const, entry: n, data: n.data })),
+    ...(await getCollection('highlights')).map((h) => ({ kind: 'highlight' as const, entry: h, data: h.data })),
+  ]
+    .sort(byDate)
+    .map(async (item) => ({ ...item, Content: (await render(item.entry)).Content })),
+);
+
+// Archive: items from the PICKSC years, grouped by year.
+const archive = await Promise.all(news.filter((n) => n.data.archive).map(async (n) => ({ entry: n, Content: (await render(n)).Content })));
+const years = [...new Set(archive.map((a) => a.entry.data.date.getUTCFullYear()))];
+const span = `${years.at(-1)}–${years[0]}`;
+---
+
+<Base title="News" description="News from the UCLA Plasma Simulation Group: research highlights, software releases, awards and events.">
+  <section class="border-b border-slate-200 bg-gradient-to-b from-brand-50/60 to-white">
+    <div class="mx-auto max-w-4xl px-4 py-14 sm:px-6">
+      <h1 class="text-4xl font-semibold">News</h1>
+      <p class="mt-4 max-w-3xl text-lg leading-relaxed text-slate-600">
+        Research highlights, software releases, awards and events from the group. For the full list of papers, see
+        our <a href="/publications">publications</a>.
+      </p>
+      <nav aria-label="News sections" class="mt-6 flex flex-wrap gap-2">
+        <a href="#latest" class="rounded-full border border-slate-300 bg-white px-4 py-1.5 text-sm text-slate-700 no-underline hover:border-brand-600 hover:text-brand-700">Latest</a>
+        <a href="#archive" class="rounded-full border border-slate-300 bg-white px-4 py-1.5 text-sm text-slate-700 no-underline hover:border-brand-600 hover:text-brand-700">Archive {span}</a>
+      </nav>
+    </div>
+  </section>
+
+  <div class="mx-auto max-w-4xl px-4 sm:px-6">
+    <!-- Latest -->
+    <section id="latest" class="scroll-mt-20 pt-14">
+      <h2 class="text-2xl font-semibold">Latest</h2>
+      <ol class="mt-6 divide-y divide-slate-200 border-y border-slate-200">
+        {latest.map(({ kind, data, Content }) => (
+          <li class="grid gap-5 py-8 sm:grid-cols-[11rem_1fr]">
+            <div class="order-last sm:order-first">
+              {data.image && (
+                <Image src={data.image} alt={data.imageAlt} widths={[176, 352]} sizes="(min-width: 640px) 176px, 100vw" class="w-full rounded-lg border border-slate-200 bg-white object-contain p-2 sm:max-h-40" />
+              )}
+            </div>
+            <article>
+              <p class="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-slate-500">
+                <time datetime={data.date.toISOString().slice(0, 10)}>{fmt(data.date, kind === 'news' ? data.datePrecision : 'month')}</time>
+                {kind === 'highlight' && (
+                  <span class="rounded-full bg-brand-50 px-2.5 py-0.5 text-xs font-medium text-brand-700">Research highlight · {themes[data.theme].title}</span>
+                )}
+              </p>
+              <h3 class="mt-2 text-xl leading-snug font-semibold">{data.title}</h3>
+              <div class="prose-content mt-3 text-slate-700"><Content /></div>
+              {kind === 'highlight' && (
+                <p class="mt-3 text-sm text-slate-600">
+                  {data.paper.authors}, <a href={`https://doi.org/${data.paper.doi}`}>{data.paper.citation}</a>
+                </p>
+              )}
+            </article>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    <!-- Archive -->
+    <section id="archive" class="scroll-mt-20 py-14">
+      <h2 class="text-2xl font-semibold">Archive, {span}</h2>
+      <p class="mt-3 max-w-3xl text-slate-600">
+        News from the years when the group's software and educational work was supported by PICKSC, the NSF-funded
+        Particle-in-Cell and Kinetic Simulation Software Center at UCLA. Select an item to read it.
+      </p>
+      {years.map((y) => (
+        <div class="mt-8">
+          <h3 class="font-sans text-sm font-semibold tracking-wide text-slate-500 uppercase">{y}</h3>
+          <ul class="mt-3 space-y-2">
+            {archive.filter((a) => a.entry.data.date.getUTCFullYear() === y).map(({ entry, Content }) => (
+              <li>
+                <details id={entry.id} class="group scroll-mt-20 rounded-lg border border-slate-200 bg-white open:border-slate-300">
+                  <summary class="flex cursor-pointer list-none items-center gap-4 px-4 py-3 hover:bg-slate-50 [&::-webkit-details-marker]:hidden">
+                    {entry.data.image ? (
+                      <Image src={entry.data.image} alt="" widths={[48, 96]} sizes="48px" class="size-12 shrink-0 rounded border border-slate-100 bg-white object-contain" />
+                    ) : <span class="size-12 shrink-0" />}
+                    <span class="min-w-0 flex-1">
+                      <span class="block font-medium text-slate-900">{entry.data.title}</span>
+                      <span class="block text-sm text-slate-500">{fmt(entry.data.date, entry.data.datePrecision)}</span>
+                    </span>
+                    <span class="shrink-0 text-slate-400 transition-transform group-open:rotate-90" aria-hidden="true">›</span>
+                  </summary>
+                  <div class="prose-content border-t border-slate-100 px-4 py-4 text-slate-700 sm:pl-20"><Content /></div>
+                </details>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </section>
+  </div>
+</Base>
+
+<script>
+  // Open an archive item when its link (/news#slug) is followed.
+  const open = () => {
+    const el = location.hash && document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    if (el instanceof HTMLDetailsElement) {
+      el.open = true;
+      el.scrollIntoView();
+    }
+  };
+  open();
+  window.addEventListener('hashchange', open);
+</script>

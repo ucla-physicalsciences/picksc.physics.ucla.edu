@@ -56,4 +56,20 @@ const software = defineCollection({
   }),
 });
 
-export const collections = { highlights, areas, software };
+// News: one Markdown file per item, shown newest first on /news together with the research highlights.
+// `datePrecision` says how much of `date` to show (several old items are only known to the year);
+// `archive` marks items carried over from the old PICKSC site.
+const news = defineCollection({
+  loader: glob({ pattern: '*.md', base: './src/content/news' }),
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
+      date: z.coerce.date(),
+      datePrecision: z.enum(['day', 'month', 'year']).default('day'),
+      image: image().optional(),
+      imageAlt: z.string().default(''),
+      archive: z.boolean().default(false),
+    }),
+});
+
+export const collections = { highlights, areas, software, news };
