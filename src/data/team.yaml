@@ -74,12 +74,16 @@ groups:
         photo: zack-pine.jpg
         scholar: https://scholar.google.com/citations?user=EyxPHfoAAAAJ
 
-# Shown as a compact list of names (with affiliation if given).
+# Shown as a compact list of names (with affiliation if given). Alphabetical by last name.
 collaborators:
   - name: Frederico Fiúza
     scholar: https://scholar.google.com/citations?user=wn-spAsAAAAJ
   - name: Ricardo A. Fonseca
     scholar: https://scholar.google.pt/citations?user=rYNr27QAAAAJ
+  - name: Thomas Grismayer
+    scholar: https://scholar.google.com/citations?user=-DiybloAAAAJ
+  - name: Chandrashekhar (Chan) Joshi
+    scholar: https://scholar.google.com/citations?user=1v3gIC4AAAAJ
   - name: Richard D. Sydora
     scholar: https://scholar.google.ca/citations?user=nXtozfMAAAAJ
   - name: Xinlu Xu
