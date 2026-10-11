@@ -15,8 +15,7 @@ pis:
     role: Co-director
     title: Associate Professor, Physics & Astronomy
     bio: >-
-      E. Paulo Alves is an Associate Professor of Physics & Astronomy at UCLA. His research combines large-scale
-      kinetic simulations and AI/ML to study plasma astrophysics and intense laser–plasma interactions. He received
+      His research combines large-scale kinetic simulations and AI/ML to study plasma astrophysics and intense laser–plasma interactions. He received
       his PhD from Instituto Superior Técnico, Lisbon, and was a researcher at SLAC National Accelerator Laboratory
       before joining UCLA.
     photo: paulo-alves.jpg
@@ -26,8 +25,7 @@ pis:
     role: Co-director
     title: Distinguished Professor, Physics & Astronomy and Electrical & Computer Engineering
     bio: >-
-      Warren B. Mori is a Distinguished Professor of Physics & Astronomy and of Electrical & Computer Engineering at
-      UCLA. He is a leader in the theory and simulation of plasma-based acceleration and nonlinear laser–plasma
+      He is a leader in the theory and simulation of plasma-based acceleration and nonlinear laser–plasma
       interactions, and his work has been recognized by numerous awards, including the APS James Clerk Maxwell
       Prize for Plasma Physics.
     photo: warren-mori.jpg
@@ -70,7 +68,7 @@ groups:
         linkedin: https://www.linkedin.com/in/maria-almanza-b97082314/
       - name: Albert Countryman
         role: Graduate student
-        focus: Nonlinear optics of plasma metamaterials
+        focus: Nonlinear optics of plasma metamaterials and ICF
       - name: Gabrielle Guttormsen
         role: Graduate student
         focus: Particle acceleration in relativistic astrophysical jets
@@ -89,7 +87,7 @@ groups:
         focus: Stimulated Raman and Brillouin scattering in inhomogeneous plasmas
       - name: Zack Pine
         role: Graduate student
-        focus: Physics-informed machine learning to reconstruct plasma dynamics from experimental data
+        focus: Physics-informed ML to reconstruct plasma dynamics from experimental data
         photo: zack-pine.jpg
         scholar: https://scholar.google.com/citations?user=EyxPHfoAAAAJ
 
