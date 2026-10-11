@@ -1,0 +1,131 @@
+---
+import Base from '../layouts/Base.astro';
+import { team } from '../data/team';
+
+// Open positions. Add one entry per advertised position; when the list is empty the page says
+// there are none advertised and invites general inquiries.
+//   { title: 'Postdoctoral researcher in ...', text: 'One or two sentences.', apply: 'How to apply / deadline', link?: 'https://...' }
+const positions: { title: string; text: string; apply: string; link?: string }[] = [];
+
+const pis = team.pis.filter((p) => p.email);
+
+const paths = [
+  {
+    id: 'graduate-students',
+    title: 'Graduate students',
+    body: [
+      'Our PhD students are admitted through the UCLA graduate programs in Physics & Astronomy or in Electrical & Computer Engineering. Apply to either program and mention the group in your statement of purpose.',
+      'You are welcome to email us before or after you apply, with your CV and a few sentences on what interests you. Current UCLA graduate students looking for a research group are encouraged to get in touch directly.',
+    ],
+    links: [
+      { label: 'Physics & Astronomy graduate program', href: 'https://www.pa.ucla.edu/graduate-students.html' },
+      { label: 'ECE graduate admissions', href: 'https://www.ee.ucla.edu/graduate-admissions-overview/' },
+      { label: 'UCLA graduate admissions', href: 'https://grad.ucla.edu/admissions/' },
+    ],
+  },
+  {
+    id: 'postdocs',
+    title: 'Postdoctoral researchers',
+    body: [
+      'Open postdoctoral positions are listed above when we have them. We are also happy to hear from candidates who would like to apply for an independent fellowship to work with us.',
+      'Send a CV, a short statement of research interests and the names of two or three references.',
+    ],
+    links: [],
+  },
+  {
+    id: 'undergraduates',
+    title: 'Undergraduates',
+    body: [
+      'UCLA undergraduates interested in a research project in plasma simulation or machine learning for plasma physics are welcome to contact us. Tell us about your background, your programming experience and what you would like to work on.',
+    ],
+    links: [],
+  },
+  {
+    id: 'visitors',
+    title: 'Visitors',
+    body: [
+      'We regularly host visiting students and researchers working on related problems or with our codes. If you would like to visit, write to us with what you would like to work on and the dates you have in mind.',
+    ],
+    links: [],
+  },
+];
+---
+
+<Base title="Join us" description="Graduate, postdoctoral, undergraduate and visiting opportunities in the UCLA Plasma Simulation Group.">
+  <section class="border-b border-slate-200 bg-gradient-to-b from-brand-50/60 to-white">
+    <div class="mx-auto max-w-4xl px-4 py-14 sm:px-6">
+      <h1 class="text-4xl font-semibold">Join us</h1>
+      <p class="mt-4 max-w-3xl text-lg leading-relaxed text-slate-600">
+        We are always interested in hearing from people who want to combine plasma physics, large-scale simulation and
+        AI/ML. See our <a href="/research">research</a> and <a href="/software">software</a> for what we work on.
+      </p>
+      <nav aria-label="Join us sections" class="mt-6 flex flex-wrap gap-2">
+        {[{ id: 'positions', title: 'Open positions' }, ...paths].map((s) => (
+          <a href={`#${s.id}`} class="rounded-full border border-slate-300 bg-white px-4 py-1.5 text-sm text-slate-700 no-underline hover:border-brand-600 hover:text-brand-700">{s.title}</a>
+        ))}
+      </nav>
+    </div>
+  </section>
+
+  <div class="mx-auto max-w-4xl px-4 sm:px-6">
+    <!-- Open positions -->
+    <section id="positions" class="scroll-mt-20 pt-14">
+      <h2 class="text-2xl font-semibold">Open positions</h2>
+      {positions.length ? (
+        <ul class="mt-6 space-y-4">
+          {positions.map((p) => (
+            <li class="rounded-xl border border-brand-600/30 bg-brand-50/50 p-6">
+              <h3 class="text-lg font-semibold">{p.title}</h3>
+              <p class="mt-2 text-slate-700">{p.text}</p>
+              <p class="mt-2 text-sm text-slate-600">{p.apply}{p.link && <> <a href={p.link}>Details</a></>}</p>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p class="mt-4 text-slate-700">
+          There are no positions advertised at the moment, but we welcome inquiries from prospective students,
+          postdocs and visitors at any time.
+        </p>
+      )}
+    </section>
+
+    <!-- Ways to join -->
+    {paths.map((s) => (
+      <section id={s.id} class="scroll-mt-20 pt-14">
+        <h2 class="text-2xl font-semibold">{s.title}</h2>
+        {s.body.map((t) => <p class="mt-4 leading-relaxed text-slate-700">{t}</p>)}
+        {s.links.length > 0 && (
+          <ul class="mt-4 flex flex-wrap gap-x-6 gap-y-1 text-sm">
+            {s.links.map((l) => <li><a href={l.href} class="no-underline hover:underline">{l.label} ↗</a></li>)}
+          </ul>
+        )}
+      </section>
+    ))}
+
+    <!-- What we look for -->
+    <section id="background" class="scroll-mt-20 pt-14">
+      <h2 class="text-2xl font-semibold">Useful background</h2>
+      <ul class="mt-4 list-disc space-y-2 pl-5 leading-relaxed text-slate-700">
+        <li>A strong foundation in physics, applied mathematics or engineering. Prior plasma physics is helpful but not required.</li>
+        <li>Programming experience, for example in Python, Fortran, C/C++ or CUDA, and an interest in high-performance computing.</li>
+        <li>For our AI/ML work, familiarity with machine learning and frameworks such as PyTorch or JAX.</li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="scroll-mt-20 py-14">
+      <div class="rounded-xl border border-slate-200 bg-brand-50/50 p-6">
+        <h2 class="text-2xl font-semibold">Get in touch</h2>
+        <p class="mt-2 text-slate-700">Email either of the group's co-directors:</p>
+        <ul class="mt-4 grid gap-3 sm:grid-cols-2">
+          {pis.map((p) => (
+            <li>
+              <p class="font-semibold text-slate-900">{p.name}</p>
+              <a href={`mailto:${p.email}`} class="text-sm">{p.email}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  </div>
+</Base>

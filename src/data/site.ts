@@ -7,7 +7,7 @@ export const nav = [
   { label: 'Publications', href: '/publications' },
   { label: 'Team', href: '/team' },
   { label: 'News', href: '/news' },
-  { label: 'Join us', href: `${LEGACY}/opportunities.html` },
+  { label: 'Join us', href: '/join-us' },
 ];
 
 // Labels for the research-area tag on homepage highlight cards (keys match the highlights' `theme`).
