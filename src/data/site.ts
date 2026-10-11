@@ -2,12 +2,12 @@
 export const LEGACY = 'https://picksc.physics.ucla.edu';
 
 export const nav = [
+  { label: 'Home', href: '/' },
   { label: 'Research', href: '/research' },
-  { label: 'Software', href: '/software' },
   { label: 'Publications', href: '/publications' },
   { label: 'Team', href: '/team' },
   { label: 'News', href: '/news' },
-  { label: 'Join us', href: '/join-us' },
+  { label: 'Opportunities', href: '/opportunities' },
 ];
 
 // Labels for the research-area tag on homepage highlight cards (keys match the highlights' `theme`).
