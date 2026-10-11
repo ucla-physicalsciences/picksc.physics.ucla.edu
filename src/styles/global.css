@@ -50,3 +50,81 @@
   font-weight: 600;
   color: var(--color-slate-900);
 }
+
+/* Long-form Markdown pages (software docs). No typography plugin, so the basics are styled here. */
+.prose-content {
+  line-height: 1.7;
+  color: var(--color-slate-700);
+}
+.prose-content > * + * {
+  margin-top: 1rem;
+}
+.prose-content h2 {
+  margin-top: 2.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.prose-content h3 {
+  margin-top: 2rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.prose-content ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+.prose-content ol {
+  list-style: decimal;
+  padding-left: 1.5rem;
+}
+.prose-content li + li {
+  margin-top: 0.35rem;
+}
+.prose-content strong {
+  font-weight: 600;
+  color: var(--color-slate-900);
+}
+.prose-content img {
+  margin-inline: auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+.prose-content p:has(> img) + p > em:only-child {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--color-slate-500);
+}
+.prose-content code {
+  font-size: 0.875em;
+  background: var(--color-slate-100);
+  border-radius: 0.25rem;
+  padding: 0.1em 0.35em;
+}
+.prose-content pre {
+  overflow-x: auto;
+  background: var(--color-slate-900);
+  color: var(--color-slate-100);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  font-size: 0.875rem;
+}
+.prose-content pre code {
+  background: none;
+  padding: 0;
+}
+.prose-content table {
+  display: block;
+  overflow-x: auto;
+  font-size: 0.875rem;
+  border-collapse: collapse;
+}
+.prose-content th,
+.prose-content td {
+  border: 1px solid var(--color-slate-200);
+  padding: 0.4rem 0.6rem;
+  text-align: left;
+}
+.prose-content a {
+  overflow-wrap: anywhere;
+}

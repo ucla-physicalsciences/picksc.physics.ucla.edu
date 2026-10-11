@@ -1,0 +1,67 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { softwareSections, href, GROUPS } from '../../data/softwareNav';
+
+export async function getStaticPaths() {
+  const pages = await getCollection('software');
+  return pages.filter((p) => p.data.group !== 'overview').map((page) => ({ params: { slug: page.id }, props: { page } }));
+}
+
+const { page } = Astro.props;
+const { Content } = await render(page);
+const sections = await softwareSections();
+const group = GROUPS.find((g) => g.id === page.data.group)!;
+const section = sections.find((s) => s.id === group.id)!;
+const isIndex = page.data.order === 0;
+const current = href(page);
+---
+
+<Base title={page.data.title} description={`${page.data.title}: ${group.title.toLowerCase()} from the UCLA Plasma Simulation Group.`}>
+  <div class="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:px-6 lg:grid-cols-[14rem_1fr]">
+    <!-- Section navigation (below the content on small screens) -->
+    <aside class="order-last lg:order-first">
+      <nav aria-label="Software" class="lg:sticky lg:top-24">
+        <a href="/software" class="font-sans text-sm font-semibold text-slate-900 no-underline hover:text-brand-700">All software</a>
+        {sections.map((s) => (
+          <div class="mt-5">
+            {s.index ? (
+              <a
+                href={href(s.index)}
+                aria-current={href(s.index) === current ? 'page' : undefined}
+                class:list={['block text-xs font-semibold tracking-wide uppercase no-underline', href(s.index) === current ? 'text-brand-700' : 'text-slate-500 hover:text-brand-700']}
+              >{s.title}</a>
+            ) : (
+              <p class="text-xs font-semibold tracking-wide text-slate-500 uppercase">{s.title}</p>
+            )}
+            <ul class="mt-2 space-y-1 border-l border-slate-200">
+              {s.pages.map((p) => (
+                <li>
+                  <a
+                    href={href(p)}
+                    aria-current={href(p) === current ? 'page' : undefined}
+                    class:list={['-ml-px block border-l py-0.5 pl-3 text-sm no-underline', href(p) === current ? 'border-brand-600 font-medium text-brand-700' : 'border-transparent text-slate-600 hover:border-slate-400 hover:text-slate-900']}
+                  >{p.data.title}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </nav>
+    </aside>
+
+    <article class="min-w-0 max-w-3xl">
+      <p class="text-sm text-slate-500">
+        <a href="/software" class="no-underline hover:underline">Software</a>
+        {!isIndex && section.index && <> / <a href={href(section.index)} class="no-underline hover:underline">{group.title}</a></>}
+      </p>
+      <h1 class="mt-2 text-4xl font-semibold">{page.data.title}</h1>
+      {page.data.repo && (
+        <a href={page.data.repo} class="mt-4 inline-flex items-center gap-2 rounded-full border border-slate-300 px-4 py-1.5 text-sm text-slate-700 no-underline hover:border-brand-600 hover:text-brand-700">
+          GitHub repository <span aria-hidden="true">↗</span>
+        </a>
+      )}
+      <div class="prose-content mt-8"><Content /></div>
+    </article>
+  </div>
+</Base>

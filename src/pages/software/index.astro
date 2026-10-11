@@ -1,0 +1,50 @@
+---
+import { getEntry, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { softwareSections, href, EXTERNAL } from '../../data/softwareNav';
+
+const sections = await softwareSections();
+const overview = await getEntry('software', 'overview');
+const { Content } = await render(overview!);
+---
+
+<Base title="Software" description="Particle-in-cell simulation software from the UCLA Plasma Simulation Group: production codes, skeleton codes, frameworks and educational tools.">
+  <section class="border-b border-slate-200 bg-gradient-to-b from-brand-50/60 to-white">
+    <div class="mx-auto max-w-6xl px-4 py-14 sm:px-6">
+      <h1 class="text-4xl font-semibold">Software</h1>
+      <p class="mt-4 max-w-3xl text-lg leading-relaxed text-slate-600">
+        We develop and maintain particle-in-cell (PIC) codes for research, high-performance computing and teaching. Most are
+        freely available on our <a href="https://github.com/UCLA-Plasma-Simulation-Group">GitHub</a>. Much of this software
+        and its educational material was developed with support from PICKSC, the NSF-funded UCLA Particle-in-Cell and
+        Kinetic Simulation Software Center.
+      </p>
+    </div>
+  </section>
+
+  <div class="mx-auto max-w-6xl px-4 py-14 sm:px-6">
+    <div class="grid gap-6 md:grid-cols-2">
+      {sections.map((s) => (
+        <section class="rounded-xl border border-slate-200 bg-white p-6">
+          <h2 class="text-2xl font-semibold">
+            {s.index ? <a href={href(s.index)} class="text-slate-900 no-underline hover:text-brand-700">{s.title}</a> : s.title}
+          </h2>
+          <p class="mt-2 text-slate-600">{s.blurb}</p>
+          <ul class="mt-4 flex flex-wrap gap-2">
+            {s.pages.map((p) => (
+              <li><a href={href(p)} class="inline-block rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 no-underline hover:border-brand-600 hover:text-brand-700">{p.data.title}</a></li>
+            ))}
+            {(EXTERNAL[s.id] ?? []).map((x) => (
+              <li><a href={x.href} class="inline-block rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 no-underline hover:border-brand-600 hover:text-brand-700">{x.title} <span aria-hidden="true">↗</span></a></li>
+            ))}
+          </ul>
+          {s.index && <a href={href(s.index)} class="mt-5 inline-block text-sm font-medium no-underline hover:underline">Overview →</a>}
+        </section>
+      ))}
+    </div>
+
+    <section class="mt-16 max-w-3xl">
+      <h2 class="text-3xl font-semibold">About our software</h2>
+      <div class="prose-content mt-6"><Content /></div>
+    </section>
+  </div>
+</Base>

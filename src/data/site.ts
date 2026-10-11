@@ -3,7 +3,7 @@ export const LEGACY = 'https://picksc.physics.ucla.edu';
 
 export const nav = [
   { label: 'Research', href: '/research' },
-  { label: 'Software', href: `${LEGACY}/software-overview.html` },
+  { label: 'Software', href: '/software' },
   { label: 'Publications', href: '/publications' },
   { label: 'Team', href: '/team' },
   { label: 'News', href: `${LEGACY}/news.html` },
@@ -41,11 +41,11 @@ export const software = [
   {
     name: 'UPIC & skeleton codes',
     desc: 'Trusted, bare-bones parallel PIC components and mini-apps for building new codes.',
-    href: `${LEGACY}/skeleton-code.html`,
+    href: '/software/skeleton-codes',
   },
   {
     name: 'Educational codes',
     desc: 'Jupyter notebooks and small PIC codes for teaching plasma physics.',
-    href: `${LEGACY}/jupyterPIC.html`,
+    href: '/software/education',
   },
 ];

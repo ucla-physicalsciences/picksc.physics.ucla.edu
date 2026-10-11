@@ -43,4 +43,17 @@ const areas = defineCollection({
     }),
 });
 
-export const collections = { highlights, areas };
+// Software and educational-code pages, migrated from the old site. `group` puts a page in a section of
+// /software (the page with order 0 is that section's overview); `legacy` is its old URL, which redirects here.
+const software = defineCollection({
+  loader: glob({ pattern: '*.md', base: './src/content/software' }),
+  schema: z.object({
+    title: z.string(),
+    group: z.enum(['overview', 'production', 'skeleton', 'frameworks', 'education']),
+    order: z.number(),
+    legacy: z.string().optional(),
+    repo: z.string().url().optional(),
+  }),
+});
+
+export const collections = { highlights, areas, software };
