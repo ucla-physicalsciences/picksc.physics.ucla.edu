@@ -18,3 +18,27 @@ export function byDoi(doi: string): Publication {
   if (!p) throw new Error(`DOI ${doi} not found in src/data/publications.json`);
   return p;
 }
+
+// Highlight group authors (current members and alumni on the team page). An author matches a
+// member with the same surname and first initial; when both first names are spelled out they
+// must also agree, so e.g. "Chen-Kang Huang" doesn't match alumnus "Chengkun Huang".
+import { team } from './team';
+
+// Same surname and initial as a group member but a different person.
+const NOT_GROUP = new Set(['C.-K. Huang', 'Chen-Kang Huang']);
+
+const parse = (name: string) => {
+  const words = name.normalize('NFD').replace(/\p{M}/gu, '').replace(/\(.*?\)/g, '').replace(/\./g, '. ').trim().split(/\s+/);
+  const first = words[0];
+  return { key: `${first[0]} ${words.at(-1)}`.toLowerCase(), first: /^[^.]{2,}$/.test(first) ? first.toLowerCase() : null };
+};
+const members = new Map<string, (string | null)[]>();
+for (const p of [...team.pis, ...team.groups.flatMap((g) => g.members), ...team.alumni]) {
+  const { key, first } = parse(p.name);
+  members.set(key, [...(members.get(key) ?? []), first]);
+}
+export const isGroupAuthor = (author: string) => {
+  if (NOT_GROUP.has(author)) return false;
+  const { key, first } = parse(author);
+  return (members.get(key) ?? []).some((f) => !first || !f || f === first);
+};

@@ -4,7 +4,7 @@ export const LEGACY = 'https://picksc.physics.ucla.edu';
 export const nav = [
   { label: 'Research', href: '/research' },
   { label: 'Software', href: `${LEGACY}/software-overview.html` },
-  { label: 'Publications', href: `${LEGACY}/publications.html` },
+  { label: 'Publications', href: '/publications' },
   { label: 'Team', href: '/team' },
   { label: 'News', href: `${LEGACY}/news.html` },
   { label: 'Join us', href: `${LEGACY}/opportunities.html` },

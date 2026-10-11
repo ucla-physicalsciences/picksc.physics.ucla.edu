@@ -1,0 +1,126 @@
+---
+import Base from '../layouts/Base.astro';
+import { publications, isGroupAuthor, type Publication } from '../data/publications';
+import { LEGACY } from '../data/site';
+
+const years = [...new Set(publications.map((p) => p.year))].sort((a, b) => b - a);
+const byYear = (y: number) => publications.filter((p) => p.year === y);
+const MAX_AUTHORS = 12;
+
+const venue = (p: Publication) =>
+  [p.volume, p.page].filter(Boolean).join(', ');
+const searchText = (p: Publication) =>
+  [p.title, p.authors.join(' '), p.journal, p.year].join(' ').toLowerCase();
+
+const other = [
+  { label: 'Dissertations', href: `${LEGACY}/dissertations.html` },
+  { label: 'Reports and notes', href: `${LEGACY}/reports-and-notes.html` },
+  { label: 'Presentations', href: `${LEGACY}/presentations.html` },
+];
+---
+
+<Base title="Publications" description="Peer-reviewed publications of the UCLA Plasma Simulation Group.">
+  <section class="border-b border-slate-200 bg-gradient-to-b from-brand-50/60 to-white">
+    <div class="mx-auto max-w-6xl px-4 py-14 sm:px-6">
+      <h1 class="text-4xl font-semibold">Publications</h1>
+      <p class="mt-4 max-w-3xl text-lg leading-relaxed text-slate-600">
+        Peer-reviewed papers by members of the group, newest first. Group members are shown in bold. See also our{' '}
+        {other.map((o, i) => (
+          <>{i > 0 && (i === other.length - 1 ? ' and ' : ', ')}<a href={o.href}>{o.label.toLowerCase()}</a></>
+        ))}.
+      </p>
+      <div class="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center">
+        <label class="relative block w-full sm:max-w-sm">
+          <span class="sr-only">Search publications</span>
+          <input
+            id="pub-search"
+            type="search"
+            placeholder="Search titles, authors, journals…"
+            class="w-full rounded-full border border-slate-300 bg-white px-4 py-2 text-sm focus:border-brand-600 focus:ring-1 focus:ring-brand-600 focus:outline-none"
+          />
+        </label>
+        <p id="pub-count" class="text-sm text-slate-500" aria-live="polite">{publications.length} papers</p>
+      </div>
+      <nav aria-label="Years" class="mt-5 flex flex-wrap gap-1.5">
+        {years.map((y) => (
+          <a href={`#y${y}`} data-year-chip={y} class="rounded-full border border-slate-300 bg-white px-3 py-1 text-sm text-slate-700 no-underline hover:border-brand-600 hover:text-brand-700">{y}</a>
+        ))}
+      </nav>
+    </div>
+  </section>
+
+  <div class="mx-auto max-w-6xl px-4 pb-16 sm:px-6">
+    {years.map((y) => (
+      <section id={`y${y}`} data-year={y} class="scroll-mt-20 pt-12">
+        <h2 class="border-b border-slate-200 pb-2 text-2xl font-semibold">{y}</h2>
+        <ol class="divide-y divide-slate-100">
+          {byYear(y).map((p) => {
+            const shown = p.authors.length > MAX_AUTHORS + 2 ? p.authors.slice(0, MAX_AUTHORS) : p.authors;
+            const hidden = p.authors.length - shown.length;
+            const hiddenGroup = p.authors.slice(shown.length).filter(isGroupAuthor);
+            return (
+              <li class="py-4" data-search={searchText(p)}>
+                <a href={`https://doi.org/${p.doi}`} class="font-medium text-slate-900 no-underline hover:text-brand-700">{p.title}</a>
+                <p class="mt-1 text-sm leading-relaxed text-slate-600">
+                  {shown.map((a, i) => (
+                    <>{i > 0 && ', '}{isGroupAuthor(a) ? <strong class="font-semibold text-slate-800">{a}</strong> : a}</>
+                  ))}
+                  {hidden > 0 && (
+                    <span class="text-slate-500">
+                      {' '}… and {hidden} more
+                      {hiddenGroup.length > 0 && <>, including <strong class="font-semibold text-slate-800">{hiddenGroup.join(', ')}</strong></>}
+                    </span>
+                  )}
+                </p>
+                <p class="mt-1 text-sm text-slate-500">
+                  {p.status === 'accepted' && <span class="mr-1.5 rounded bg-amber-100 px-1.5 py-0.5 text-xs font-medium text-amber-800">Accepted</span>}
+                  <span class="italic">{p.journal}</span>{venue(p) && ` ${venue(p)}`} ({p.year})
+                  <span class="ml-2 inline-flex gap-2">
+                    <a href={`https://doi.org/${p.doi}`} class="text-xs no-underline hover:underline">DOI</a>
+                    {p.arxiv && <a href={`https://arxiv.org/abs/${p.arxiv}`} class="text-xs no-underline hover:underline">arXiv</a>}
+                  </span>
+                </p>
+              </li>
+            );
+          })}
+        </ol>
+      </section>
+    ))}
+    <p id="pub-empty" class="hidden pt-12 text-slate-500">No publications match your search.</p>
+  </div>
+</Base>
+
+<script>
+  const input = document.getElementById('pub-search') as HTMLInputElement;
+  const count = document.getElementById('pub-count')!;
+  const empty = document.getElementById('pub-empty')!;
+  const items = [...document.querySelectorAll<HTMLElement>('[data-search]')];
+  const sections = [...document.querySelectorAll<HTMLElement>('[data-year]')];
+  const total = items.length;
+
+  const filter = () => {
+    const terms = input.value.toLowerCase().split(/\s+/).filter(Boolean);
+    let n = 0;
+    for (const li of items) {
+      const hit = terms.every((t) => li.dataset.search!.includes(t));
+      li.hidden = !hit;
+      if (hit) n++;
+    }
+    for (const s of sections) {
+      const any = s.querySelector('li:not([hidden])') !== null;
+      s.hidden = !any;
+      const chip = document.querySelector<HTMLElement>(`[data-year-chip="${s.dataset.year}"]`);
+      if (chip) chip.hidden = !any;
+    }
+    count.textContent = terms.length ? `${n} of ${total} papers` : `${total} papers`;
+    empty.classList.toggle('hidden', n > 0);
+  };
+  input.addEventListener('input', filter);
+
+  // Support links like /publications?q=alves
+  const q = new URLSearchParams(location.search).get('q');
+  if (q) {
+    input.value = q;
+    filter();
+  }
+</script>
