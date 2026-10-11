@@ -5,8 +5,6 @@ import Base from '../layouts/Base.astro';
 import HighlightCard from '../components/HighlightCard.astro';
 // Placeholder hero: the stacked group logo. Candidate simulation figures live in src/assets/simulations/.
 import hero from '../../brand/SVG/PSG_lockup-stacked_color.svg';
-import nsfLogo from '../assets/funders/nsf-logo.png';
-import doeSeal from '../assets/funders/doe-seal.svg';
 import { publications, cite, shortAuthors } from '../data/publications';
 import { software } from '../data/site';
 
@@ -117,19 +115,6 @@ const recent = publications.slice(0, 5);
         Infrastructure for Sustained Innovation award.
       </p>
       <a href="/about" class="mt-4 inline-block font-medium no-underline hover:underline">Our history →</a>
-
-      <!-- Main sources of support -->
-      <div class="mt-6 border-t border-slate-200 pt-5">
-        <p class="text-xs font-semibold tracking-wide text-slate-500 uppercase">Supported by</p>
-        <div class="mt-3 flex items-center gap-6">
-          <a href="https://www.nsf.gov/" class="shrink-0" title="U.S. National Science Foundation">
-            <Image src={nsfLogo} alt="U.S. National Science Foundation" width={64} height={64} class="size-16" />
-          </a>
-          <a href="https://www.energy.gov/science/office-science" class="shrink-0" title="U.S. Department of Energy">
-            <img src={doeSeal.src} alt="U.S. Department of Energy" width="64" height="64" class="size-16" />
-          </a>
-        </div>
-      </div>
     </aside>
   </section>
 </Base>
