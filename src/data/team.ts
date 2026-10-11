@@ -17,11 +17,12 @@ export interface Person {
   researchgate?: string;
   dblp?: string;
 }
-export interface Alum {
-  name: string;
-  role?: string;
+export interface Alum extends Person {
   years?: string;
-  now?: string;
+  /** Where they went next. */
+  after?: string;
+  /** Short testimonial about their time in the group. */
+  quote?: string;
 }
 interface Team {
   pis: Person[];

@@ -8,12 +8,11 @@ const sections = [
   { id: 'pis', title: 'Principal investigators' },
   ...team.groups.map((g) => ({ id: g.title.toLowerCase().replace(/[^a-z]+/g, '-'), title: g.title })),
   { id: 'collaborators', title: 'Collaborators' },
-  { id: 'alumni', title: 'Alumni' },
 ];
 const groupId = (title: string) => title.toLowerCase().replace(/[^a-z]+/g, '-');
 ---
 
-<Base title="Team" description="Members, collaborators and alumni of the UCLA Plasma Simulation Group.">
+<Base title="Team" description="Members and collaborators of the UCLA Plasma Simulation Group.">
   <section class="border-b border-slate-200 bg-gradient-to-b from-brand-50/60 to-white">
     <div class="mx-auto max-w-6xl px-4 py-14 sm:px-6">
       <h1 class="text-4xl font-semibold">Team</h1>
@@ -84,29 +83,15 @@ const groupId = (title: string) => title.toLowerCase().replace(/[^a-z]+/g, '-');
       </p>
     </section>
 
-    <!-- Alumni -->
-    <section id="alumni" class="scroll-mt-20 pt-14">
-      <h2 class="text-2xl font-semibold">Alumni</h2>
-      <table class="mt-6 w-full text-left text-sm">
-        <thead class="border-b border-slate-300 text-xs tracking-wide text-slate-500 uppercase">
-          <tr>
-            <th class="py-2 pr-4 font-medium">Name</th>
-            <th class="py-2 pr-4 font-medium">Role</th>
-            <th class="py-2 pr-4 font-medium">Year</th>
-            <th class="hidden py-2 font-medium sm:table-cell">Now</th>
-          </tr>
-        </thead>
-        <tbody class="divide-y divide-slate-200">
-          {team.alumni.map((a) => (
-            <tr>
-              <td class="py-2.5 pr-4 font-medium text-slate-900">{a.name}</td>
-              <td class="py-2.5 pr-4 text-slate-600">{a.role}</td>
-              <td class="py-2.5 pr-4 text-slate-600">{a.years}</td>
-              <td class="hidden py-2.5 text-slate-600 sm:table-cell">{a.now}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+    <!-- Link to alumni page -->
+    <section class="py-14">
+      <a href="/alumni" class="group flex items-center justify-between gap-6 rounded-xl border border-slate-200 bg-brand-50/50 p-6 no-underline hover:border-brand-600">
+        <div>
+          <h2 class="text-2xl font-semibold text-slate-900">Alumni</h2>
+          <p class="mt-1 text-slate-600">Former students, postdocs and researchers of the group, and where they went next.</p>
+        </div>
+        <span class="shrink-0 text-2xl text-brand-700 transition-transform group-hover:translate-x-1" aria-hidden="true">&rarr;</span>
+      </a>
     </section>
   </div>
 </Base>

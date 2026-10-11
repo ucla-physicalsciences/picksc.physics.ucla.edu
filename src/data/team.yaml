@@ -5,25 +5,26 @@
 # Links (all optional): email, website, scholar, github, linkedin, researchgate, dblp
 # focus: optional one-line research focus shown under the role.
 #
-# When someone leaves, move them to `alumni` (no photo needed) with years and,
-# if known, where they are now.
+# When someone leaves, move their entry to `alumni` (src/pages/alumni.astro) and add
+# `years` (e.g. "2019–2025"), `after` (where they went next) and, optionally, `quote`
+# (a short testimonial). The photo and links can stay.
 
 pis:
+  - name: E. Paulo Alves
+    role: Co-director
+    title: Associate Professor, Physics & Astronomy
+    photo: paulo-alves.jpg
+    email: epalves@physics.ucla.edu
+    scholar: https://scholar.google.com/citations?user=dpMiNBUAAAAJ
   - name: Warren B. Mori
     role: Co-director
     title: Distinguished Professor, Physics & Astronomy and Electrical & Computer Engineering  # CHECK
     photo: warren-mori.jpg
     email: mori@physics.ucla.edu
     scholar: https://scholar.google.com/citations?user=_OsGhQ4AAAAJ
-  - name: E. Paulo Alves
-    role: Co-director
-    title: Assistant Professor, Physics & Astronomy  # CHECK
-    photo: paulo-alves.jpg
-    email: epalves@physics.ucla.edu
-    scholar: https://scholar.google.com/citations?user=dpMiNBUAAAAJ
 
 groups:
-  - title: Research staff
+  - title: Senior researchers
     members:
       - name: Viktor K. Decyk
         role: Senior researcher
@@ -37,9 +38,6 @@ groups:
         role: Senior researcher
         photo: benjamin-winjum.jpg
         scholar: https://scholar.google.com/citations?user=EqH6lrYAAAAJ
-      - name: Adam Tableman
-        role: Software engineer
-        dblp: https://dblp.org/pid/156/2911.html
 
   - title: Postdoctoral researchers
     members:
@@ -48,44 +46,33 @@ groups:
         photo: thamine-dalichaouch.jpg
         researchgate: https://www.researchgate.net/profile/Thamine-Dalichaouch
 
+  # Alphabetical by last name.
   - title: Graduate students
     members:
+      - name: Benjamin Agnew
+        role: Graduate student
       - name: Maria Almanza
         role: Graduate student
         photo: maria-almanza.jpg
         linkedin: https://www.linkedin.com/in/maria-almanza-b97082314/
-      - name: Sarah Chase
+      - name: Albert Countryman
         role: Graduate student
-        photo: sarah-chase.jpg
-        linkedin: https://www.linkedin.com/in/sarahechase/
       - name: Gabrielle Guttormsen
         role: Graduate student
         photo: gabrielle-guttormsen.jpg
         linkedin: https://www.linkedin.com/in/gabrielle-guttormsen-94104b115/
-      - name: Lance Hildebrand
+      - name: Elias Hansen
         role: Graduate student
-        photo: lance-hildebrand.jpg
-        linkedin: https://www.linkedin.com/in/lance-hildebrand-20b679a0/
-      - name: Roman P. Lee
-        role: Graduate student
-        photo: roman-lee.jpg
-        linkedin: https://www.linkedin.com/in/roman-lee-40954214b
       - name: Madox C. McGrae-Menge
         role: Graduate student
         photo: madox-mcgrae-menge.jpg
         linkedin: https://www.linkedin.com/in/madox-mcgrae-menge-9b0a91146/
-      - name: Jacob R. Pierce
+      - name: Vijay Patel
         role: Graduate student
-        photo: jacob-pierce.jpg
-        linkedin: https://www.linkedin.com/in/jacob-pierce-aa9077135/
       - name: Zack Pine
         role: Graduate student
         photo: zack-pine.jpg
         scholar: https://scholar.google.com/citations?user=EyxPHfoAAAAJ
-      - name: Qianqian Su
-        role: Graduate student
-        photo: qianqian-su.jpg
-        researchgate: https://www.researchgate.net/profile/Qianqian-Su-5
 
 # Shown as a compact list of names (with affiliation if given).
 collaborators:
@@ -98,8 +85,38 @@ collaborators:
   - name: Xinlu Xu
     scholar: https://scholar.google.com/citations?user=hhaBX3kAAAAJ
 
-# Former members, newest first. `now` = current position (optional).
+# Former members, shown on /alumni, newest first.
+#   years: time in the group ("2019–2025") or the PhD year
+#   after: where they went next (optional)
+#   quote: short testimonial about their time in the group (optional)
 alumni:
+  # Recently left; years and next positions to fill in
+  - name: Lance Hildebrand
+    role: PhD student
+    years: ""  # CHECK
+    photo: lance-hildebrand.jpg
+    linkedin: https://www.linkedin.com/in/lance-hildebrand-20b679a0/
+  - name: Roman P. Lee
+    role: PhD student
+    years: ""  # CHECK
+    photo: roman-lee.jpg
+    linkedin: https://www.linkedin.com/in/roman-lee-40954214b
+  - name: Sarah Chase
+    role: PhD student
+    years: ""  # CHECK
+    photo: sarah-chase.jpg
+    linkedin: https://www.linkedin.com/in/sarahechase/
+  - name: Qianqian Su
+    role: PhD student
+    years: ""  # CHECK
+    photo: qianqian-su.jpg
+    researchgate: https://www.researchgate.net/profile/Qianqian-Su-5
+  - name: Jacob R. Pierce
+    role: PhD student
+    years: ""  # CHECK: not in the current roster, so moved here
+    photo: jacob-pierce.jpg
+    linkedin: https://www.linkedin.com/in/jacob-pierce-aa9077135/
+  # PhD graduates (from the dissertations page)
   - { name: Yujian Zhao, role: PhD, years: "2023" }
   - { name: Kyle G. Miller, role: PhD, years: "2022" }
   - { name: Thamine N. Dalichaouch, role: PhD, years: "2021" }
@@ -118,4 +135,3 @@ alumni:
   - { name: Fei Li, role: Researcher, years: "" }
   - { name: Michael Touati, role: Researcher, years: "" }
   - { name: Nickie Ng, role: Researcher, years: "" }
-  - { name: SJ Spencer, role: Postdoctoral researcher, years: "" }  # CHECK role
