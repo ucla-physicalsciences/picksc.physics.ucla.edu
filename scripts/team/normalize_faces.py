@@ -11,8 +11,8 @@ import subprocess, sys
 from pathlib import Path
 from PIL import Image, ImageOps
 
-FACE_FRAC = 0.55   # face width / crop width
-FACE_Y = 0.45      # face centre height / crop height (a bit above middle)
+FACE_FRAC = 0.47   # face width / crop width
+FACE_Y = 0.55      # face centre height / crop height (low enough to keep the top of the head)
 MAX_PX = 600       # output size cap (avatars display at <= 128px, 2x = 256px)
 
 src = Path('src/assets/team/originals')
