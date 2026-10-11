@@ -55,15 +55,13 @@ arrow(0.425, 0.385)
 # 2. Sparse regression over a library of candidate terms
 fig.text(0.5, 0.355, r"\textbf{2.} Sparse regression over candidate terms", ha="center", va="center",
          fontsize=14, color=INK)
-colored_math(0.272, [
+colored_math(0.275, [
     (r"\partial_t f =", INK), (r"\xi_1\,\partial_x f", GRAY), ("+", INK),
     (r"\xi_2\,v\,\partial_x f", BLUE), ("+", INK), (r"\xi_3\,E\,\partial_v f", BLUE), ("+", INK),
     (r"\xi_4\,\partial_x^2 f", GRAY), (r"+\,\cdots", INK),
 ], fontsize=15)
-fig.text(0.5, 0.228, r"\textit{keep only the few terms needed to fit the data}", ha="center", va="center",
-         fontsize=12, color="#475569")
 
-arrow(0.205, 0.165)
+arrow(0.21, 0.17)
 
 # 3. Inferred PDE
 fig.add_artist(FancyBboxPatch((0.08, 0.02), 0.84, 0.13, transform=fig.transFigure,
