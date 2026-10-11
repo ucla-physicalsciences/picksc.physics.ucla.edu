@@ -106,40 +106,41 @@ collaborators:
   - name: Xinlu Xu
     scholar: https://scholar.google.com/citations?user=hhaBX3kAAAAJ
 
-# Former members, shown on /alumni, newest first.
+# Former members, shown on /alumni, newest first. PhD alumni whose name matches an entry in
+# dissertations.yaml get a link to their dissertation.
 #   years: time in the group ("2019–2025") or the PhD year
 #   after: where they went next (optional)
 #   quote: short testimonial about their time in the group (optional)
 alumni:
-  # Recently left; years and next positions to fill in
-  - name: Lance Hildebrand
-    role: PhD student
-    years: ""  # CHECK
-    photo: lance-hildebrand.jpg
-    linkedin: https://www.linkedin.com/in/lance-hildebrand-20b679a0/
-  - name: Roman P. Lee
-    role: PhD student
-    years: ""  # CHECK
-    photo: roman-lee.jpg
-    linkedin: https://www.linkedin.com/in/roman-lee-40954214b
   - name: Sarah Chase
-    role: PhD student
-    years: ""  # CHECK
+    role: PhD
+    years: "2026"
     photo: sarah-chase.jpg
     linkedin: https://www.linkedin.com/in/sarahechase/
-  - name: Qianqian Su
-    role: PhD student
-    years: ""  # CHECK
-    photo: qianqian-su.jpg
-    researchgate: https://www.researchgate.net/profile/Qianqian-Su-5
   - name: Jacob R. Pierce
-    role: PhD student
-    years: ""  # CHECK: not in the current roster, so moved here
+    role: PhD
+    years: "2026"
     photo: jacob-pierce.jpg
     linkedin: https://www.linkedin.com/in/jacob-pierce-aa9077135/
-  # PhD graduates (from the dissertations page)
+  - name: Qianqian Su
+    role: PhD
+    years: "2025"
+    photo: qianqian-su.jpg
+    researchgate: https://www.researchgate.net/profile/Qianqian-Su-5
+  - name: Roman P. Lee
+    role: PhD
+    years: "2025"
+    photo: roman-lee.jpg
+    linkedin: https://www.linkedin.com/in/roman-lee-40954214b
+  - name: Lance Hildebrand
+    role: PhD
+    years: "2024"
+    photo: lance-hildebrand.jpg
+    linkedin: https://www.linkedin.com/in/lance-hildebrand-20b679a0/
+  # PhD graduates (dissertations are in dissertations.yaml)
   - { name: Yujian Zhao, role: PhD, years: "2023" }
   - { name: Kyle G. Miller, role: PhD, years: "2022" }
+  - { name: Adam R. Tableman, role: PhD, years: "2019" }
   - { name: Joshua J. May, role: PhD, years: "2017" }
   - { name: Asher W. Davidson, role: PhD, years: "2016" }
   - { name: Peicheng Yu, role: PhD, years: "2016" }

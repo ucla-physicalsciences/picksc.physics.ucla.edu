@@ -1,0 +1,42 @@
+---
+import Base from '../layouts/Base.astro';
+import { dissertations } from '../data/dissertations';
+
+const linkLabel = (url: string) =>
+  url.includes('escholarship.org') ? 'eScholarship' : url.includes('arxiv.org') ? 'arXiv' : url.endsWith('.pdf') ? 'PDF' : 'Link';
+---
+
+<Base title="Dissertations" description="PhD dissertations from the UCLA Plasma Simulation Group.">
+  <section class="border-b border-slate-200 bg-gradient-to-b from-brand-50/60 to-white">
+    <div class="mx-auto max-w-6xl px-4 py-14 sm:px-6">
+      <p class="text-sm"><a href="/publications" class="no-underline hover:underline">&larr; Publications</a></p>
+      <h1 class="mt-2 text-4xl font-semibold">Dissertations</h1>
+      <p class="mt-4 max-w-3xl text-lg leading-relaxed text-slate-600">
+        PhD dissertations completed in the group at UCLA, newest first. Most are available in full through UCLA's{' '}
+        <a href="https://escholarship.org/uc/ucla_etd">eScholarship</a> repository. See also our <a href="/alumni">alumni</a>.
+      </p>
+    </div>
+  </section>
+
+  <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+    <ol class="divide-y divide-slate-200 border-y border-slate-200">
+      {dissertations.map((d) => (
+        <li class="grid gap-x-8 gap-y-1 py-5 sm:grid-cols-[5rem_1fr]">
+          <p class="font-sans text-sm font-semibold text-slate-500 tabular-nums">{d.year}</p>
+          <div>
+            {d.url ? (
+              <a href={d.url} class="font-medium text-slate-900 no-underline hover:text-brand-700">{d.title}</a>
+            ) : (
+              <p class="font-medium text-slate-900">{d.title}</p>
+            )}
+            <p class="mt-1 text-sm text-slate-600">
+              <span class="font-semibold text-slate-800">{d.name}</span>
+              {d.advisor && <span class="text-slate-500"> · Advisor: {d.advisor}</span>}
+              {d.url && <a href={d.url} class="ml-2 text-xs no-underline hover:underline">{linkLabel(d.url)}</a>}
+            </p>
+          </div>
+        </li>
+      ))}
+    </ol>
+  </div>
+</Base>
