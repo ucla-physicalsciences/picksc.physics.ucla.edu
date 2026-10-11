@@ -57,13 +57,13 @@ const other = [
           {byYear(y).map((p) => {
             const shown = p.authors.length > MAX_AUTHORS + 2 ? p.authors.slice(0, MAX_AUTHORS) : p.authors;
             const hidden = p.authors.length - shown.length;
-            const hiddenGroup = p.authors.slice(shown.length).filter(isGroupAuthor);
+            const hiddenGroup = p.authors.slice(shown.length).filter((a) => isGroupAuthor(a, p.doi));
             return (
               <li class="py-4" data-search={searchText(p)}>
                 <a href={`https://doi.org/${p.doi}`} class="font-medium text-slate-900 no-underline hover:text-brand-700">{p.title}</a>
                 <p class="mt-1 text-sm leading-relaxed text-slate-600">
                   {shown.map((a, i) => (
-                    <>{i > 0 && ', '}{isGroupAuthor(a) ? <strong class="font-semibold text-slate-800">{a}</strong> : a}</>
+                    <>{i > 0 && ', '}{isGroupAuthor(a, p.doi) ? <strong class="font-semibold text-slate-800">{a}</strong> : a}</>
                   ))}
                   {hidden > 0 && (
                     <span class="text-slate-500">
