@@ -1,0 +1,86 @@
+# Talks and conference proceedings, shown on /presentations.
+# `file` is a path under public/ (e.g. presentations/may.pdf); leave it out when there are no slides.
+
+workshops:
+  - title: First Annual OSIRIS Users and Developers Workshop
+    year: 2017
+    agenda: presentations/agenda.pdf
+    sessions:
+      - title: Introduction to OSIRIS 4.0
+        talks:
+          - { speaker: Ricardo Fonseca, title: Introduction to OSIRIS 4.0 for developers (and users), file: presentations/introduction.pdf }
+          - { speaker: Anton Helm, title: "Implementing a ponderomotive guiding center solver: a case study", file: presentations/helm.pdf }
+          - { speaker: Ricardo Fonseca, title: New hardware support in OSIRIS 4.0, file: presentations/fonseca2.pdf }
+          - { speaker: Josh May, title: OSIRIS collision package overview, file: presentations/may.pdf }
+      - title: Accessing and using OSIRIS through GitHub
+        talks:
+          - { speaker: Anton Helm, title: Accessing and using OSIRIS through GitHub, file: presentations/helm2.pdf }
+      - title: New features in OSIRIS 4.0
+        talks:
+          - { speaker: Anton Helm, title: Three-dimensional modeling using the ponderomotive guiding center solver, file: presentations/helm3.pdf }
+          - { speaker: Asher Davidson and Thamine Dalichaouch, title: The implementation and usage of the quasi-3D algorithm in OSIRIS 4.0, file: presentations/davidson.pdf }
+          - { speaker: Thomas Grismayer, title: Numerics for ultra-intense fields, file: presentations/grismayer.pdf }
+          - { speaker: Xinlu Xu, title: Customized FD and hybrid FFT/FD algorithms for eliminating the numerical Cherenkov instability (NCI), file: presentations/xu1.key.zip }
+          - { speaker: Han Wen, title: "New antennas for modeling the nonlinear optics of plasmas & non-uniform particle weighting", file: presentations/han.pptx }
+          - { speaker: Thamine Dalichaouch, title: Azimuthal Fourier mode diagnostic for comparisons of full-3D and quasi-3D simulations, file: presentations/thamine.key }
+          - { speaker: Ricardo Fonseca, title: (Beam) field initialization in OSIRIS 4.0, file: presentations/balzarini-fonseca.pdf }
+      - title: Short talks on usage of OSIRIS 3.0 and 4.0
+        talks:
+          - { speaker: Xinlu Xu, title: Modeling laser-driven density downramp injection, file: presentations/xu-modeling.key }
+          - { speaker: Asher Davidson, title: Modeling LWFA with the quasi-3D version of OSIRIS, file: presentations/davidson2.pdf }
+          - { speaker: Weiming An, title: Modeling plasma wakefield accelerators, file: presentations/weimingan.pdf }
+          - { speaker: Jens Osterhoff, title: "OSIRIS usage at DESY: full start-to-end PWFA simulations for FLASHForward", file: presentations/osterhoff.pdf }
+          - { speaker: Fabrízio Del Gaudio, title: Particle-in-cell Compton scattering }
+          - { speaker: Paulo Alves, title: Coupling of numerical PIC and Monte Carlo }
+          - { speaker: Scott Feister, title: Numerical challenges in efficient modeling of colliding flows, file: presentations/feister.pptx }
+          - { speaker: Frank Tsung, title: Modeling nonlinear optics of plasmas (relevant to IFE), file: presentations/tsung.pdf }
+          - { speaker: Frederico Fiúza, title: Modeling collisionless shocks and overdense laser-plasma interactions }
+          - { speaker: Xinlu Xu, title: Modeling ionization injection in OSIRIS, file: presentations/Ionization_Injection_XinluXu.key }
+      - title: Documentation for working with and running OSIRIS
+        talks:
+          - { speaker: Anton Helm, title: Documentation for working with and running OSIRIS, file: presentations/helm4-documentation.pdf }
+      - title: Current development and ideas for future plans
+        talks:
+          - { speaker: Ricardo Fonseca, title: Dynamic load balancing in OSIRIS, file: presentations/fonseca-dynamic.pdf }
+          - { speaker: Qiyang Hu and Frank Tsung, title: Overview of the PICKSC Science Gateway, file: presentations/hu-tsung.pdf }
+          - { speaker: Michael Touati, title: Integrating UPIC algorithms into OSIRIS, file: presentations/touati.pdf }
+          - { speaker: Kyle Miller, title: "Boris correction: exact and approximate", file: presentations/miller.pdf }
+          - { speaker: François Courvoisier, title: Research at FEMTO-ST Institute }
+          - { speaker: Fábio Cruz, title: Modified spherical coordinate system for PIC simulations of pulsar magnetospheres }
+          - { speaker: Giannandrea Inchingolo, title: Multi-dimensional shearing modules in OSIRIS 4.0, file: presentations/inchingolo.pdf }
+          - { speaker: Kevin Schoeffler, title: QED energy and relativistic temperature diagnostics }
+
+# Selected talks, newest first.
+talks:
+  - { authors: R. A. Fonseca, title: Challenges in computer simulations to the exascale, venue: 17th Advanced Accelerator Concepts Workshop, year: 2016, file: presentations/fonseca-exascale.pdf }
+  - { authors: "X. Xu, F. Li, W. Lu, C. Joshi, W. B. Mori", title: Physics of high quality electrons generation from density downramp injection in the 3D blowout regime, venue: 17th Advanced Accelerator Concepts Workshop, year: 2016 }
+  - { authors: "X. Xu, C.-H. Pai, J. Vieira, W. Lu, C. Joshi, W. B. Mori", title: Nanoscale electron bunching and spiraling in laser-triggered ionization injection in plasma accelerators, venue: 17th Advanced Accelerator Concepts Workshop, year: 2016, file: presentations/xu-nanoscale.pdf }
+  - { authors: "X. Xu, P. Yu, F. Li, T. Dalichaouch, W. B. Mori", title: Comparison of the injection between boosted frame and lab frame simulations, venue: 17th Advanced Accelerator Concepts Workshop, year: 2016, file: presentations/xu-boosted.pdf }
+  - { authors: "F. Li, P. Yu, X. Xu, F. Fiuza, V. K. Decyk, T. Dalichaouch, A. Davidson, A. Tableman, W. An, F. S. Tsung, R. A. Fonseca, W. Lu, W. B. Mori", title: Controlling the numerical Cerenkov instability in PIC simulations using a customized FDTD Maxwell solver and a local FFT based current correction, venue: 17th Advanced Accelerator Concepts Workshop, year: 2016, file: presentations/li-numerical.pdf }
+  - { authors: "L. D. Amorim, W. An, W. B. Mori, J. Vieira", title: Transverse evolution of e+ beams accelerating in hollow plasma channel non-linear wakefields, venue: 17th Advanced Accelerator Concepts Workshop, year: 2016, file: presentations/amorim.pdf }
+  - { authors: V. K. Decyk, title: A portable approach for PIC on emerging architectures, venue: APS April Meeting, year: 2016, file: presentations/decyk-portable.pdf }
+  - { authors: W. An, title: Simulations of plasma wakefield acceleration at FACET and beyond, venue: 12th International Computational Accelerator Physics Conference, year: 2015, file: presentations/an-simulations.pdf }
+  - { authors: "W. B. Mori, V. K. Decyk, F. S. Tsung, R. E. Caflisch, R. A. Fonseca", title: The UCLA Particle-in-Cell and Kinetic Simulation Software Center (PICKSC), year: 2015, file: presentations/mori-picksc-2015.pdf }
+  - { authors: W. An et al., title: Plasma ion motion in the nonlinear blowout regime, venue: 16th Advanced Accelerator Concepts Workshop, year: 2014 }
+  - { authors: A. Davidson, title: Exploration of LWFA parameter regimes using truncated azimuthal geometry in the OSIRIS simulation framework, venue: APS Division of Plasma Physics Meeting (JO7.11), year: 2014 }
+  - { authors: A. Davidson, title: Implementation of a hybrid particle code with a PIC description in r-z and a gridless description in φ into OSIRIS, venue: 16th Advanced Accelerator Concepts Workshop, year: 2014 }
+  - { authors: "B. J. Winjum, F. S. Tsung, W. B. Mori", title: PIC simulations of multi-speckle stimulated Raman scattering in inhomogeneous plasmas, venue: Anomalous Absorption Conference, year: 2014 }
+  - { authors: "B. J. Winjum, J. J. Tu, S. S. Su, V. Decyk, W. B. Mori", title: Verification and convergence properties of a particle-in-cell code, venue: Anomalous Absorption Conference, year: 2014, file: presentations/winjum-verification.pdf }
+  - { authors: "B. J. Winjum, J. J. Tu, S. S. Su, V. Decyk, W. B. Mori", title: Verification and convergence properties of a particle-in-cell code (invited), venue: "Computational Methods in High Energy Density Plasmas, IPAM Reunion Conference I, Lake Arrowhead", year: 2013 }
+  - { authors: "B. J. Winjum, V. K. Decyk, W. B. Mori, J. W. Banks, R. L. Berger, T. Chapman, S. Brunner", title: Kinetic simulations of externally driven and instability driven nonlinear electron plasma waves relevant to stimulated Raman scattering, venue: APS Division of Plasma Physics Meeting (NP8.117), year: 2013 }
+  - { authors: "B. J. Winjum, R. L. Berger, T. Chapman, J. W. Banks, S. Brunner, V. K. Decyk, W. B. Mori", title: Kinetic simulations of the self-focusing and dissipation of finite-width electron plasma waves, venue: Anomalous Absorption Conference, year: 2013 }
+
+# Conference proceedings, newest first.
+proceedings:
+  - { authors: "A. Davidson, A. Tableman, P. Yu, W. An, F. Tsung, W. Lu, R. A. Fonseca, W. B. Mori", title: An examination of the scaling laws for LWFA in the self-guided nonlinear blowout regime, venue: AIP Conference Proceedings 1812, 040014, year: 2017, url: https://doi.org/10.1063/1.4975861 }
+  - { authors: P. Yu et al., venue: "International Particle Accelerator Conference (IPAC), Richmond, VA", year: 2015 }
+  - { authors: P. Yu et al., venue: "16th Advanced Accelerator Concepts Workshop, San Jose, CA", year: 2014 }
+  - { authors: "P. Muggli, O. Reimann, N. Lopes, L. Silva, J. Vieira, E. Adli, S. Gessner, M. Hogan, S. Li, M. Litos, C. Joshi, K. Marsh, W. Mori, N. Vafaei-Najafabadi, Y. Fang", title: Electron and positron bunch self-modulation experiments at SLAC-FACET, venue: "North American Particle Accelerator Conference, Pasadena, CA", year: 2013, url: https://accelconf.web.cern.ch/pac2013/ }
+  - { authors: "A. A. Sahai, T. C. Katsouleas, F. S. Tsung, W. B. Mori", title: Long term evolution of plasma wakefields, venue: "North American Particle Accelerator Conference, Pasadena, CA", year: 2013, url: https://accelconf.web.cern.ch/pac2013/ }
+  - { authors: "C. Clayton, W. An, C. Joshi, K. Marsh, W. Mori, N. Vafaei-Najafabadi, P. Muggli, E. Adli, C. I. Clarke, S. Corde, J.-P. Delahaye, R. J. England, A. S. Fisher, J. Frederico, S. J. Gessner, M. Hogan, S. Z. Li, M. D. Litos, D. Walz, Z. Wu, W. Lu", title: A betatron-analysis technique for identifying narrowband trapped charge within a broadband energy tail in PWFA experiments at FACET, venue: "North American Particle Accelerator Conference, Pasadena, CA", year: 2013, url: https://accelconf.web.cern.ch/pac2013/ }
+  - { authors: "A. W. Davidson, W. Lu, M. Zheng, C. Joshi, L. O. Silva, J. Martins, R. A. Fonseca, W. B. Mori", title: Self and ionization-injection in LWFA for near-term lasers, venue: "North American Particle Accelerator Conference, Pasadena, CA", year: 2013, url: https://accelconf.web.cern.ch/pac2013/ }
+  - { authors: "N. Vafaei-Najafabadi, W. An, C. E. Clayton, C. Joshi, W. Lu, K. A. Marsh, W. B. Mori, E. Adli, C. I. Clarke, S. Corde, J.-P. Delahaye, R. J. England, A. S. Fisher, J. Frederico, S. J. Gessner, M. J. Hogan, S. Z. Li, M. D. Litos, D. Walz, Z. Wu, P. Muggli", title: Suppression of the transformer ratio due to distributed injection of electrons in a plasma wakefield accelerator, venue: "North American Particle Accelerator Conference, Pasadena, CA", year: 2013, url: https://accelconf.web.cern.ch/pac2013/ }
+  - { authors: "P. Yu, V. K. Decyk, W. An, F. S. Tsung, W. B. Mori, X. Xu, W. Lu, J. Vieira, R. A. Fonseca, L. O. Silva", title: Simulation of laser wakefield acceleration in the Lorentz boosted frame with UPIC-EMMA, venue: "North American Particle Accelerator Conference, Pasadena, CA", year: 2013, url: https://accelconf.web.cern.ch/pac2013/ }
+  - { authors: "Y. Fang, P. Muggli, W. Mori", title: Possibility of confirming SMI through energy spectrum with the 1 nC ATF electron bunch, venue: "North American Particle Accelerator Conference, Pasadena, CA", year: 2013, url: https://accelconf.web.cern.ch/pac2013/ }
+  - { authors: "M. D. Litos, E. Adli, C. I. Clarke, S. Corde, J. P. Delahaye, R. J. England, A. S. Fisher, J. Frederico, S. Gessner, M. J. Hogan, S. Li, D. Walz, G. White, Z. Wu, V. Yakimenko, W. An, C. E. Clayton, C. Joshi, W. Lu, K. A. Marsh, W. B. Mori, N. Vafaei-Najafabadi, P. Muggli", title: Latest plasma wakefield acceleration results from the FACET project, venue: "North American Particle Accelerator Conference, Pasadena, CA", year: 2013, url: https://accelconf.web.cern.ch/pac2013/ }
+  - { authors: "K. A. Marsh, W. An, C. E. Clayton, C. Joshi, W. B. Mori, N. Vafaei-Najafabadi, P. Muggli, C. I. Clarke, S. Corde, J-P. Delahaye, R. J. England, A. S. Fisher, J. Frederico, S. J. Gessner, M. J. Hogan, S. Z. Li, M. D. Litos, D. Walz, Z. Wu, E. Adli, W. Lu", title: X-ray radiation and electron injection from beam envelope oscillations in plasma wakefield accelerator experiments at FACET, venue: "North American Particle Accelerator Conference, Pasadena, CA", year: 2013, url: https://accelconf.web.cern.ch/pac2013/ }

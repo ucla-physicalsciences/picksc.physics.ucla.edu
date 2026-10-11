@@ -75,27 +75,27 @@
   title: Efficient Modeling of Plasma Wake Field Acceleration Experiments Using Particle-In-Cell Methods
   advisor: Warren B. Mori
   url: https://escholarship.org/uc/item/9jf851kc
-# Before 2011: not on eScholarship. CHECK: where to host the full texts (currently PDFs on the old site).
+# Before 2011: not on eScholarship; PDFs are in public/reports-notes/ (consider Zenodo later).
 - name: Jay E. Fahlen
   year: 2010
   title: "Nonlinear Phenomena of Plasma Waves in a Kinetic Regime: Frequency Shifts, Packets, and Transverse Localization"
-  url: https://picksc.physics.ucla.edu/reports-notes/fahlen.pdf
+  url: /reports-notes/fahlen.pdf
 - name: Benjamin J. Winjum
   year: 2010
   title: Particle-in-cell simulations of stimulated Raman scattering for parameters relevant to inertial fusion energy
-  url: https://picksc.physics.ucla.edu/reports-notes/winjum.pdf
+  url: /reports-notes/winjum.pdf
 - name: Miaomiao Zhou
   year: 2008
   title: Accelerating Ultra-Short Electron/Positron Bunches in Field Ionization Produced Plasmas
-  url: https://picksc.physics.ucla.edu/reports-notes/zhou.pdf
+  url: /reports-notes/zhou.pdf
 - name: Wei Lu
   year: 2006
   title: Nonlinear Plasma Wakefield Theory and Optimum Scaling for Laser Wakefield Accelerator (LWFA) in the Blowout Regime
-  url: https://picksc.physics.ucla.edu/reports-notes/weilu.pdf
+  url: /reports-notes/weilu.pdf
 - name: Chengkun Huang
   year: 2005
   title: Quasi-static Modeling of Beam-Plasma and Laser-Plasma Interactions
-  url: https://picksc.physics.ucla.edu/reports-notes/huang.pdf
+  url: /reports-notes/huang.pdf
 - name: Roy G. Hemker
   year: 2000
   title: Particle-In-Cell Modeling of Plasma-Based Accelerators in Two and Three Dimensions

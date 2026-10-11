@@ -1,0 +1,27 @@
+---
+// One talk, report or proceedings entry: title, people, venue and year, and a download/link.
+import { fileLink } from '../data/files';
+import type { Entry } from '../data/talks';
+
+interface Props {
+  entry: Entry;
+}
+const { entry: e } = Astro.props;
+const file = e.file ? fileLink(e.file) : undefined;
+const people = e.speaker ?? e.authors;
+const where = [e.venue, e.year].filter(Boolean).join(', ');
+---
+
+<li class="py-4">
+  {e.title && <p class="font-medium text-slate-900">{e.title}</p>}
+  <p class:list={['text-sm text-slate-600', e.title && 'mt-1']}>
+    {people}{where && <span class="text-slate-500">{people && ' · '}{where}</span>}
+  </p>
+  {e.note && <p class="mt-1 text-sm text-slate-500">{e.note}</p>}
+  {(file || e.url) && (
+    <p class="mt-1 flex flex-wrap gap-x-3 text-xs">
+      {file && <a href={file.href} class="no-underline hover:underline">{file.label}</a>}
+      {e.url && <a href={e.url} class="no-underline hover:underline">{e.url.includes('doi.org') ? 'DOI' : 'Link'}</a>}
+    </p>
+  )}
+</li>

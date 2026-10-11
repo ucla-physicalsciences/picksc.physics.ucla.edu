@@ -1,0 +1,11 @@
+# Reports, notes and proposals, shown on /reports-and-notes. `file` is a path under public/.
+- section: Reports
+  items:
+    - { authors: "E. Huang, P. C. Liewer, V. K. Decyk, R. D. Ferraro", title: Concurrent three-dimensional fast Fourier transform algorithms for coarse-grained distributed memory parallel computers, venue: "CRPC-93-10 Technical Report, Center for Research on Parallel Computation, Caltech", year: 1993, file: reports-notes/93-tech-report.pdf }
+    - { authors: V. K. Decyk, title: Simulation of microscopic processes in plasma, venue: "Report PPG-1057, invited paper at the International Conference on Plasma Physics, Kiev, USSR", year: 1987, note: Describes the subtraction technique., file: reports-notes/87-decyk-report.pdf }
+- section: Notes
+  items:
+    - { authors: V. K. Decyk, title: Description of spectral particle-in-cell codes from the UPIC framework, file: reports-notes/upic-models.pdf }
+- section: Proposals
+  items:
+    - { authors: "W. B. Mori, V. K. Decyk, T. C. Katsouleas, D. W. Forslund, R. D. Ferraro, E. Horowitz", title: Full-scale numerical experiment to test a future plasma-based accelerator, venue: "Submitted to NSF as part of the U.S. High Performance Computing and Communications Program", year: 1992, file: reports-notes/NSF_advanced_accel_gr_chall_92.pdf }
