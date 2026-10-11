@@ -44,7 +44,7 @@ const slug = (id: string) => id.replace(/^\d+-/, '');
               <Figure
                 image={data.image}
                 alt={data.imageAlt}
-                class={data.image ? (data.wideFigure ? '' : 'max-h-[420px]') : 'aspect-[4/3]'}
+                class={data.image ? (data.wideFigure ? '' : 'max-h-[560px]') : 'aspect-[4/3]'}
                 sizes={data.wideFigure ? '(min-width: 1152px) 1100px, 100vw' : '(min-width: 1024px) 440px, 100vw'}
                 widths={data.wideFigure ? [800, 1400, 2200] : undefined}
               />

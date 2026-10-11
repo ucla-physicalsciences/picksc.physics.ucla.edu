@@ -3,9 +3,8 @@ title: AI/ML for plasma physics
 subtitle: Coupling machine learning with kinetic simulations to accelerate discovery
 order: 2
 image: ../../assets/areas/ai-ml-sparse-regression.png
-imageAlt: "Workflow for discovering the governing equation from simulation data: measurement volumes are sampled from electron phase-space snapshots, a library of candidate terms is built and integrated over them, and sparse regression yields the inferred Vlasov equation."
-figureCredit: "Discovering the Vlasov equation from particle-in-cell data with sparse regression. Adapted from Fig. 1(b) of Alves & Fiuza, Phys. Rev. Research (2022), CC BY 4.0."
-wideFigure: true
+imageAlt: "Three steps: electron phase-space snapshots from a kinetic simulation; a sparse regression that writes the time derivative of f as a sum of candidate terms and keeps only two of them; and the inferred Vlasov equation."
+figureCredit: "Discovering the Vlasov equation from particle-in-cell data with sparse regression. Adapted from Alves & Fiuza, Phys. Rev. Research (2022), CC BY 4.0."
 publications:
   - 10.1103/PhysRevResearch.4.033192
   - 10.1103/9fq1-vpqz
