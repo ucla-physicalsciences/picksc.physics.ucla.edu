@@ -1,0 +1,106 @@
+---
+import Base from '../layouts/Base.astro';
+
+// Milestones on the timeline. Each one has a source (a paper, a page on this site or a code release).
+const milestones = [
+  { year: '1973', text: 'John M. Dawson founds the UCLA Simulation of Plasmas Group.' },
+  { year: '1979', text: 'Tajima and Dawson propose the laser wakefield accelerator.', href: 'https://doi.org/10.1103/PhysRevLett.43.267' },
+  { year: '1983', text: 'Dawson’s review “Particle simulation of plasmas” in Reviews of Modern Physics.', href: 'https://doi.org/10.1103/RevModPhys.55.403' },
+  { year: '1985', text: 'Chen, Dawson and collaborators propose the plasma wakefield accelerator.', href: 'https://doi.org/10.1103/PhysRevLett.54.693' },
+  { year: '1989', text: 'Liewer and Decyk publish the first domain-decomposition algorithm for parallel PIC codes.', href: 'https://doi.org/10.1016/0021-9991(89)90153-8' },
+  { year: '1998', text: 'Warren B. Mori becomes the group’s leader.' },
+  { year: '2002', text: 'The OSIRIS framework is described, developed with collaborators at IST, Lisbon.', href: 'https://doi.org/10.1007/3-540-47789-6_36' },
+  { year: '2006', text: 'QuickPIC, the first fully 3D quasi-static PIC code, is published.', href: 'https://doi.org/10.1016/j.jcp.2006.01.039' },
+  { year: '2014', text: 'QuickPIC simulations of the FACET two-bunch experiment appear on the cover of Nature. PICKSC hosts its first workshop.', href: '/news#nature-cover-quickpic' },
+  { year: '2015', text: 'PICKSC releases a hierarchy of skeleton PIC codes, from serial to GPU.', href: '/software/skeleton-codes' },
+  { year: '2017', text: 'QuickPIC, OSHUN and UPIC 2.0 are released as open source; first OSIRIS Users and Developers Workshop.', href: '/presentations#workshop-2017' },
+  { year: '2021', text: 'QPAD, a quasi-static code with azimuthal decomposition, is published.', href: 'https://doi.org/10.1016/j.cpc.2020.107784' },
+  { year: '2025', text: 'OSIRIS runs on GPUs at scale on NERSC’s Perlmutter.', href: 'https://doi.org/10.1017/S0022377824001569' },
+];
+---
+
+<Base title="Our history" description="The history of the UCLA Plasma Simulation Group, founded by John M. Dawson in 1973.">
+  <section class="border-b border-slate-200 bg-gradient-to-b from-brand-50/60 to-white">
+    <div class="mx-auto max-w-6xl px-4 py-14 sm:px-6">
+      <h1 class="text-4xl font-semibold">Our history</h1>
+      <p class="mt-4 max-w-3xl text-lg leading-relaxed text-slate-600">
+        For more than fifty years, the group has developed particle-in-cell simulation methods and used them to make
+        discoveries in plasma physics.
+      </p>
+    </div>
+  </section>
+
+  <div class="mx-auto grid max-w-6xl gap-12 px-4 py-14 sm:px-6 lg:grid-cols-[1fr_20rem]">
+    <article class="area-text max-w-3xl space-y-5 leading-relaxed text-slate-700">
+      <h2 class="text-2xl font-semibold text-slate-900">The Dawson years</h2>
+      <p>
+        The UCLA Simulation of Plasmas Group was formed in 1973 by the late John M. Dawson. Under his leadership the group
+        developed a suite of FFT-based (spectral) particle-in-cell codes
+        (<a href="https://doi.org/10.1103/RevModPhys.55.403">Dawson, Rev. Mod. Phys. 1983</a>) and used them to study
+        basic and applied plasma physics in magnetically confined plasmas, space plasmas, radiation sources, intense
+        short-pulse laser- and beam-plasma interactions, and plasma-based acceleration.
+      </p>
+      <p>
+        The group invented the laser wakefield
+        (<a href="https://doi.org/10.1103/PhysRevLett.43.267">Tajima &amp; Dawson, Phys. Rev. Lett. 1979</a>) and plasma
+        wakefield (<a href="https://doi.org/10.1103/PhysRevLett.54.693">Chen et al., Phys. Rev. Lett. 1985</a>)
+        accelerator concepts, and pioneered parallel computing for PIC codes, including the first paper on domain
+        decomposition for PIC (<a href="https://doi.org/10.1016/0021-9991(89)90153-8">Liewer &amp; Decyk, J. Comput. Phys.
+        1989</a>). It also invented the <a href="/reports-notes/87-decyk-report.pdf">subtraction technique</a>, which
+        separates the wakes made by single particles from thermal fluctuations.
+      </p>
+
+      <h2 class="pt-4 text-2xl font-semibold text-slate-900">Parallel simulation and plasma-based acceleration</h2>
+      <p>
+        Since 1998 the group has been led by Warren B. Mori, and it became a leader in the use of parallel PIC codes for
+        plasma-based acceleration, for laser–plasma interactions relevant to inertial fusion energy, and for relativistic
+        shocks. The group pioneered parallel PIC simulations of short-pulse laser- and beam-plasma interactions, the
+        moving-window technique for plasma-based acceleration, three-dimensional quasi-static PIC, and ponderomotive
+        guiding-center methods in PIC codes. It helped develop Lorentz-boosted-frame techniques and methods to eliminate
+        the numerical Cerenkov instability.
+      </p>
+      <p>
+        Together with its collaborators, the group helped establish the nonlinear blowout regime of plasma-based
+        acceleration, including beam loading, and new ways of injecting electrons into plasma wakes. Throughout, it has
+        combined full-scale simulations with experiments to unravel ultrafast, intense laser- and beam-plasma
+        interactions, and it has developed PIC algorithms that run efficiently on many-core and GPU architectures.
+      </p>
+
+      <h2 class="pt-4 text-2xl font-semibold text-slate-900">PICKSC</h2>
+      <p>
+        The UCLA Particle-in-Cell and Kinetic Simulation Software Center (PICKSC) was created through an NSF Software
+        Infrastructure for Sustained Innovation award, with Warren Mori as its director, so that the group’s home-grown
+        PIC and kinetic simulation software could have a broader impact. PICKSC released the UPIC Framework and a
+        hierarchy of skeleton codes, made QuickPIC and OSHUN open source, developed educational software, and hosted
+        workshops for the PIC community. Much of the <a href="/software">software</a> on this site was developed with
+        its support; its earlier news is in the <a href="/news#archive">news archive</a>.
+      </p>
+
+      <h2 class="pt-4 text-2xl font-semibold text-slate-900">The group today</h2>
+      <p>
+        Today the UCLA Plasma Simulation Group is co-led by Professors Warren B. Mori and E. Paulo Alves, in the UCLA
+        Departments of Physics &amp; Astronomy and of Electrical &amp; Computer Engineering, and works closely with the
+        UCLA Laser–Plasma Group led by Professor Chan Joshi. Our research spans plasma-based acceleration and light
+        sources, plasma astrophysics, laser–plasma interactions and the nonlinear optics of plasmas, and it increasingly
+        combines large-scale kinetic simulation with AI/ML. See our <a href="/research">research</a> and{' '}
+        <a href="/team">team</a>.
+      </p>
+    </article>
+
+    <!-- Timeline -->
+    <aside aria-labelledby="milestones">
+      <h2 id="milestones" class="text-xl font-semibold">Milestones</h2>
+      <ol class="mt-6 border-l border-slate-200">
+        {milestones.map((m) => (
+          <li class="relative pb-6 pl-6 last:pb-0">
+            <span class="absolute top-1.5 -left-[5px] size-2.5 rounded-full bg-brand-600" aria-hidden="true"></span>
+            <p class="font-sans text-sm font-semibold text-brand-700">{m.year}</p>
+            <p class="mt-1 text-sm leading-relaxed text-slate-700">
+              {m.href ? <a href={m.href} class="text-slate-700 hover:text-brand-700">{m.text}</a> : m.text}
+            </p>
+          </li>
+        ))}
+      </ol>
+    </aside>
+  </div>
+</Base>

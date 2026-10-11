@@ -6,7 +6,7 @@ import HighlightCard from '../components/HighlightCard.astro';
 // Placeholder hero: the stacked group logo. Candidate simulation figures live in src/assets/simulations/.
 import hero from '../../brand/SVG/PSG_lockup-stacked_color.svg';
 import { publications, cite, shortAuthors } from '../data/publications';
-import { software, LEGACY } from '../data/site';
+import { software } from '../data/site';
 
 const highlights = (await getCollection('highlights', ({ data }) => data.featured))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
@@ -111,7 +111,7 @@ const recent = publications.slice(0, 5);
         UCLA Particle-in-Cell and Kinetic Simulation Software Center (PICKSC), created through an NSF Software
         Infrastructure for Sustained Innovation award.
       </p>
-      <a href={`${LEGACY}/about-us.html`} class="mt-4 inline-block font-medium no-underline hover:underline">Our history →</a>
+      <a href="/about" class="mt-4 inline-block font-medium no-underline hover:underline">Our history →</a>
     </aside>
   </section>
 </Base>
