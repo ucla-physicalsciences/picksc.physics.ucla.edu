@@ -60,6 +60,11 @@
   title: Lorentz boosted frame simulation technique in Particle-in-cell methods
   advisor: Warren B. Mori
   url: https://escholarship.org/uc/item/064635rb
+- name: Chao Gong
+  year: 2015
+  title: Optical Probing of CO2 Laser-Plasma Interactions at Near Critical Density
+  advisor: Chan Joshi and Warren B. Mori
+  url: https://escholarship.org/uc/item/2s47d1jv
 - name: Ian N. Ellis
   year: 2014
   title: Wakes in Inertial Fusion Plasmas
@@ -79,7 +84,7 @@
   year: 2010
   title: Particle-in-cell simulations of stimulated Raman scattering for parameters relevant to inertial fusion energy
   url: https://picksc.physics.ucla.edu/reports-notes/winjum.pdf
-- name: Miaomiao Zhou  # CHECK first name
+- name: Miaomiao Zhou
   year: 2008
   title: Accelerating Ultra-Short Electron/Positron Bunches in Field Ionization Produced Plasmas
   url: https://picksc.physics.ucla.edu/reports-notes/zhou.pdf

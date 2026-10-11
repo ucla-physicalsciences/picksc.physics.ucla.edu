@@ -144,11 +144,12 @@ alumni:
   - { name: Joshua J. May, role: PhD, years: "2017" }
   - { name: Asher W. Davidson, role: PhD, years: "2016" }
   - { name: Peicheng Yu, role: PhD, years: "2016" }
+  - { name: Chao Gong, role: PhD, years: "2015" }
   - { name: Ian N. Ellis, role: PhD, years: "2014" }
   - { name: Weiming An, role: PhD, years: "2013" }
   - { name: Jay E. Fahlen, role: PhD, years: "2010" }
   - { name: Benjamin J. Winjum, role: PhD, years: "2010" }
-  - { name: Miaomiao Zhou, role: PhD, years: "2008" }  # CHECK first name
+  - { name: Miaomiao Zhou, role: PhD, years: "2008" }
   - { name: Wei Lu, role: PhD, years: "2006" }
   - { name: Chengkun Huang, role: PhD, years: "2005" }
   - { name: Roy G. Hemker, role: PhD, years: "2000" }
