@@ -22,6 +22,7 @@ npm run build    # static site in dist/
 | Highlight figures | `src/assets/research/` |
 | Candidate simulation figures (homepage hero) | `src/assets/simulations/` |
 | Publications | `src/data/publications.json` |
+| Team members, collaborators, alumni | `src/data/team.yaml` (photos in `src/assets/team/`) |
 | Menu, research themes, software list | `src/data/site.ts` |
 | Group logo files (SVG, PNG, PDF; not served by the site) | `brand/` |
 | Logo used in the header | `src/assets/group-logo.svg` (copy of `brand/SVG/PSG_lockup-horizontal_color.svg`, outer margin trimmed) |

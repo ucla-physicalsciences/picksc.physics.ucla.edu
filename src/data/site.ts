@@ -5,7 +5,7 @@ export const nav = [
   { label: 'Research', href: '/research' },
   { label: 'Software', href: `${LEGACY}/software-overview.html` },
   { label: 'Publications', href: `${LEGACY}/publications.html` },
-  { label: 'Team', href: `${LEGACY}/team.html` },
+  { label: 'Team', href: '/team' },
   { label: 'News', href: `${LEGACY}/news.html` },
   { label: 'Join us', href: `${LEGACY}/opportunities.html` },
 ];

@@ -1,0 +1,20 @@
+---
+// Round team photo, or the person's initials when there is no photo.
+import { Image } from 'astro:assets';
+import { initials, photoFor, type Person } from '../data/team';
+
+interface Props {
+  person: Person;
+  size: number;
+}
+const { person, size } = Astro.props;
+const photo = photoFor(person);
+---
+
+{photo ? (
+  <Image src={photo} alt={person.name} width={size} height={size} densities={[1, 2]} class="shrink-0 rounded-full object-cover" style={`width:${size}px;height:${size}px`} />
+) : (
+  <div class="flex shrink-0 items-center justify-center rounded-full bg-brand-100 font-serif text-brand-700" style={`width:${size}px;height:${size}px;font-size:${size / 3}px`} aria-hidden="true">
+    {initials(person.name)}
+  </div>
+)}

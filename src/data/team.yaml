@@ -1,0 +1,121 @@
+# Team page data. Edit this file to add, update or move people.
+#
+# Photos: put a square photo in src/assets/team/ and give its file name in `photo`.
+#         Without a photo, the card shows the person's initials.
+# Links (all optional): email, website, scholar, github, linkedin, researchgate, dblp
+# focus: optional one-line research focus shown under the role.
+#
+# When someone leaves, move them to `alumni` (no photo needed) with years and,
+# if known, where they are now.
+
+pis:
+  - name: Warren B. Mori
+    role: Co-director
+    title: Distinguished Professor, Physics & Astronomy and Electrical & Computer Engineering  # CHECK
+    photo: warren-mori.jpg
+    email: mori@physics.ucla.edu
+    scholar: https://scholar.google.com/citations?user=_OsGhQ4AAAAJ
+  - name: E. Paulo Alves
+    role: Co-director
+    title: Assistant Professor, Physics & Astronomy  # CHECK
+    photo: paulo-alves.jpg
+    email: epalves@physics.ucla.edu
+    scholar: https://scholar.google.com/citations?user=dpMiNBUAAAAJ
+
+groups:
+  - title: Research staff
+    members:
+      - name: Viktor K. Decyk
+        role: Senior researcher
+        photo: viktor-decyk.jpg
+        researchgate: https://www.researchgate.net/scientific-contributions/Viktor-K-Decyk-35597257
+      - name: Frank S. Tsung
+        role: Senior researcher
+        photo: frank-tsung.jpg
+        scholar: https://scholar.google.com/citations?user=Xf_G6M4AAAAJ
+      - name: Benjamin J. Winjum
+        role: Senior researcher
+        photo: benjamin-winjum.jpg
+        scholar: https://scholar.google.com/citations?user=EqH6lrYAAAAJ
+      - name: Adam Tableman
+        role: Software engineer
+        dblp: https://dblp.org/pid/156/2911.html
+
+  - title: Postdoctoral researchers
+    members:
+      - name: Thamine N. Dalichaouch
+        role: Postdoctoral researcher
+        photo: thamine-dalichaouch.jpg
+        researchgate: https://www.researchgate.net/profile/Thamine-Dalichaouch
+
+  - title: Graduate students
+    members:
+      - name: Maria Almanza
+        role: Graduate student
+        photo: maria-almanza.jpg
+        linkedin: https://www.linkedin.com/in/maria-almanza-b97082314/
+      - name: Sarah Chase
+        role: Graduate student
+        photo: sarah-chase.jpg
+        linkedin: https://www.linkedin.com/in/sarahechase/
+      - name: Gabrielle Guttormsen
+        role: Graduate student
+        photo: gabrielle-guttormsen.jpg
+        linkedin: https://www.linkedin.com/in/gabrielle-guttormsen-94104b115/
+      - name: Lance Hildebrand
+        role: Graduate student
+        photo: lance-hildebrand.jpg
+        linkedin: https://www.linkedin.com/in/lance-hildebrand-20b679a0/
+      - name: Roman P. Lee
+        role: Graduate student
+        photo: roman-lee.jpg
+        linkedin: https://www.linkedin.com/in/roman-lee-40954214b
+      - name: Madox C. McGrae-Menge
+        role: Graduate student
+        photo: madox-mcgrae-menge.jpg
+        linkedin: https://www.linkedin.com/in/madox-mcgrae-menge-9b0a91146/
+      - name: Jacob R. Pierce
+        role: Graduate student
+        photo: jacob-pierce.jpg
+        linkedin: https://www.linkedin.com/in/jacob-pierce-aa9077135/
+      - name: Zack Pine
+        role: Graduate student
+        photo: zack-pine.jpg
+        scholar: https://scholar.google.com/citations?user=EyxPHfoAAAAJ
+      - name: Qianqian Su
+        role: Graduate student
+        photo: qianqian-su.jpg
+        researchgate: https://www.researchgate.net/profile/Qianqian-Su-5
+
+# Shown as a compact list of names (with affiliation if given).
+collaborators:
+  - name: Frederico Fiúza
+    scholar: https://scholar.google.com/citations?user=wn-spAsAAAAJ
+  - name: Ricardo A. Fonseca
+    scholar: https://scholar.google.pt/citations?user=rYNr27QAAAAJ
+  - name: Richard D. Sydora
+    scholar: https://scholar.google.ca/citations?user=nXtozfMAAAAJ
+  - name: Xinlu Xu
+    scholar: https://scholar.google.com/citations?user=hhaBX3kAAAAJ
+
+# Former members, newest first. `now` = current position (optional).
+alumni:
+  - { name: Yujian Zhao, role: PhD, years: "2023" }
+  - { name: Kyle G. Miller, role: PhD, years: "2022" }
+  - { name: Thamine N. Dalichaouch, role: PhD, years: "2021" }
+  - { name: Joshua J. May, role: PhD, years: "2017" }
+  - { name: Asher W. Davidson, role: PhD, years: "2016" }
+  - { name: Peicheng Yu, role: PhD, years: "2016" }
+  - { name: Ian N. Ellis, role: PhD, years: "2014" }
+  - { name: Weiming An, role: PhD, years: "2013" }
+  - { name: Jay E. Fahlen, role: PhD, years: "2010" }
+  - { name: Benjamin J. Winjum, role: PhD, years: "2010" }
+  - { name: Miaomiao Zhou, role: PhD, years: "2008" }  # CHECK first name
+  - { name: Wei Lu, role: PhD, years: "2006" }
+  - { name: Chengkun Huang, role: PhD, years: "2005" }
+  - { name: Roy G. Hemker, role: PhD, years: "2000" }
+  # Previously on the team page (hidden there); add years and roles
+  - { name: Fei Li, role: Researcher, years: "" }
+  - { name: Michael Touati, role: Researcher, years: "" }
+  - { name: Nickie Ng, role: Researcher, years: "" }
+  - { name: SJ Spencer, role: Postdoctoral researcher, years: "" }  # CHECK role
