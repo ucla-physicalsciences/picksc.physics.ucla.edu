@@ -1,9 +1,9 @@
-# Build the Astro site and publish it to GitHub Pages on every push to main.
+# Build the Astro site and publish it to GitHub Pages on every push to main (or astro-revamp, which the old picksc repository publishes while it shows the new site).
 name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches: [main, astro-revamp]
   workflow_dispatch:
 
 permissions:
