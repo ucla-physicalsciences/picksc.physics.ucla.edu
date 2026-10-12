@@ -2,7 +2,8 @@
 import logo from '../assets/group-logo.svg';
 import { nav } from '../data/site';
 
-const path = Astro.url.pathname.replace(/\/$/, '');
+// Pages are built as files (/team.html, /index.html); compare without the extension or a trailing slash.
+const path = Astro.url.pathname.replace(/(\/index)?\.html$|\/$/, '');
 ---
 
 <header class="sticky top-0 z-20 border-b border-slate-200 bg-white/90 backdrop-blur">

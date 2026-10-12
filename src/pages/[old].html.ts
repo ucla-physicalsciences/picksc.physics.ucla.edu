@@ -4,19 +4,13 @@ import type { APIRoute, GetStaticPaths } from 'astro';
 import { getCollection } from 'astro:content';
 import { href } from '../data/softwareNav';
 
+// Pages whose old and new names match (team.html, news.html, ...) need no entry: the new page is built at that file.
 const PAGES: Record<string, string> = {
   'index-slideshow': '/',
   services: '/',
   'secondary-sidebar': '/',
   'about-us': '/about',
-  team: '/team',
-  publications: '/publications',
   'publications-old': '/publications',
-  news: '/news',
-  opportunities: '/opportunities',
-  presentations: '/presentations',
-  dissertations: '/dissertations',
-  'reports-and-notes': '/reports-and-notes',
   'research-overview': '/research',
   'high-performance-computing': '/research#software-hpc',
   'plasma-based-acceleration': '/research#plasma-acceleration',
