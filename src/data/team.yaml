@@ -53,7 +53,13 @@ groups:
       - name: Thamine N. Dalichaouch
         role: Postdoctoral researcher
         photo: thamine-dalichaouch.jpg
+        scholar: https://scholar.google.com/citations?user=u3ixPtwAAAAJ
         researchgate: https://www.researchgate.net/profile/Thamine-Dalichaouch
+      - name: Jacob R. Pierce
+        role: Postdoctoral researcher
+        photo: jacob-pierce.jpg
+        scholar: https://scholar.google.com/citations?user=tBeKOc4AAAAJ
+        linkedin: https://www.linkedin.com/in/jacob-pierce-aa9077135/
 
   # Alphabetical by last name.
   - title: Graduate students
@@ -69,6 +75,7 @@ groups:
       - name: Albert Countryman
         role: Graduate student
         focus: Nonlinear optics of plasma metamaterials and ICF
+        photo: albert-countryman.jpeg
       - name: Gabrielle Guttormsen
         role: Graduate student
         focus: Particle acceleration in relativistic astrophysical jets
@@ -81,6 +88,7 @@ groups:
         role: Graduate student
         focus: Data-driven reduced models and closures for kinetic plasmas
         photo: madox-mcgrae-menge.jpg
+        scholar: https://scholar.google.com/citations?user=yK7KHLIAAAAJ
         linkedin: https://www.linkedin.com/in/madox-mcgrae-menge-9b0a91146/
       - name: Vijay Patel
         role: Graduate student
@@ -122,6 +130,7 @@ alumni:
     role: PhD
     years: "2026"
     photo: jacob-pierce.jpg
+    scholar: https://scholar.google.com/citations?user=tBeKOc4AAAAJ
     linkedin: https://www.linkedin.com/in/jacob-pierce-aa9077135/
   - name: Qianqian Su
     role: PhD
