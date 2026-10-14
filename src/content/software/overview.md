@@ -47,7 +47,7 @@ include binary collision and field ionization models. Data structures and algori
 architectures, first explored in our skeleton codes, are now part of the production codes: OSIRIS, for example,
 runs on GPUs.
 
-Much of this work was supported by PICKSC, the NSF-funded Particle-in-Cell and Kinetic Simulation Software Center
+Some of this work was supported by PICKSC, the NSF-funded Particle-in-Cell and Kinetic Simulation Software Center
 at UCLA, whose aim was to make the group's codes openly available to the community. Today OSIRIS, QuickPIC, QPAD,
 OSHUN, the UPIC Framework and the skeleton codes are all open source; see the individual pages and our
 [GitHub organization](https://github.com/UCLA-Plasma-Simulation-Group).

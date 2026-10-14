@@ -108,6 +108,7 @@ collaborators:
 
 # Former members, shown on /alumni, newest first. PhD alumni whose name matches an entry in
 # dissertations.yaml get a link to their dissertation.
+#   role: PhD, Postdoc or Visitor; picks the section of the alumni page the person is listed in
 #   years: time in the group ("2019–2025") or the PhD year
 #   after: where they went next (optional)
 #   quote: short testimonial about their time in the group (optional)
@@ -153,7 +154,7 @@ alumni:
   - { name: Wei Lu, role: PhD, years: "2006" }
   - { name: Chengkun Huang, role: PhD, years: "2005" }
   - { name: Roy G. Hemker, role: PhD, years: "2000" }
-  # Previously on the team page (hidden there); add years and roles
-  - { name: Fei Li, role: Researcher, years: "" }
-  - { name: Michael Touati, role: Researcher, years: "" }
-  - { name: Nickie Ng, role: Researcher, years: "" }
+  # Postdocs (add years)
+  - { name: Fei Li, role: Postdoc, years: "" }
+  - { name: Michael Touati, role: Postdoc, years: "" }
+  - { name: Nickie Ng, role: Postdoc, years: "" }
